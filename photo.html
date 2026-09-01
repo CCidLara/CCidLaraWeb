@@ -1,236 +1,213 @@
 <!DOCTYPE html>
-<html lang="es" class="no-js">
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Galería Fotográfica</title>
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- GLightbox CSS for image zoom -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
-    <style>
-        body {
-            background: #f8f7f4; /* Soft paper white */
-        }
-        .photo-masonry {
-            margin: 40px auto;
-            max-width: 1600px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background: transparent;
-            padding: 0;
-        }
-        .photo-masonry-item {
-            width: 16.6666%;
-            margin: 4px;
-            background: none;
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: none;
-            transition: transform 0.4s cubic-bezier(.4,0,.2,1);
-            display: flex;
-        }
-        .photo-masonry-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            transition: transform 0.2s;
-            border: none;
-            box-shadow: none;
-            background: #f8f7f4;
-        }
-        .photo-masonry-item img:hover {
-            transform: scale(1.03);
-        }
-        @media (max-width: 1400px) {
-            .photo-masonry-item { width: 20%; }
-        }
-        @media (max-width: 1200px) {
-            .photo-masonry-item { width: 25%; }
-        }
-        @media (max-width: 900px) {
-            .photo-masonry-item { width: 33.3333%; }
-        }
-        @media (max-width: 700px) {
-            .photo-masonry-item { width: 50%; }
-        }
-        @media (max-width: 500px) {
-            .photo-masonry-item { width: 100%; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fotografía & Archivo Visual — Christofer Cid Lara · CCidLara</title>
+  
+  <meta name="description" content="Archivo fotográfico de Christofer Cid Lara: Magallanes, Dientes de Navarino, Araucanía Andina, Noroeste Argentino, Fotolibro Infrarrojo (IR) y película analógica 35mm.">
+  <meta name="author" content="Christofer Cid Lara">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .photo-hero {
+      padding: 10rem 0 4rem;
+      text-align: center;
+      position: relative;
+    }
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-bone-muted);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      padding: 0.4rem 0.9rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      transition: all 0.25s ease;
+    }
+    .back-home-btn:hover {
+      border-color: var(--color-red);
+      color: var(--color-red-bright);
+    }
+  </style>
 </head>
+
 <body id="top">
 
-    <div id="page" class="s-pagewrap" style="background:transparent;">
+  <!-- Canvas Background -->
+  <canvas id="vision-canvas" aria-hidden="true"></canvas>
 
-        <!-- # site header -->
-        <header class="s-header">
-            <div class="row s-header__inner">
-                <div class="s-header__block">
-                    <div class="s-header__logo">
-                        <a class="logo" href="index.html">
-                            <img src="images/logo.svg" alt="Homepage">
-                        </a>
-                    </div>
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-                </div>
-                <nav class="s-header__nav">
-                    <ul class="s-header__menu-links">
-                        <li><a href="index.html#intro">BIO</a></li>
-                        <li><a href="index.html#about">Investigación</a></li>
-                        <li class="current"><a href="photo.html">Fotografía</a></li>
-                        <li><a href="index.html#works">Proyectos</a></li>
-                        <li><a href="index.html#footer">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+  <!-- Header -->
+  <header class="site-header scrolled">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo">
+        <span>CCidLara</span>
+        <span class="brand-dot"></span>
+      </a>
 
-        <!-- # photo gallery -->
-        <section id="photo-gallery" class="s-works target-section">
-            <div class="row">
-                <div class="column xl-12">
-                    <div class="section-header" data-num="01">
-                        <h2 class="text-display-title">Galería Fotográfica</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="photo-masonry">
-                <!-- Dummy images, scrambled order for testing -->
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
-                    </a>
-                </div>
-                <div class="photo-masonry-item">
-                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
-                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
-                    </a>
-                </div>
-            </div>
-        </section>
+      <nav class="main-nav">
+        <a href="index.html#vision" class="nav-link" data-i18n="navVision">Visión</a>
+        <a href="index.html#investigacion" class="nav-link" data-i18n="navResearch">Investigación</a>
+        <a href="index.html#arte-tecnico" class="nav-link" data-i18n="navVFX">Arte Técnico</a>
+        <a href="#top" class="nav-link active" data-i18n="navPhoto">Fotografía</a>
+        <a href="index.html#contacto" class="nav-link" data-i18n="navContact">Contacto</a>
+      </nav>
 
-        <footer id="footer" class="s-footer target-section">
-            <div class="row s-footer__bottom">
-                <div class="column xl-12">
-                    <p class="ss-copyright">
-                        <span>© Copyright Hudson 2023</span>
-                        <span>Design by <a href="https://styleshout.com/">StyleShout</a></span>
-                    </p>
-                </div>
-            </div>
-        </footer>
-
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Selección de idioma">
+          <button type="button" class="lang-btn active" data-lang="es" id="btnLangEs">ES</button>
+          <button type="button" class="lang-btn" data-lang="en" id="btnLangEn">EN</button>
+        </div>
+        <a href="index.html" class="btn btn-secondary" style="padding:0.45rem 1rem; font-size:0.75rem;">
+          ← Inicio
+        </a>
+      </div>
     </div>
+  </header>
 
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <!-- GLightbox JS for image zoom -->
-    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-    <script>
-        imagesLoaded('.photo-masonry', function() {
-            new Masonry('.photo-masonry', {
-                itemSelector: '.photo-masonry-item',
-                percentPosition: true,
-                gutter: 8, // Small gap between images
-                transitionDuration: '0.4s'
-            });
-        });
-        const lightbox = GLightbox({ selector: '.glightbox' });
-    </script>
+  <main>
+    
+    <!-- Photo Archive Hero -->
+    <section class="photo-hero">
+      <div class="container">
+        <a href="index.html" class="back-home-btn">
+          ← <span data-i18n="backHome">Volver a la Página Principal</span>
+        </a>
+        
+        <p class="section-meta" style="justify-content:center;">33°S – 55°S · ARCHIVO COMPLETO</p>
+        <h1 class="section-title" style="font-size:clamp(2.5rem, 5vw, 4.2rem);">
+          Archivo <em>Fotográfico</em>
+        </h1>
+        <p class="section-lead" style="margin-left:auto; margin-right:auto; max-width:44rem;">
+          Documentación de paisajes sub-antárticos, cordilleras andinas, reflectancia infrarroja a 720nm y haluros de plata analógicos.
+        </p>
+
+        <!-- Category Filters -->
+        <div class="gallery-controls" style="margin-top:3rem;">
+          <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Todas</button>
+          <button type="button" class="filter-btn" data-filter="patagonia" data-i18n="filterPatagonia">Magallanes &amp; Patagonia</button>
+          <button type="button" class="filter-btn" data-filter="navarino" data-i18n="filterNavarino">Dientes de Navarino</button>
+          <button type="button" class="filter-btn" data-filter="araucania" data-i18n="filterAraucania">Araucanía Andina</button>
+          <button type="button" class="filter-btn" data-filter="argentina" data-i18n="filterArgentina">Noroeste Argentino</button>
+          <button type="button" class="filter-btn" data-filter="infrared" data-i18n="filterInfrared">Infrarrojo (IR)</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Full Photo Masonry Grid -->
+    <section class="site-section" style="padding-top:0;">
+      <div class="container">
+        <div class="photo-masonry-grid" id="fullPhotoGrid">
+          <!-- Injected via JS from manifest.json or full item list -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Full Screen Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
+    <button type="button" class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Cerrar modal">&times;</button>
+    <button type="button" class="lightbox-nav-btn prev" onclick="prevLightbox()" aria-label="Anterior">&#8592;</button>
+    <button type="button" class="lightbox-nav-btn next" onclick="nextLightbox()" aria-label="Siguiente">&#8594;</button>
+    
+    <div class="lightbox-content-box">
+      <img src="" alt="Fotografía" class="lightbox-main-img" id="lightboxMainImg">
+      <div class="lightbox-caption">
+        <h4 id="lightboxTitle">Título</h4>
+        <p id="lightboxSeries">Serie</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom-row">
+        <span>© 2026 Christofer Cid Lara · Archivo Fotográfico</span>
+        <span>Santiago de Chile · Confín Austral</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Load full manifest for the dedicated photo archive page
+    fetch('images/portfolio/manifest.json')
+      .then(res => res.json())
+      .then(data => {
+        window.fullArchiveData = data;
+        renderFullArchive('all');
+      })
+      .catch(() => {
+        // Fallback to curatedGalleryItems
+        window.fullArchiveData = curatedGalleryItems;
+        renderFullArchive('all');
+      });
+
+    let activeFullItems = [];
+
+    function renderFullArchive(filter = 'all') {
+      const container = document.getElementById('fullPhotoGrid');
+      if (!container || !window.fullArchiveData) return;
+
+      activeFullItems = filter === 'all'
+        ? window.fullArchiveData
+        : window.fullArchiveData.filter(i => (i.category || i.cat) === filter);
+
+      container.innerHTML = activeFullItems.map((item, idx) => `
+        <div class="photo-card reveal active" onclick="openFullLightbox(${idx})">
+          <img src="${item.thumb || item.file}" alt="${item.title}" class="photo-img" loading="lazy" />
+          <div class="photo-hover-overlay">
+            <h4 class="photo-title">${item.title}</h4>
+            <p class="photo-sub">${item.series || item.description}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function openFullLightbox(idx) {
+      if (idx < 0 || idx >= activeFullItems.length) return;
+      currentLightboxIndex = idx;
+      const modal = document.getElementById('lightboxModal');
+      const mainImg = document.getElementById('lightboxMainImg');
+      const captionTitle = document.getElementById('lightboxTitle');
+      const captionSeries = document.getElementById('lightboxSeries');
+
+      const item = activeFullItems[idx];
+      mainImg.src = item.file || item.full;
+      captionTitle.textContent = item.title;
+      captionSeries.textContent = item.series || item.description;
+
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Connect filters on photo.html
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.getAttribute('data-filter');
+        renderFullArchive(cat);
+      });
+    });
+  </script>
+
 </body>
 </html>

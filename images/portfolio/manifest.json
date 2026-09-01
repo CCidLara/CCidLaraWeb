@@ -1,0 +1,362 @@
+[
+  {
+    "id": "photo-1",
+    "file": "images/portfolio/araucania_01.webp",
+    "thumb": "images/portfolio/araucania_01_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-2",
+    "file": "images/portfolio/araucania_02.webp",
+    "thumb": "images/portfolio/araucania_02_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-3",
+    "file": "images/portfolio/araucania_03.webp",
+    "thumb": "images/portfolio/araucania_03_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-4",
+    "file": "images/portfolio/araucania_04.webp",
+    "thumb": "images/portfolio/araucania_04_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-5",
+    "file": "images/portfolio/araucania_05.webp",
+    "thumb": "images/portfolio/araucania_05_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-6",
+    "file": "images/portfolio/araucania_06.webp",
+    "thumb": "images/portfolio/araucania_06_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-7",
+    "file": "images/portfolio/araucania_07.webp",
+    "thumb": "images/portfolio/araucania_07_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-8",
+    "file": "images/portfolio/araucania_08.webp",
+    "thumb": "images/portfolio/araucania_08_thumb.webp",
+    "category": "araucania",
+    "title": "Araucanía Andina",
+    "description": "Volcanic & Forest Ecosystems",
+    "series": "Araucanía Andina"
+  },
+  {
+    "id": "photo-9",
+    "file": "images/portfolio/argentina_01.webp",
+    "thumb": "images/portfolio/argentina_01_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-10",
+    "file": "images/portfolio/argentina_02.webp",
+    "thumb": "images/portfolio/argentina_02_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-11",
+    "file": "images/portfolio/argentina_03.webp",
+    "thumb": "images/portfolio/argentina_03_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-12",
+    "file": "images/portfolio/argentina_04.webp",
+    "thumb": "images/portfolio/argentina_04_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-13",
+    "file": "images/portfolio/argentina_05.webp",
+    "thumb": "images/portfolio/argentina_05_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-14",
+    "file": "images/portfolio/argentina_06.webp",
+    "thumb": "images/portfolio/argentina_06_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-15",
+    "file": "images/portfolio/argentina_07.webp",
+    "thumb": "images/portfolio/argentina_07_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-16",
+    "file": "images/portfolio/argentina_08.webp",
+    "thumb": "images/portfolio/argentina_08_thumb.webp",
+    "category": "argentina",
+    "title": "Northwest Argentina & Andes",
+    "description": "Arid Altitudes & Geology",
+    "series": "Northwest Argentina & Andes"
+  },
+  {
+    "id": "photo-17",
+    "file": "images/portfolio/infrared_01.webp",
+    "thumb": "images/portfolio/infrared_01_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-18",
+    "file": "images/portfolio/infrared_02.webp",
+    "thumb": "images/portfolio/infrared_02_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-19",
+    "file": "images/portfolio/infrared_03.webp",
+    "thumb": "images/portfolio/infrared_03_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-20",
+    "file": "images/portfolio/infrared_04.webp",
+    "thumb": "images/portfolio/infrared_04_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-21",
+    "file": "images/portfolio/infrared_05.webp",
+    "thumb": "images/portfolio/infrared_05_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-22",
+    "file": "images/portfolio/infrared_06.webp",
+    "thumb": "images/portfolio/infrared_06_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-23",
+    "file": "images/portfolio/infrared_07.webp",
+    "thumb": "images/portfolio/infrared_07_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-24",
+    "file": "images/portfolio/infrared_08.webp",
+    "thumb": "images/portfolio/infrared_08_thumb.webp",
+    "category": "infrared",
+    "title": "Infrared Spectrum (IR)",
+    "description": "Experimental Spectral Vision",
+    "series": "Infrared Spectrum (IR)"
+  },
+  {
+    "id": "photo-25",
+    "file": "images/portfolio/navarino_01.webp",
+    "thumb": "images/portfolio/navarino_01_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-26",
+    "file": "images/portfolio/navarino_02.webp",
+    "thumb": "images/portfolio/navarino_02_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-27",
+    "file": "images/portfolio/navarino_03.webp",
+    "thumb": "images/portfolio/navarino_03_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-28",
+    "file": "images/portfolio/navarino_04.webp",
+    "thumb": "images/portfolio/navarino_04_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-29",
+    "file": "images/portfolio/navarino_05.webp",
+    "thumb": "images/portfolio/navarino_05_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-30",
+    "file": "images/portfolio/navarino_06.webp",
+    "thumb": "images/portfolio/navarino_06_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-31",
+    "file": "images/portfolio/navarino_07.webp",
+    "thumb": "images/portfolio/navarino_07_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-32",
+    "file": "images/portfolio/navarino_08.webp",
+    "thumb": "images/portfolio/navarino_08_thumb.webp",
+    "category": "navarino",
+    "title": "Dientes de Navarino",
+    "description": "Sub-Antarctic Landscape",
+    "series": "Dientes de Navarino"
+  },
+  {
+    "id": "photo-33",
+    "file": "images/portfolio/patagonia_01.webp",
+    "thumb": "images/portfolio/patagonia_01_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  },
+  {
+    "id": "photo-34",
+    "file": "images/portfolio/patagonia_02.webp",
+    "thumb": "images/portfolio/patagonia_02_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  },
+  {
+    "id": "photo-35",
+    "file": "images/portfolio/patagonia_03.webp",
+    "thumb": "images/portfolio/patagonia_03_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  },
+  {
+    "id": "photo-36",
+    "file": "images/portfolio/patagonia_04.webp",
+    "thumb": "images/portfolio/patagonia_04_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  },
+  {
+    "id": "photo-37",
+    "file": "images/portfolio/patagonia_05.webp",
+    "thumb": "images/portfolio/patagonia_05_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  },
+  {
+    "id": "photo-38",
+    "file": "images/portfolio/patagonia_06.webp",
+    "thumb": "images/portfolio/patagonia_06_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  },
+  {
+    "id": "photo-39",
+    "file": "images/portfolio/patagonia_07.webp",
+    "thumb": "images/portfolio/patagonia_07_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  },
+  {
+    "id": "photo-40",
+    "file": "images/portfolio/patagonia_08.webp",
+    "thumb": "images/portfolio/patagonia_08_thumb.webp",
+    "category": "patagonia",
+    "title": "Magallanes & Patagonia",
+    "description": "Landscape / Glaciers & Mountains",
+    "series": "Magallanes & Patagonia"
+  }
+]
