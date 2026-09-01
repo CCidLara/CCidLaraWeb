@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Galería Fotográfica</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- GLightbox CSS for image zoom -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <style>
+        body {
+            background: #f8f7f4; /* Soft paper white */
+        }
+        .photo-masonry {
+            margin: 40px auto;
+            max-width: 1600px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: transparent;
+            padding: 0;
+        }
+        .photo-masonry-item {
+            width: 16.6666%;
+            margin: 4px;
+            background: none;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: none;
+            transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+            display: flex;
+        }
+        .photo-masonry-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.2s;
+            border: none;
+            box-shadow: none;
+            background: #f8f7f4;
+        }
+        .photo-masonry-item img:hover {
+            transform: scale(1.03);
+        }
+        @media (max-width: 1400px) {
+            .photo-masonry-item { width: 20%; }
+        }
+        @media (max-width: 1200px) {
+            .photo-masonry-item { width: 25%; }
+        }
+        @media (max-width: 900px) {
+            .photo-masonry-item { width: 33.3333%; }
+        }
+        @media (max-width: 700px) {
+            .photo-masonry-item { width: 50%; }
+        }
+        @media (max-width: 500px) {
+            .photo-masonry-item { width: 100%; }
+        }
+    </style>
+</head>
+<body id="top">
+
+    <div id="page" class="s-pagewrap" style="background:transparent;">
+
+        <!-- # site header -->
+        <header class="s-header">
+            <div class="row s-header__inner">
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo.svg" alt="Homepage">
+                        </a>
+                    </div>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div>
+                <nav class="s-header__nav">
+                    <ul class="s-header__menu-links">
+                        <li><a href="index.html#intro">BIO</a></li>
+                        <li><a href="index.html#about">Investigación</a></li>
+                        <li class="current"><a href="photo.html">Fotografía</a></li>
+                        <li><a href="index.html#works">Proyectos</a></li>
+                        <li><a href="index.html#footer">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- # photo gallery -->
+        <section id="photo-gallery" class="s-works target-section">
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="01">
+                        <h2 class="text-display-title">Galería Fotográfica</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-masonry">
+                <!-- Dummy images, scrambled order for testing -->
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal1.jpg" alt="Foto horizontal 1">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical2.jpg" alt="Foto vertical 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/horizontal2-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/horizontal2.jpg" alt="Foto horizontal 2">
+                    </a>
+                </div>
+                <div class="photo-masonry-item">
+                    <a href="images/folio/vertical1-large.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="images/folio/vertical1.jpg" alt="Foto vertical 1">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer" class="s-footer target-section">
+            <div class="row s-footer__bottom">
+                <div class="column xl-12">
+                    <p class="ss-copyright">
+                        <span>© Copyright Hudson 2023</span>
+                        <span>Design by <a href="https://styleshout.com/">StyleShout</a></span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- GLightbox JS for image zoom -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        imagesLoaded('.photo-masonry', function() {
+            new Masonry('.photo-masonry', {
+                itemSelector: '.photo-masonry-item',
+                percentPosition: true,
+                gutter: 8, // Small gap between images
+                transitionDuration: '0.4s'
+            });
+        });
+        const lightbox = GLightbox({ selector: '.glightbox' });
+    </script>
+</body>
+</html>
