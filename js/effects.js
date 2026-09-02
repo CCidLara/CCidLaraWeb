@@ -253,20 +253,17 @@ class VisualEffectsEngine {
       zIndex: '9100',
       pointerEvents: 'none',
       userSelect: 'none',
-      fontFamily: "'Syne', sans-serif",
-      fontWeight: '800',
-      letterSpacing: '-0.035em',
+      fontFamily: "var(--font-typewriter, 'Courier Prime', monospace)",
+      fontWeight: '700',
+      letterSpacing: '0.08em',
       opacity: '0',
       whiteSpace: 'nowrap',
       transformOrigin: 'left top',
       willChange: 'transform, opacity',
-      background: 'linear-gradient(135deg, #ffffff 20%, #f5f2eb 55%, #e53835 100%)',
-      webkitBackgroundClip: 'text',
-      webkitTextFillColor: 'transparent',
-      backgroundClip: 'text',
-      filter: 'drop-shadow(0 4px 25px rgba(197, 34, 31, 0.45))',
+      color: '#f5f2eb',
+      textShadow: '0 0 25px rgba(197, 160, 89, 0.45), 0 3px 12px rgba(0, 0, 0, 0.95)',
     });
-    this.flyEl.textContent = 'CCidLara';
+    this.flyEl.innerHTML = '<span style="color:#c5a059;font-weight:400;margin-right:2px;">[</span>CCidLara<span style="color:#c5a059;font-weight:400;margin-left:2px;">]</span>';
     document.body.appendChild(this.flyEl);
 
     // Initial position cache

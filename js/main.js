@@ -21,10 +21,10 @@ const translations = {
     getCV: "Descargar CV",
 
     // Hero
-    heroBadge: "Investigador en Visión por Computador · Ingeniero · Artista",
+    heroBadge: "Ingeniería Eléctrica · Visión Computacional · Fotografía de Territorio",
     titleFull: "CHRISTOFER CID LARA",
-    titleCompressed: "CCidLara",
-    heroStatement: "Investigando la <em>visión</em> a través de la luz, el aprendizaje profundo, los efectos matemáticos y la fotografía.",
+    titleCompressed: "[ CCidLara ]",
+    heroStatement: "Ingeniería eléctrica, física de la luz y registro fotográfico de territorio.",
     heroTagAI: "Investigación en IA",
     heroTagPhoto: "Fotografía & Óptica",
     heroTagTechArt: "Arte Técnico & Shaders",
@@ -35,10 +35,10 @@ const translations = {
 
     // Section 1: Vision / About
     aboutMeta: "01 / Fundamento & Trayectoria",
-    aboutTitle: "El prisma de la <em>visión integral</em>",
-    aboutQuote: "«La imagen como fenómeno físico, estructura matemática y lenguaje poético.»",
-    aboutBio1: "Ingeniero Civil Eléctrico y Magíster (Universidad de Chile). Mi práctica investiga la confluencia entre Deep Learning, simulación en tiempo real y captura óptica territorial.",
-    aboutBio2: "Research Engineer en el <em>Instituto Milenio iHEALTH</em> (reconstrucción 3D MRI autosupervisada), Co-fundador y Artista Técnico en <em>Austral Games</em> (Curilemu) y Director de I+D en <em>Cid-Lara Studio</em>.",
+    aboutTitle: "Ingeniería, Óptica & Territorio",
+    aboutQuote: "«La imagen como fenómeno físico, estructura matemática y documento territorial.»",
+    aboutBio1: "Ingeniero Civil Eléctrico y Magíster en Ciencias de la Ingeniería (Universidad de Chile). Mi práctica investiga la confluencia entre modelos generativos para reconstrucción de imágenes, arte técnico en motores de tiempo real y fotografía analógica y digital.",
+    aboutBio2: "Investigo métodos de Deep Image Prior para resonancia magnética 3D multicontraste en el Instituto Milenio iHEALTH, dirijo el desarrollo técnico en Austral Games (Curilemu) y desarrollo instrumentación óptica en Cid-Lara Studio.",
     stat1Val: "10+",
     stat1Lbl: "Años de Trayectoria",
     stat2Val: "Nature / ACS",
@@ -48,34 +48,34 @@ const translations = {
 
     // Section 2: Disciplines
     discMeta: "02 / Cuatro Vertientes",
-    discTitle: "Disciplinas de la <em>visión</em>",
-    discLead: "La imagen articulada desde cuatro frentes complementarios: el aprendizaje de máquinas, el arte técnico en tiempo real, la captura óptica y el desarrollo de sistemas.",
+    discTitle: "Líneas de Trabajo",
+    discLead: "Práctica articulada en cuatro áreas concretas: aprendizaje profundo en imagenología, arte técnico para videojuegos, documentación fotográfica y automatización de instrumentación.",
 
     disc1Num: "01 // INTELIGENCIA ARTIFICIAL",
     disc1Title: "AI Vision Researcher",
-    disc1Desc: "Investigación en arquitecturas neuronales bio-inspiradas (NAS), Deep Image Prior, reconstrucción de imágenes 3D y procesamiento computacional de patrones visuales complejos.",
+    disc1Desc: "Reconstrucción 3D MRI sin supervisión, arquitecturas neuronales bio-inspiradas (NAS) y Deep Image Prior para imágenes biomédicas y patrones visuales complejos.",
     
     disc2Num: "02 // ARTE TÉCNICO & MATEMÁTICA",
     disc2Title: "Technical Artist & VFX",
-    disc2Desc: "Diseño de sombreadores procedurales HLSL, sistemas de partículas Niagara en Unreal Engine 5, simulación física y dirección técnica para videojuegos narrativos como Curilemu.",
+    disc2Desc: "Sombreadores procedurales HLSL, sistemas de partículas Niagara en Unreal Engine 5, simulación física y dirección técnica para producciones interactivas como Curilemu.",
 
     disc3Num: "03 // FOTOGRAFÍA & TERRITORIO",
-    disc3Title: "Fotografía & Artes Mediales",
-    disc3Desc: "Documentación visual de alta resolución en zonas extremas de la Patagonia, Araucanía y los Andes. Exploración del espectro infrarrojo (IR), astrofotografía y película analógica de 35mm.",
+    disc3Title: "Fotografía & Óptica",
+    disc3Desc: "Documentación territorial en Dientes de Navarino (55°S), Torres del Paine, Serranías del Hornocal (4350m) y Araucanía Andina. Fotolibro monográfico en espectro infrarrojo (720nm) y película 35mm.",
 
     disc4Num: "04 // INGENIERÍA & SISTEMAS",
     disc4Title: "Developer & Director I+D",
-    disc4Desc: "Dirección de ingeniería en Cid-Lara Studio y NAR Labs. Automatización a escala nanométrica en sistemas láser de femtosegundos (MIRO) y docencia universitaria en sistemas digitales.",
+    disc4Desc: "Dirección de ingeniería en Cid-Lara Studio. Automatización a escala nanométrica para grabado láser de femtosegundos en cristales ópticos (MIRO) y docencia universitaria en sistemas digitales.",
 
     // Section 3: Research
     resMeta: "03 / Producción Científica",
-    resTitle: "Investigación en <em>Visión & Fotónica</em>",
-    resLead: "Aportes en reconstrucción de imágenes médicas, búsqueda bio-inspirada de redes neuronales y física de redes fotónicas.",
+    resTitle: "Investigación en Visión & Fotónica",
+    resLead: "Reconstrucción de imágenes médicas sin supervisión, búsqueda bio-inspirada de redes neuronales y física de redes fotónicas en guías de onda.",
     resSpotlightInst: "Instituto Milenio iHEALTH · U. de Chile",
     resSpotlightTitle: "Reconstrucción Autosupervisada de Resonancia Magnética 3D Multicontraste",
     resSpotlightP1: "Desarrollo de métodos eficientes basados en <strong>Deep Image Prior (DIP)</strong> para reconstruir volúmenes 3D de alta fidelidad sin requerir grandes conjuntos de entrenamiento supervisado.",
-    resSpotlightP2: "Reducción significativa del tiempo de adquisición y artefactos de movimiento mediante optimización estocástica y regularizaciones adaptativas.",
-    resPubsHeading: "Publicaciones en Revistas de Alto Impacto",
+    resSpotlightP2: "Reducción del tiempo de adquisición y supresión de artefactos de movimiento mediante optimización estocástica y regularizaciones de fase.",
+    resPubsHeading: "Publicaciones en Revistas con Comité Editorial",
     pub1Badge: "Nature · Sci Rep",
     pub1Title: "Strain-induced localization to delocalization transition on a Lieb photonic ribbon lattice",
     pub1Desc: "D. Román-Cortés, G. Fadic, C. Cid-Lara et al. · Scientific Reports (2021)",
@@ -84,10 +84,16 @@ const translations = {
     pub2Desc: "M. Mazanov, D. Román-Cortés, G. Cáceres-Aravena, C. Cid, M. A. Gorlach, R. A. Vicencio · Nano Letters (2024)",
     pubLinkText: "Ver Paper →",
 
+    // Section 3-B: p5.js Optical Lab
+    p5LabTitle: "Simulador de Red Fotónica Lieb",
+    p5LabLead: "Modelo interactivo de propagación y difracción óptica en una red de Lieb. Basado en la investigación publicada en Scientific Reports (Nature, 2021). Haz clic o arrastra para emitir pulsos de onda coherentes.",
+    p5CtrlWavelength: "Longitud de Onda (λ)",
+    p5CtrlStrain: "Deformación de Red (Strain δ)",
+
     // Section 4: Technical Art & Projects
     projMeta: "04 / Producción Técnica & Obras",
-    projTitle: "Efectos Matemáticos & <em>Sistemas</em>",
-    projLead: "Implementación de tecnologías visuales, shaders y dirección técnica en producciones interactivas.",
+    projTitle: "Efectos Matemáticos & Sistemas",
+    projLead: "Implementación de tecnologías visuales en tiempo real, sombreadores procedurales y dirección técnica.",
     proj1Role: "Videojuego · Unreal Engine 5 · Co-Fundador & Artista Técnico",
     proj1Title: "Curilemu — Mitología & Horror Austral",
     proj1Desc: "Aventura de acción y horror en tercera persona arraigada en el folklore de Chiloé y la Recta Provincia. Responsable de la arquitectura de Niagara VFX, sombreadores de niebla volumétrica, modelado procedural de bosques y dirección de producción técnica.",
@@ -150,10 +156,10 @@ const translations = {
     getCV: "Download CV",
 
     // Hero
-    heroBadge: "Computer Vision Researcher · Engineer · Visual Artist",
+    heroBadge: "Electrical Engineering · Computer Vision · Territorial Photography",
     titleFull: "CHRISTOFER CID LARA",
-    titleCompressed: "CCidLara",
-    heroStatement: "Investigating <em>vision</em> through light, deep learning, mathematical effects, and photography.",
+    titleCompressed: "[ CCidLara ]",
+    heroStatement: "Electrical engineering, physics of light, and territorial photography.",
     heroTagAI: "AI Research",
     heroTagPhoto: "Photography & Optics",
     heroTagTechArt: "Tech Art & Shaders",
@@ -163,48 +169,48 @@ const translations = {
     heroScroll: "Scroll",
 
     // Section 1: Vision / About
-    aboutMeta: "01 / Foundation & Background",
-    aboutTitle: "The prism of <em>integrated vision</em>",
-    aboutQuote: "“The image as physical phenomenon, mathematical structure, and poetic language.”",
-    aboutBio1: "Electrical Engineer and M.Sc. (Universidad de Chile). My practice investigates the intersection of Deep Learning, real-time simulation, and territorial optical capture.",
-    aboutBio2: "Research Engineer at <em>iHEALTH Millennium Institute</em> (self-supervised 3D MRI reconstruction), Co-founder & Tech Artist at <em>Austral Games</em> (Curilemu), and Director of R&D at <em>Cid-Lara Studio</em>.",
+    aboutMeta: "01 / Foundation & Practice",
+    aboutTitle: "Engineering, Optics & Territory",
+    aboutQuote: "“The image as physical phenomenon, mathematical structure, and territorial document.”",
+    aboutBio1: "Civil Electrical Engineer and M.Sc. in Engineering Sciences from Universidad de Chile. My practice investigates the intersection of generative image reconstruction, real-time technical art in game engines, and territorial photography.",
+    aboutBio2: "Researching Deep Image Prior methods for 3D multi-contrast MRI at iHEALTH Millennium Institute, leading technical direction at Austral Games (Curilemu), and developing optical automation at Cid-Lara Studio.",
     stat1Val: "10+",
-    stat1Lbl: "Years of Experience",
+    stat1Lbl: "Years of Practice",
     stat2Val: "Nature / ACS",
-    stat2Lbl: "Scientific Publications",
+    stat2Lbl: "Peer-Reviewed Papers",
     stat3Val: "4000+",
     stat3Lbl: "Archive Frames",
 
     // Section 2: Disciplines
-    discMeta: "02 / Four Facets",
-    discTitle: "Disciplines of <em>Vision</em>",
-    discLead: "The visual medium articulated across four complementary fronts: machine learning, real-time technical art, optical capture, and computational systems.",
+    discMeta: "02 / Areas of Practice",
+    discTitle: "Lines of Work",
+    discLead: "Practice articulated across four concrete domains: deep learning in medical imaging, technical art for games, photographic documentation, and instrumentation automation.",
 
     disc1Num: "01 // ARTIFICIAL INTELLIGENCE",
     disc1Title: "AI Vision Researcher",
-    disc1Desc: "Research into bio-inspired Neural Architecture Search (NAS), Deep Image Prior, 3D multi-contrast image reconstruction, and computational analysis of complex visual patterns.",
+    disc1Desc: "Unsupervised 3D MRI reconstruction, bio-inspired Neural Architecture Search (NAS), and Deep Image Prior for biomedical imaging and complex optical patterns.",
     
     disc2Num: "02 // TECHNICAL ART & MATHEMATICS",
     disc2Title: "Technical Artist & VFX",
-    disc2Desc: "Design of procedural HLSL shaders, Niagara particle dynamics in Unreal Engine 5, volumetric physics, and technical direction for narrative titles such as Curilemu.",
+    disc2Desc: "Procedural HLSL shaders, Niagara particle dynamics in Unreal Engine 5, physical simulation, and technical direction for interactive productions such as Curilemu.",
 
     disc3Num: "03 // PHOTOGRAPHY & TERRITORY",
-    disc3Title: "Fine Art Photography",
-    disc3Desc: "High-resolution visual documentation in remote Patagonia, Araucanía, and the Andes. Specialized in infrared spectrum (IR), astrophotography, and 35mm analogue film.",
+    disc3Title: "Territorial Photography",
+    disc3Desc: "Territorial documentation across Dientes de Navarino (55°S), Torres del Paine, Serranías del Hornocal (4350m), and the Andean Araucanía. Monograph in 720nm infrared and 35mm film.",
 
     disc4Num: "04 // SYSTEMS & ENGINEERING",
     disc4Title: "Developer & Director of R&D",
-    disc4Desc: "Engineering direction at Cid-Lara Studio and NAR Labs. Nanometric scale automation for femtosecond laser photonics (MIRO) and university lectures in digital systems.",
+    disc4Desc: "Engineering direction at Cid-Lara Studio. Nanometer-scale XYZ stage automation for femtosecond laser micromachining in optical crystals (MIRO) and university digital systems teaching.",
 
     // Section 3: Research
-    resMeta: "03 / Scientific Production",
-    resTitle: "Research in <em>Vision & Photonics</em>",
-    resLead: "Contributions in medical image reconstruction, bio-inspired neural networks, and photonic lattice physics.",
+    resMeta: "03 / Scientific Research",
+    resTitle: "Research in Vision & Photonics",
+    resLead: "Unsupervised medical image reconstruction, bio-inspired neural networks, and photonic lattice physics in optical waveguides.",
     resSpotlightInst: "iHEALTH Millennium Institute · U. de Chile",
-    resSpotlightTitle: "Self-Supervised 3D Multi-Contrast MRI Reconstruction",
-    resSpotlightP1: "Development of data-efficient methods based on <strong>Deep Image Prior (DIP)</strong> to reconstruct high-fidelity 3D medical volumes without requiring large supervised training databases.",
-    resSpotlightP2: "Significant reduction of acquisition time and motion artifacts via stochastic optimization and adaptive regularizers.",
-    resPubsHeading: "Publications in High-Impact Journals",
+    resSpotlightTitle: "Unsupervised 3D Multi-Contrast MRI Reconstruction",
+    resSpotlightP1: "Data-efficient methods based on <strong>Deep Image Prior (DIP)</strong> to reconstruct high-fidelity 3D medical volumes without requiring large supervised training databases.",
+    resSpotlightP2: "Acquisition time acceleration and motion artifact mitigation via stochastic optimization and phase-regularized loss functions.",
+    resPubsHeading: "Peer-Reviewed Journal Publications",
     pub1Badge: "Nature · Sci Rep",
     pub1Title: "Strain-induced localization to delocalization transition on a Lieb photonic ribbon lattice",
     pub1Desc: "D. Román-Cortés, G. Fadic, C. Cid-Lara et al. · Scientific Reports (2021)",
@@ -213,10 +219,16 @@ const translations = {
     pub2Desc: "M. Mazanov, D. Román-Cortés, G. Cáceres-Aravena, C. Cid, M. A. Gorlach, R. A. Vicencio · Nano Letters (2024)",
     pubLinkText: "View Paper →",
 
+    // Section 3-B: p5.js Optical Lab
+    p5LabTitle: "Lieb Photonic Lattice Simulator",
+    p5LabLead: "Interactive model of optical wave propagation and diffraction in a Lieb lattice. Based on research published in Scientific Reports (Nature, 2021). Click or drag to pulse coherent wavefronts.",
+    p5CtrlWavelength: "Wavelength (λ)",
+    p5CtrlStrain: "Lattice Strain (δ)",
+
     // Section 4: Technical Art & Projects
     projMeta: "04 / Technical Production & Works",
-    projTitle: "Mathematical Effects & <em>Systems</em>",
-    projLead: "Implementation of real-time visual technologies, shaders, and technical direction in interactive productions.",
+    projTitle: "Mathematical Effects & Systems",
+    projLead: "Real-time visual technologies, procedural shaders, and technical direction in interactive productions.",
     proj1Role: "Videogame · Unreal Engine 5 · Co-Founder & Tech Artist",
     proj1Title: "Curilemu — Southern Mythology & Action RPG",
     proj1Desc: "Third-person dark fantasy action RPG rooted in the folklore and myths of Chiloé. Responsible for Niagara VFX architecture, volumetric fog shaders, procedural forest generation, and executive production pipelines.",
