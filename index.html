@@ -194,15 +194,15 @@
             </div>
 
             <blockquote class="manifesto-quote" data-i18n="aboutQuote">
-              «Desde el fotón capturado en un sensor hasta los pesos de una red neuronal profunda: la imagen es a la vez fenómeno físico, estructura matemática y lenguaje poético.»
+              «La imagen como fenómeno físico, estructura matemática y lenguaje poético.»
             </blockquote>
 
             <div class="about-bio-body">
               <p data-i18n="aboutBio1">
-                Ingeniero Civil Eléctrico y Magíster en Ciencias de la Ingeniería (con mención en Deep Learning y visión computacional) de la <strong>Universidad de Chile</strong>. Mi trabajo converge entre la investigación rigurosa en modelos generativos, el arte técnico en motores de tiempo real y la fotografía territorial.
+                Ingeniero Civil Eléctrico y Magíster (Universidad de Chile). Mi práctica investiga la confluencia entre Deep Learning, simulación en tiempo real y captura óptica territorial.
               </p>
               <p data-i18n="aboutBio2">
-                Me desempeño como <strong>Research Engineer</strong> en el <em>Instituto Milenio iHEALTH</em>, desarrollando algoritmos autosupervisados para reconstrucción de resonancia magnética 3D multicontraste. En paralelo, soy <strong>Technical Artist y Co-fundador</strong> en <em>Austral Games</em> y <strong>Director de I+D</strong> en <em>Cid-Lara Studio / NAR Labs</em>, además de docente en la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Chile.
+                Research Engineer en el <em>Instituto Milenio iHEALTH</em> (reconstrucción 3D MRI autosupervisada), Co-fundador y Artista Técnico en <em>Austral Games</em> (Curilemu) y Director de I+D en <em>Cid-Lara Studio</em>.
               </p>
             </div>
 
@@ -537,14 +537,46 @@
           </p>
         </div>
 
-        <!-- Filter Controls -->
+        <!-- Featured Photobook Showcase: Paisajes Inexistentes -->
+        <div class="photobook-featured-card reveal">
+          <div class="photobook-visual">
+            <img src="images/portfolio/photobook_01.webp" alt="Fotolibro Paisajes Inexistentes — Christofer Cid Lara" class="photobook-spread-img" loading="lazy">
+            <div class="photobook-badge-spec">720nm IR · Monografía</div>
+          </div>
+          <div class="photobook-info">
+            <span class="photobook-meta">Fotolibro Publicado · Edición Especial</span>
+            <h3 class="photobook-title">Paisajes Inexistentes</h3>
+            <p class="photobook-subtitle">Reflectancia Infrarroja · Magallanes, Navarino &amp; Paine</p>
+            <p class="photobook-synopsis" data-i18n="photobookSynopsis">
+              Monografía visual dedicada a la luz invisible y la memoria geológica en el confín austral. Registro multiespectral de estepas, bosques muertos y glaciares sub-antárticos.
+            </p>
+            <div class="photobook-actions">
+              <a href="pdf/Paisajes_Inexistentes.pdf" target="_blank" download class="btn btn-primary" style="padding:0.6rem 1.3rem; font-size:0.78rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Descargar Fotolibro (PDF 2.9 MB)
+              </a>
+              <button type="button" class="btn btn-secondary" onclick="triggerCategoryFilter('photobook')" style="padding:0.6rem 1.1rem; font-size:0.78rem;">
+                Ver Muestras IR →
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter Controls (7 Travels & Categories) -->
         <div class="gallery-controls reveal">
           <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Todas</button>
-          <button type="button" class="filter-btn" data-filter="patagonia" data-i18n="filterPatagonia">Magallanes &amp; Patagonia</button>
-          <button type="button" class="filter-btn" data-filter="navarino" data-i18n="filterNavarino">Dientes de Navarino</button>
-          <button type="button" class="filter-btn" data-filter="araucania" data-i18n="filterAraucania">Araucanía Andina</button>
-          <button type="button" class="filter-btn" data-filter="argentina" data-i18n="filterArgentina">Noroeste Argentino</button>
-          <button type="button" class="filter-btn" data-filter="infrared" data-i18n="filterInfrared">Infrarrojo (IR)</button>
+          <button type="button" class="filter-btn" data-filter="photobook" data-i18n="filterPhotobook">Fotolibro IR</button>
+          <button type="button" class="filter-btn" data-filter="navarino" data-i18n="filterNavarino">Navarino</button>
+          <button type="button" class="filter-btn" data-filter="torres-del-paine" data-i18n="filterPaine">Torres del Paine</button>
+          <button type="button" class="filter-btn" data-filter="sendero-condor" data-i18n="filterCondor">Sendero Cóndor</button>
+          <button type="button" class="filter-btn" data-filter="tilcara-jujuy" data-i18n="filterTilcara">Tilcara / Jujuy</button>
+          <button type="button" class="filter-btn" data-filter="araucania" data-i18n="filterAraucania">Araucanía</button>
+          <button type="button" class="filter-btn" data-filter="portraits" data-i18n="filterPortraits">Retratos</button>
+          <button type="button" class="filter-btn" data-filter="events" data-i18n="filterEvents">Eventos</button>
         </div>
 
         <!-- Masonry Photo Grid -->
@@ -772,6 +804,8 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="js/vendor/gsap.min.js"></script>
+  <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/effects.js"></script>
 

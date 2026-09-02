@@ -36,9 +36,9 @@ const translations = {
     // Section 1: Vision / About
     aboutMeta: "01 / Fundamento & Trayectoria",
     aboutTitle: "El prisma de la <em>visión integral</em>",
-    aboutQuote: "«Desde el fotón capturado en un sensor hasta los pesos de una red neuronal profunda: la imagen es a la vez fenómeno físico, estructura matemática y lenguaje poético.»",
-    aboutBio1: "Ingeniero Civil Eléctrico y Magíster en Ciencias de la Ingeniería (con mención en Deep Learning y visión computacional) de la <strong>Universidad de Chile</strong>. Mi trabajo converge entre la investigación rigurosa en modelos generativos, el arte técnico en motores de tiempo real y la fotografía territorial.",
-    aboutBio2: "Me desempeño como <strong>Research Engineer</strong> en el <em>Instituto Milenio iHEALTH</em>, desarrollando algoritmos autosupervisados para reconstrucción de resonancia magnética 3D multicontraste. En paralelo, soy <strong>Technical Artist y Co-fundador</strong> en <em>Austral Games</em> y <strong>Director de I+D</strong> en <em>Cid-Lara Studio / NAR Labs</em>, además de docente en la Facultad de Ciencias Físicas y Matemáticas de la Universidad de Chile.",
+    aboutQuote: "«La imagen como fenómeno físico, estructura matemática y lenguaje poético.»",
+    aboutBio1: "Ingeniero Civil Eléctrico y Magíster (Universidad de Chile). Mi práctica investiga la confluencia entre Deep Learning, simulación en tiempo real y captura óptica territorial.",
+    aboutBio2: "Research Engineer en el <em>Instituto Milenio iHEALTH</em> (reconstrucción 3D MRI autosupervisada), Co-fundador y Artista Técnico en <em>Austral Games</em> (Curilemu) y Director de I+D en <em>Cid-Lara Studio</em>.",
     stat1Val: "10+",
     stat1Lbl: "Años de Trayectoria",
     stat2Val: "Nature / ACS",
@@ -107,12 +107,15 @@ const translations = {
     photoTitle: "Colección <em>Fotográfica</em>",
     photoLead: "Un registro visual del territorio austral, la geología andina, el espectro infrarrojo y la textura de la película analógica.",
     filterAll: "Todas",
-    filterPatagonia: "Magallanes & Patagonia",
-    filterNavarino: "Dientes de Navarino",
-    filterAraucania: "Araucanía Andina",
-    filterArgentina: "Noroeste Argentino",
-    filterInfrared: "Infrarrojo (IR)",
-    filterAnalog: "Analógicas 35mm",
+    filterPhotobook: "Fotolibro IR",
+    filterNavarino: "Navarino",
+    filterPaine: "Torres del Paine",
+    filterCondor: "Sendero Cóndor",
+    filterTilcara: "Tilcara / Jujuy",
+    filterAraucania: "Araucanía",
+    filterPortraits: "Retratos",
+    filterEvents: "Eventos",
+    photobookSynopsis: "Monografía visual dedicada a la luz invisible y la memoria geológica en el confín austral. Registro multiespectral de estepas, bosques muertos y glaciares sub-antárticos.",
     viewFullArchive: "Abrir Archivo Completo en Alta Resolución →",
 
     // Section 6: Contact
@@ -162,9 +165,9 @@ const translations = {
     // Section 1: Vision / About
     aboutMeta: "01 / Foundation & Background",
     aboutTitle: "The prism of <em>integrated vision</em>",
-    aboutQuote: "“From a photon captured on an image sensor to the weights of a deep neural network: the image is simultaneously physical phenomenon, mathematical structure, and poetic language.”",
-    aboutBio1: "Electrical Engineer and M.Sc. in Engineering Sciences (with specialization in Deep Learning and computer vision) from <strong>Universidad de Chile</strong>. My work converges rigorous research in generative models, real-time technical art in game engines, and territorial landscape photography.",
-    aboutBio2: "I serve as <strong>Research Engineer</strong> at the <em>iHEALTH Millennium Institute</em>, developing self-supervised algorithms for 3D multi-contrast magnetic resonance imaging reconstruction. In parallel, I am <strong>Technical Artist & Co-founder</strong> at <em>Austral Games</em> and <strong>Director of R&D</strong> at <em>Cid-Lara Studio / NAR Labs</em>, as well as an instructor at Universidad de Chile's Faculty of Physical and Mathematical Sciences.",
+    aboutQuote: "“The image as physical phenomenon, mathematical structure, and poetic language.”",
+    aboutBio1: "Electrical Engineer and M.Sc. (Universidad de Chile). My practice investigates the intersection of Deep Learning, real-time simulation, and territorial optical capture.",
+    aboutBio2: "Research Engineer at <em>iHEALTH Millennium Institute</em> (self-supervised 3D MRI reconstruction), Co-founder & Tech Artist at <em>Austral Games</em> (Curilemu), and Director of R&D at <em>Cid-Lara Studio</em>.",
     stat1Val: "10+",
     stat1Lbl: "Years of Experience",
     stat2Val: "Nature / ACS",
@@ -233,12 +236,15 @@ const translations = {
     photoTitle: "Curated <em>Portfolio</em>",
     photoLead: "A visual archive of sub-antarctic territories, Andean geology, infrared wavelengths, and film emulsion grain.",
     filterAll: "All",
-    filterPatagonia: "Magallanes & Patagonia",
-    filterNavarino: "Navarino Circuit",
-    filterAraucania: "Andean Araucanía",
-    filterArgentina: "Northwest Argentina",
-    filterInfrared: "Infrared (IR)",
-    filterAnalog: "35mm Analogue",
+    filterPhotobook: "Photobook IR",
+    filterNavarino: "Navarino",
+    filterPaine: "Torres del Paine",
+    filterCondor: "Sendero Cóndor",
+    filterTilcara: "Tilcara / Jujuy",
+    filterAraucania: "Araucanía",
+    filterPortraits: "Portraits",
+    filterEvents: "Events",
+    photobookSynopsis: "Visual monograph exploring invisible wavelengths and geological memory in southern Patagonia. Multispectral capture of steppes, dead forests, and sub-antarctic glaciers.",
     viewFullArchive: "Open Complete High-Res Archive →",
 
     // Section 6: Contact
@@ -410,100 +416,452 @@ function initVisionCanvas() {
 // =============================================================================
 const curatedGalleryItems = [
   {
-    id: "patagonia-01",
-    cat: "patagonia",
-    title: "Torres del Paine & Cuernos",
-    series: "Magallanes & Patagonia",
-    thumb: "images/portfolio/patagonia_01_thumb.webp",
-    full: "images/portfolio/patagonia_01.webp"
+    "id": "photo-1",
+    "cat": "photobook",
+    "title": "Estepa Infrarroja",
+    "series": "Fotolibro IR · 720nm",
+    "thumb": "images/portfolio/photobook_01_thumb.webp",
+    "full": "images/portfolio/photobook_01.webp"
   },
   {
-    id: "navarino-01",
-    cat: "navarino",
-    title: "Paso de los Dientes",
-    series: "Dientes de Navarino 55°S",
-    thumb: "images/portfolio/navarino_01_thumb.webp",
-    full: "images/portfolio/navarino_01.webp"
+    "id": "photo-2",
+    "cat": "photobook",
+    "title": "Reflectancia Clorofilica",
+    "series": "Fotolibro IR · 720nm",
+    "thumb": "images/portfolio/photobook_02_thumb.webp",
+    "full": "images/portfolio/photobook_02.webp"
   },
   {
-    id: "araucania-01",
-    cat: "araucania",
-    title: "Bosque de Araucarias & Volcán",
-    series: "Araucanía Andina",
-    thumb: "images/portfolio/araucania_01_thumb.webp",
-    full: "images/portfolio/araucania_01.webp"
+    "id": "photo-3",
+    "cat": "photobook",
+    "title": "Laguna Espectral",
+    "series": "Fotolibro IR · 720nm",
+    "thumb": "images/portfolio/photobook_03_thumb.webp",
+    "full": "images/portfolio/photobook_03.webp"
   },
   {
-    id: "argentina-01",
-    cat: "argentina",
-    title: "Serranías del Hornocal",
-    series: "Noroeste Argentino & Puna",
-    thumb: "images/portfolio/argentina_01_thumb.webp",
-    full: "images/portfolio/argentina_01.webp"
+    "id": "photo-4",
+    "cat": "photobook",
+    "title": "Cromatica Multiespectral",
+    "series": "Fotolibro IR · 720nm",
+    "thumb": "images/portfolio/photobook_04_thumb.webp",
+    "full": "images/portfolio/photobook_04.webp"
   },
   {
-    id: "infrared-01",
-    cat: "infrared",
-    title: "Fotolibro IR — Espectro Infrarrojo",
-    series: "Infrared Optical Studies",
-    thumb: "images/portfolio/infrared_01_thumb.webp",
-    full: "images/portfolio/infrared_01.webp"
+    "id": "photo-5",
+    "cat": "photobook",
+    "title": "Bosque Fantasma",
+    "series": "Fotolibro IR · 720nm",
+    "thumb": "images/portfolio/photobook_05_thumb.webp",
+    "full": "images/portfolio/photobook_05.webp"
   },
   {
-    id: "patagonia-02",
-    cat: "patagonia",
-    title: "Glaciar Grey & Hielo Milenario",
-    series: "Magallanes & Patagonia",
-    thumb: "images/portfolio/patagonia_02_thumb.webp",
-    full: "images/portfolio/patagonia_02.webp"
+    "id": "photo-6",
+    "cat": "photobook",
+    "title": "Horizonte de Hielo IR",
+    "series": "Fotolibro IR · 720nm",
+    "thumb": "images/portfolio/photobook_06_thumb.webp",
+    "full": "images/portfolio/photobook_06.webp"
   },
   {
-    id: "navarino-02",
-    cat: "navarino",
-    title: "Laguna del Salto & Cordón Austral",
-    series: "Dientes de Navarino 55°S",
-    thumb: "images/portfolio/navarino_02_thumb.webp",
-    full: "images/portfolio/navarino_02.webp"
+    "id": "photo-7",
+    "cat": "navarino",
+    "title": "Canal Beagle y Confin Austral",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_01_thumb.webp",
+    "full": "images/portfolio/navarino_01.webp"
   },
   {
-    id: "araucania-02",
-    cat: "araucania",
-    title: "Textura Geológica & Niebla",
-    series: "Araucanía Andina",
-    thumb: "images/portfolio/araucania_02_thumb.webp",
-    full: "images/portfolio/araucania_02.webp"
+    "id": "photo-8",
+    "cat": "navarino",
+    "title": "Laguna del Salto",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_02_thumb.webp",
+    "full": "images/portfolio/navarino_02.webp"
   },
   {
-    id: "argentina-02",
-    cat: "argentina",
-    title: "Erosión Eólica & Altiplano",
-    series: "Noroeste Argentino & Puna",
-    thumb: "images/portfolio/argentina_02_thumb.webp",
-    full: "images/portfolio/argentina_02.webp"
+    "id": "photo-9",
+    "cat": "navarino",
+    "title": "Macizo de los Dientes",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_03_thumb.webp",
+    "full": "images/portfolio/navarino_03.webp"
   },
   {
-    id: "patagonia-03",
-    cat: "patagonia",
-    title: "Fiordos Patagónicos & Luz Rasante",
-    series: "Magallanes & Patagonia",
-    thumb: "images/portfolio/patagonia_03_thumb.webp",
-    full: "images/portfolio/patagonia_03.webp"
+    "id": "photo-10",
+    "cat": "navarino",
+    "title": "Valle de Turba y Ventisquero",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_04_thumb.webp",
+    "full": "images/portfolio/navarino_04.webp"
   },
   {
-    id: "infrared-02",
-    cat: "infrared",
-    title: "Reflectancia de Clorofila (720nm)",
-    series: "Infrared Optical Studies",
-    thumb: "images/portfolio/infrared_02_thumb.webp",
-    full: "images/portfolio/infrared_02.webp"
+    "id": "photo-11",
+    "cat": "navarino",
+    "title": "Laguna de los Dientes",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_05_thumb.webp",
+    "full": "images/portfolio/navarino_05.webp"
   },
   {
-    id: "navarino-03",
-    cat: "navarino",
-    title: "Canal Beagle desde la Cumbre",
-    series: "Dientes de Navarino 55°S",
-    thumb: "images/portfolio/navarino_03_thumb.webp",
-    full: "images/portfolio/navarino_03.webp"
+    "id": "photo-12",
+    "cat": "navarino",
+    "title": "Paso de los Dientes",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_06_thumb.webp",
+    "full": "images/portfolio/navarino_06.webp"
+  },
+  {
+    "id": "photo-13",
+    "cat": "navarino",
+    "title": "Paso Ventarron",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_07_thumb.webp",
+    "full": "images/portfolio/navarino_07.webp"
+  },
+  {
+    "id": "photo-14",
+    "cat": "navarino",
+    "title": "Descenso a Puerto Williams",
+    "series": "Dientes de Navarino 55°S",
+    "thumb": "images/portfolio/navarino_08_thumb.webp",
+    "full": "images/portfolio/navarino_08.webp"
+  },
+  {
+    "id": "photo-15",
+    "cat": "torres-del-paine",
+    "title": "Cuernos del Paine al Alba",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_01_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_01.webp"
+  },
+  {
+    "id": "photo-16",
+    "cat": "torres-del-paine",
+    "title": "Lago Nordenskjold",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_02_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_02.webp"
+  },
+  {
+    "id": "photo-17",
+    "cat": "torres-del-paine",
+    "title": "Valle del Frances",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_03_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_03.webp"
+  },
+  {
+    "id": "photo-18",
+    "cat": "torres-del-paine",
+    "title": "Glaciar Grey y Tempanos",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_04_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_04.webp"
+  },
+  {
+    "id": "photo-19",
+    "cat": "torres-del-paine",
+    "title": "Torres del Paine",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_05_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_05.webp"
+  },
+  {
+    "id": "photo-20",
+    "cat": "torres-del-paine",
+    "title": "Lago Pehoe y Viento",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_06_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_06.webp"
+  },
+  {
+    "id": "photo-21",
+    "cat": "torres-del-paine",
+    "title": "Laguna Amarga",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_07_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_07.webp"
+  },
+  {
+    "id": "photo-22",
+    "cat": "torres-del-paine",
+    "title": "Rio Paine",
+    "series": "Parque Nacional Torres del Paine",
+    "thumb": "images/portfolio/torres_del_paine_08_thumb.webp",
+    "full": "images/portfolio/torres_del_paine_08.webp"
+  },
+  {
+    "id": "photo-23",
+    "cat": "sendero-condor",
+    "title": "Mirador Condor — Panoramica Pehoe",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_01_thumb.webp",
+    "full": "images/portfolio/sendero_condor_01.webp"
+  },
+  {
+    "id": "photo-24",
+    "cat": "sendero-condor",
+    "title": "Relieve del Macizo",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_02_thumb.webp",
+    "full": "images/portfolio/sendero_condor_02.webp"
+  },
+  {
+    "id": "photo-25",
+    "cat": "sendero-condor",
+    "title": "Vientos del Condor",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_03_thumb.webp",
+    "full": "images/portfolio/sendero_condor_03.webp"
+  },
+  {
+    "id": "photo-26",
+    "cat": "sendero-condor",
+    "title": "Cuernos desde las Alturas",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_04_thumb.webp",
+    "full": "images/portfolio/sendero_condor_04.webp"
+  },
+  {
+    "id": "photo-27",
+    "cat": "sendero-condor",
+    "title": "Horizonte Turquesa",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_05_thumb.webp",
+    "full": "images/portfolio/sendero_condor_05.webp"
+  },
+  {
+    "id": "photo-28",
+    "cat": "sendero-condor",
+    "title": "Estepa y Contrafuerte",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_06_thumb.webp",
+    "full": "images/portfolio/sendero_condor_06.webp"
+  },
+  {
+    "id": "photo-29",
+    "cat": "sendero-condor",
+    "title": "Luz del Ocaso sobre Cuernos",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_07_thumb.webp",
+    "full": "images/portfolio/sendero_condor_07.webp"
+  },
+  {
+    "id": "photo-30",
+    "cat": "sendero-condor",
+    "title": "Atmosfera Patagonica",
+    "series": "Mirador Condor · Pehoe",
+    "thumb": "images/portfolio/sendero_condor_08_thumb.webp",
+    "full": "images/portfolio/sendero_condor_08.webp"
+  },
+  {
+    "id": "photo-31",
+    "cat": "tilcara-jujuy",
+    "title": "Quebrada de Humahuaca",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_01_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_01.webp"
+  },
+  {
+    "id": "photo-32",
+    "cat": "tilcara-jujuy",
+    "title": "Pucara de Tilcara",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_02_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_02.webp"
+  },
+  {
+    "id": "photo-33",
+    "cat": "tilcara-jujuy",
+    "title": "Serranias del Hornocal — 14 Colores",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_03_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_03.webp"
+  },
+  {
+    "id": "photo-34",
+    "cat": "tilcara-jujuy",
+    "title": "Estructura Geologica Hornocal",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_04_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_04.webp"
+  },
+  {
+    "id": "photo-35",
+    "cat": "tilcara-jujuy",
+    "title": "Garganta del Diablo — Tilcara",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_05_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_05.webp"
+  },
+  {
+    "id": "photo-36",
+    "cat": "tilcara-jujuy",
+    "title": "Salinas Grandes y Luz",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_06_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_06.webp"
+  },
+  {
+    "id": "photo-37",
+    "cat": "tilcara-jujuy",
+    "title": "Purmamarca y Siete Colores",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_07_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_07.webp"
+  },
+  {
+    "id": "photo-38",
+    "cat": "tilcara-jujuy",
+    "title": "Atardecer en la Quebrada",
+    "series": "Noroeste Argentino y Puna",
+    "thumb": "images/portfolio/tilcara_jujuy_08_thumb.webp",
+    "full": "images/portfolio/tilcara_jujuy_08.webp"
+  },
+  {
+    "id": "photo-39",
+    "cat": "araucania",
+    "title": "Bosque de Araucarias y Nieve",
+    "series": "Bosques Templados y Volcanes",
+    "thumb": "images/portfolio/araucania_01_thumb.webp",
+    "full": "images/portfolio/araucania_01.webp"
+  },
+  {
+    "id": "photo-40",
+    "cat": "araucania",
+    "title": "Laguna Arcoiris",
+    "series": "Bosques Templados y Volcanes",
+    "thumb": "images/portfolio/araucania_02_thumb.webp",
+    "full": "images/portfolio/araucania_02.webp"
+  },
+  {
+    "id": "photo-41",
+    "cat": "araucania",
+    "title": "Araucaria Milenaria",
+    "series": "Bosques Templados y Volcanes",
+    "thumb": "images/portfolio/araucania_03_thumb.webp",
+    "full": "images/portfolio/araucania_03.webp"
+  },
+  {
+    "id": "photo-42",
+    "cat": "araucania",
+    "title": "Volcan Lonquimay y Escoria",
+    "series": "Bosques Templados y Volcanes",
+    "thumb": "images/portfolio/araucania_04_thumb.webp",
+    "full": "images/portfolio/araucania_04.webp"
+  },
+  {
+    "id": "photo-43",
+    "cat": "araucania",
+    "title": "Bosque Siempreverde Andino",
+    "series": "Bosques Templados y Volcanes",
+    "thumb": "images/portfolio/araucania_05_thumb.webp",
+    "full": "images/portfolio/araucania_05.webp"
+  },
+  {
+    "id": "photo-44",
+    "cat": "araucania",
+    "title": "Lava y Nieve",
+    "series": "Bosques Templados y Volcanes",
+    "thumb": "images/portfolio/araucania_06_thumb.webp",
+    "full": "images/portfolio/araucania_06.webp"
+  },
+  {
+    "id": "photo-45",
+    "cat": "portraits",
+    "title": "Retrato Austral I",
+    "series": "Retratos Autorales y Luz Territorial",
+    "thumb": "images/portfolio/portraits_01_thumb.webp",
+    "full": "images/portfolio/portraits_01.webp"
+  },
+  {
+    "id": "photo-46",
+    "cat": "portraits",
+    "title": "Mirada y Territorio",
+    "series": "Retratos Autorales y Luz Territorial",
+    "thumb": "images/portfolio/portraits_02_thumb.webp",
+    "full": "images/portfolio/portraits_02.webp"
+  },
+  {
+    "id": "photo-47",
+    "cat": "portraits",
+    "title": "Retrato Austral II",
+    "series": "Retratos Autorales y Luz Territorial",
+    "thumb": "images/portfolio/portraits_03_thumb.webp",
+    "full": "images/portfolio/portraits_03.webp"
+  },
+  {
+    "id": "photo-48",
+    "cat": "portraits",
+    "title": "Gesto y Presencia",
+    "series": "Retratos Autorales y Luz Territorial",
+    "thumb": "images/portfolio/portraits_04_thumb.webp",
+    "full": "images/portfolio/portraits_04.webp"
+  },
+  {
+    "id": "photo-49",
+    "cat": "portraits",
+    "title": "Luz de Estudio y Optica 50mm",
+    "series": "Retratos Autorales y Luz Territorial",
+    "thumb": "images/portfolio/portraits_05_thumb.webp",
+    "full": "images/portfolio/portraits_05.webp"
+  },
+  {
+    "id": "photo-50",
+    "cat": "portraits",
+    "title": "Retrato en Sombras Suaves",
+    "series": "Retratos Autorales y Luz Territorial",
+    "thumb": "images/portfolio/portraits_06_thumb.webp",
+    "full": "images/portfolio/portraits_06.webp"
+  },
+  {
+    "id": "photo-51",
+    "cat": "events",
+    "title": "Preparativos y Detalle",
+    "series": "Fotografia Documental de Bodas y Eventos",
+    "thumb": "images/portfolio/events_01_thumb.webp",
+    "full": "images/portfolio/events_01.webp"
+  },
+  {
+    "id": "photo-52",
+    "cat": "events",
+    "title": "Emocion y Rito",
+    "series": "Fotografia Documental de Bodas y Eventos",
+    "thumb": "images/portfolio/events_02_thumb.webp",
+    "full": "images/portfolio/events_02.webp"
+  },
+  {
+    "id": "photo-53",
+    "cat": "events",
+    "title": "Llegada de la Novia",
+    "series": "Fotografia Documental de Bodas y Eventos",
+    "thumb": "images/portfolio/events_03_thumb.webp",
+    "full": "images/portfolio/events_03.webp"
+  },
+  {
+    "id": "photo-54",
+    "cat": "events",
+    "title": "Votos y Miradas",
+    "series": "Fotografia Documental de Bodas y Eventos",
+    "thumb": "images/portfolio/events_04_thumb.webp",
+    "full": "images/portfolio/events_04.webp"
+  },
+  {
+    "id": "photo-55",
+    "cat": "events",
+    "title": "Celebracion y Brindis",
+    "series": "Fotografia Documental de Bodas y Eventos",
+    "thumb": "images/portfolio/events_05_thumb.webp",
+    "full": "images/portfolio/events_05.webp"
+  },
+  {
+    "id": "photo-56",
+    "cat": "events",
+    "title": "Fiesta y Luz de Escenario",
+    "series": "Fotografia Documental de Bodas y Eventos",
+    "thumb": "images/portfolio/events_06_thumb.webp",
+    "full": "images/portfolio/events_06.webp"
   }
 ];
 
@@ -690,3 +1048,10 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollEffects();
   initMobileMenu();
 });
+window.triggerCategoryFilter = function(cat) {
+  const btn = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+  if (btn) {
+    btn.click();
+    btn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};

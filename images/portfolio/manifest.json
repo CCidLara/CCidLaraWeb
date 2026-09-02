@@ -1,362 +1,506 @@
 [
   {
     "id": "photo-1",
-    "file": "images/portfolio/araucania_01.webp",
-    "thumb": "images/portfolio/araucania_01_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
+    "file": "images/portfolio/photobook_01.webp",
+    "thumb": "images/portfolio/photobook_01_thumb.webp",
+    "category": "photobook",
+    "title": "Estepa Infrarroja",
+    "description": "Fotolibro IR · Espectro 720nm",
+    "series": "Fotolibro IR · 720nm"
   },
   {
     "id": "photo-2",
-    "file": "images/portfolio/araucania_02.webp",
-    "thumb": "images/portfolio/araucania_02_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
+    "file": "images/portfolio/photobook_02.webp",
+    "thumb": "images/portfolio/photobook_02_thumb.webp",
+    "category": "photobook",
+    "title": "Reflectancia Clorofilica",
+    "description": "Fotolibro IR · Espectro 720nm",
+    "series": "Fotolibro IR · 720nm"
   },
   {
     "id": "photo-3",
-    "file": "images/portfolio/araucania_03.webp",
-    "thumb": "images/portfolio/araucania_03_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
+    "file": "images/portfolio/photobook_03.webp",
+    "thumb": "images/portfolio/photobook_03_thumb.webp",
+    "category": "photobook",
+    "title": "Laguna Espectral",
+    "description": "Fotolibro IR · Espectro 720nm",
+    "series": "Fotolibro IR · 720nm"
   },
   {
     "id": "photo-4",
-    "file": "images/portfolio/araucania_04.webp",
-    "thumb": "images/portfolio/araucania_04_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
+    "file": "images/portfolio/photobook_04.webp",
+    "thumb": "images/portfolio/photobook_04_thumb.webp",
+    "category": "photobook",
+    "title": "Cromatica Multiespectral",
+    "description": "Fotolibro IR · Sintesis R/RG/RGB",
+    "series": "Fotolibro IR · 720nm"
   },
   {
     "id": "photo-5",
-    "file": "images/portfolio/araucania_05.webp",
-    "thumb": "images/portfolio/araucania_05_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
+    "file": "images/portfolio/photobook_05.webp",
+    "thumb": "images/portfolio/photobook_05_thumb.webp",
+    "category": "photobook",
+    "title": "Bosque Fantasma",
+    "description": "Fotolibro IR · Dientes de Navarino",
+    "series": "Fotolibro IR · 720nm"
   },
   {
     "id": "photo-6",
-    "file": "images/portfolio/araucania_06.webp",
-    "thumb": "images/portfolio/araucania_06_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
+    "file": "images/portfolio/photobook_06.webp",
+    "thumb": "images/portfolio/photobook_06_thumb.webp",
+    "category": "photobook",
+    "title": "Horizonte de Hielo IR",
+    "description": "Fotolibro IR · Macizo Paine",
+    "series": "Fotolibro IR · 720nm"
   },
   {
     "id": "photo-7",
-    "file": "images/portfolio/araucania_07.webp",
-    "thumb": "images/portfolio/araucania_07_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
-  },
-  {
-    "id": "photo-8",
-    "file": "images/portfolio/araucania_08.webp",
-    "thumb": "images/portfolio/araucania_08_thumb.webp",
-    "category": "araucania",
-    "title": "Araucanía Andina",
-    "description": "Volcanic & Forest Ecosystems",
-    "series": "Araucanía Andina"
-  },
-  {
-    "id": "photo-9",
-    "file": "images/portfolio/argentina_01.webp",
-    "thumb": "images/portfolio/argentina_01_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-10",
-    "file": "images/portfolio/argentina_02.webp",
-    "thumb": "images/portfolio/argentina_02_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-11",
-    "file": "images/portfolio/argentina_03.webp",
-    "thumb": "images/portfolio/argentina_03_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-12",
-    "file": "images/portfolio/argentina_04.webp",
-    "thumb": "images/portfolio/argentina_04_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-13",
-    "file": "images/portfolio/argentina_05.webp",
-    "thumb": "images/portfolio/argentina_05_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-14",
-    "file": "images/portfolio/argentina_06.webp",
-    "thumb": "images/portfolio/argentina_06_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-15",
-    "file": "images/portfolio/argentina_07.webp",
-    "thumb": "images/portfolio/argentina_07_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-16",
-    "file": "images/portfolio/argentina_08.webp",
-    "thumb": "images/portfolio/argentina_08_thumb.webp",
-    "category": "argentina",
-    "title": "Northwest Argentina & Andes",
-    "description": "Arid Altitudes & Geology",
-    "series": "Northwest Argentina & Andes"
-  },
-  {
-    "id": "photo-17",
-    "file": "images/portfolio/infrared_01.webp",
-    "thumb": "images/portfolio/infrared_01_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-18",
-    "file": "images/portfolio/infrared_02.webp",
-    "thumb": "images/portfolio/infrared_02_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-19",
-    "file": "images/portfolio/infrared_03.webp",
-    "thumb": "images/portfolio/infrared_03_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-20",
-    "file": "images/portfolio/infrared_04.webp",
-    "thumb": "images/portfolio/infrared_04_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-21",
-    "file": "images/portfolio/infrared_05.webp",
-    "thumb": "images/portfolio/infrared_05_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-22",
-    "file": "images/portfolio/infrared_06.webp",
-    "thumb": "images/portfolio/infrared_06_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-23",
-    "file": "images/portfolio/infrared_07.webp",
-    "thumb": "images/portfolio/infrared_07_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-24",
-    "file": "images/portfolio/infrared_08.webp",
-    "thumb": "images/portfolio/infrared_08_thumb.webp",
-    "category": "infrared",
-    "title": "Infrared Spectrum (IR)",
-    "description": "Experimental Spectral Vision",
-    "series": "Infrared Spectrum (IR)"
-  },
-  {
-    "id": "photo-25",
     "file": "images/portfolio/navarino_01.webp",
     "thumb": "images/portfolio/navarino_01_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Canal Beagle y Confin Austral",
+    "description": "Paso Virginia · 55°S",
+    "series": "Dientes de Navarino 55°S"
   },
   {
-    "id": "photo-26",
+    "id": "photo-8",
     "file": "images/portfolio/navarino_02.webp",
     "thumb": "images/portfolio/navarino_02_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Laguna del Salto",
+    "description": "Circuito Dientes de Navarino",
+    "series": "Dientes de Navarino 55°S"
   },
   {
-    "id": "photo-27",
+    "id": "photo-9",
     "file": "images/portfolio/navarino_03.webp",
     "thumb": "images/portfolio/navarino_03_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Macizo de los Dientes",
+    "description": "Cumbre y Glaciologia",
+    "series": "Dientes de Navarino 55°S"
   },
   {
-    "id": "photo-28",
+    "id": "photo-10",
     "file": "images/portfolio/navarino_04.webp",
     "thumb": "images/portfolio/navarino_04_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Valle de Turba y Ventisquero",
+    "description": "Geologia Sub-Antartica",
+    "series": "Dientes de Navarino 55°S"
   },
   {
-    "id": "photo-29",
+    "id": "photo-11",
     "file": "images/portfolio/navarino_05.webp",
     "thumb": "images/portfolio/navarino_05_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Laguna de los Dientes",
+    "description": "Reflejo en Aguas Glaciares",
+    "series": "Dientes de Navarino 55°S"
   },
   {
-    "id": "photo-30",
+    "id": "photo-12",
     "file": "images/portfolio/navarino_06.webp",
     "thumb": "images/portfolio/navarino_06_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Paso de los Dientes",
+    "description": "Roca Andesitica y Nieve",
+    "series": "Dientes de Navarino 55°S"
   },
   {
-    "id": "photo-31",
+    "id": "photo-13",
     "file": "images/portfolio/navarino_07.webp",
     "thumb": "images/portfolio/navarino_07_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Paso Ventarron",
+    "description": "Meteorologia Austral",
+    "series": "Dientes de Navarino 55°S"
   },
   {
-    "id": "photo-32",
+    "id": "photo-14",
     "file": "images/portfolio/navarino_08.webp",
     "thumb": "images/portfolio/navarino_08_thumb.webp",
     "category": "navarino",
-    "title": "Dientes de Navarino",
-    "description": "Sub-Antarctic Landscape",
-    "series": "Dientes de Navarino"
+    "title": "Descenso a Puerto Williams",
+    "description": "Bosque Siempreverde Magallanico",
+    "series": "Dientes de Navarino 55°S"
+  },
+  {
+    "id": "photo-15",
+    "file": "images/portfolio/torres_del_paine_01.webp",
+    "thumb": "images/portfolio/torres_del_paine_01_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Cuernos del Paine al Alba",
+    "description": "Macizo Paine Central",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-16",
+    "file": "images/portfolio/torres_del_paine_02.webp",
+    "thumb": "images/portfolio/torres_del_paine_02_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Lago Nordenskjold",
+    "description": "Erosion Glacial y Sedimento",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-17",
+    "file": "images/portfolio/torres_del_paine_03.webp",
+    "thumb": "images/portfolio/torres_del_paine_03_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Valle del Frances",
+    "description": "Granito y Cornisas de Hielo",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-18",
+    "file": "images/portfolio/torres_del_paine_04.webp",
+    "thumb": "images/portfolio/torres_del_paine_04_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Glaciar Grey y Tempanos",
+    "description": "Campo de Hielo Sur",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-19",
+    "file": "images/portfolio/torres_del_paine_05.webp",
+    "thumb": "images/portfolio/torres_del_paine_05_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Torres del Paine",
+    "description": "Las Tres Torres de Granito",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-20",
+    "file": "images/portfolio/torres_del_paine_06.webp",
+    "thumb": "images/portfolio/torres_del_paine_06_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Lago Pehoe y Viento",
+    "description": "Patagonia Austral",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-21",
+    "file": "images/portfolio/torres_del_paine_07.webp",
+    "thumb": "images/portfolio/torres_del_paine_07_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Laguna Amarga",
+    "description": "Minerales y Carbonatos",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-22",
+    "file": "images/portfolio/torres_del_paine_08.webp",
+    "thumb": "images/portfolio/torres_del_paine_08_thumb.webp",
+    "category": "torres-del-paine",
+    "title": "Rio Paine",
+    "description": "Caudal Glacial",
+    "series": "Parque Nacional Torres del Paine"
+  },
+  {
+    "id": "photo-23",
+    "file": "images/portfolio/sendero_condor_01.webp",
+    "thumb": "images/portfolio/sendero_condor_01_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Mirador Condor — Panoramica Pehoe",
+    "description": "Sendero Condor · Torres del Paine",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-24",
+    "file": "images/portfolio/sendero_condor_02.webp",
+    "thumb": "images/portfolio/sendero_condor_02_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Relieve del Macizo",
+    "description": "Sendero Condor · Vistas Altas",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-25",
+    "file": "images/portfolio/sendero_condor_03.webp",
+    "thumb": "images/portfolio/sendero_condor_03_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Vientos del Condor",
+    "description": "Filo de Cresta y Pehoe",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-26",
+    "file": "images/portfolio/sendero_condor_04.webp",
+    "thumb": "images/portfolio/sendero_condor_04_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Cuernos desde las Alturas",
+    "description": "Perspectiva Aerea Natural",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-27",
+    "file": "images/portfolio/sendero_condor_05.webp",
+    "thumb": "images/portfolio/sendero_condor_05_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Horizonte Turquesa",
+    "description": "Lago Pehoe y Sedimento",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-28",
+    "file": "images/portfolio/sendero_condor_06.webp",
+    "thumb": "images/portfolio/sendero_condor_06_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Estepa y Contrafuerte",
+    "description": "Sendero Condor Este",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-29",
+    "file": "images/portfolio/sendero_condor_07.webp",
+    "thumb": "images/portfolio/sendero_condor_07_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Luz del Ocaso sobre Cuernos",
+    "description": "Sendero Condor Crepusculo",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-30",
+    "file": "images/portfolio/sendero_condor_08.webp",
+    "thumb": "images/portfolio/sendero_condor_08_thumb.webp",
+    "category": "sendero-condor",
+    "title": "Atmosfera Patagonica",
+    "description": "Sendero Condor Descenso",
+    "series": "Mirador Condor · Pehoe"
+  },
+  {
+    "id": "photo-31",
+    "file": "images/portfolio/tilcara_jujuy_01.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_01_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Quebrada de Humahuaca",
+    "description": "Valle Andino Prehispanico",
+    "series": "Noroeste Argentino y Puna"
+  },
+  {
+    "id": "photo-32",
+    "file": "images/portfolio/tilcara_jujuy_02.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_02_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Pucara de Tilcara",
+    "description": "Cactus y Piedra Ancestral",
+    "series": "Noroeste Argentino y Puna"
   },
   {
     "id": "photo-33",
-    "file": "images/portfolio/patagonia_01.webp",
-    "thumb": "images/portfolio/patagonia_01_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/tilcara_jujuy_03.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_03_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Serranias del Hornocal — 14 Colores",
+    "description": "Estratigrafia Cretacica 4350m",
+    "series": "Noroeste Argentino y Puna"
   },
   {
     "id": "photo-34",
-    "file": "images/portfolio/patagonia_02.webp",
-    "thumb": "images/portfolio/patagonia_02_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/tilcara_jujuy_04.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_04_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Estructura Geologica Hornocal",
+    "description": "Pliegues Sedimentarios",
+    "series": "Noroeste Argentino y Puna"
   },
   {
     "id": "photo-35",
-    "file": "images/portfolio/patagonia_03.webp",
-    "thumb": "images/portfolio/patagonia_03_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/tilcara_jujuy_05.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_05_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Garganta del Diablo — Tilcara",
+    "description": "Canon Fluvial de Puna",
+    "series": "Noroeste Argentino y Puna"
   },
   {
     "id": "photo-36",
-    "file": "images/portfolio/patagonia_04.webp",
-    "thumb": "images/portfolio/patagonia_04_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/tilcara_jujuy_06.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_06_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Salinas Grandes y Luz",
+    "description": "Altiplano 3450m",
+    "series": "Noroeste Argentino y Puna"
   },
   {
     "id": "photo-37",
-    "file": "images/portfolio/patagonia_05.webp",
-    "thumb": "images/portfolio/patagonia_05_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/tilcara_jujuy_07.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_07_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Purmamarca y Siete Colores",
+    "description": "Cerro de los Siete Colores",
+    "series": "Noroeste Argentino y Puna"
   },
   {
     "id": "photo-38",
-    "file": "images/portfolio/patagonia_06.webp",
-    "thumb": "images/portfolio/patagonia_06_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/tilcara_jujuy_08.webp",
+    "thumb": "images/portfolio/tilcara_jujuy_08_thumb.webp",
+    "category": "tilcara-jujuy",
+    "title": "Atardecer en la Quebrada",
+    "description": "Luz Dorada de Tilcara",
+    "series": "Noroeste Argentino y Puna"
   },
   {
     "id": "photo-39",
-    "file": "images/portfolio/patagonia_07.webp",
-    "thumb": "images/portfolio/patagonia_07_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/araucania_01.webp",
+    "thumb": "images/portfolio/araucania_01_thumb.webp",
+    "category": "araucania",
+    "title": "Bosque de Araucarias y Nieve",
+    "description": "Parque Nacional Conguillio",
+    "series": "Bosques Templados y Volcanes"
   },
   {
     "id": "photo-40",
-    "file": "images/portfolio/patagonia_08.webp",
-    "thumb": "images/portfolio/patagonia_08_thumb.webp",
-    "category": "patagonia",
-    "title": "Magallanes & Patagonia",
-    "description": "Landscape / Glaciers & Mountains",
-    "series": "Magallanes & Patagonia"
+    "file": "images/portfolio/araucania_02.webp",
+    "thumb": "images/portfolio/araucania_02_thumb.webp",
+    "category": "araucania",
+    "title": "Laguna Arcoiris",
+    "description": "Coladas de Lava Llaima",
+    "series": "Bosques Templados y Volcanes"
+  },
+  {
+    "id": "photo-41",
+    "file": "images/portfolio/araucania_03.webp",
+    "thumb": "images/portfolio/araucania_03_thumb.webp",
+    "category": "araucania",
+    "title": "Araucaria Milenaria",
+    "description": "Reserva Malalcahuello",
+    "series": "Bosques Templados y Volcanes"
+  },
+  {
+    "id": "photo-42",
+    "file": "images/portfolio/araucania_04.webp",
+    "thumb": "images/portfolio/araucania_04_thumb.webp",
+    "category": "araucania",
+    "title": "Volcan Lonquimay y Escoria",
+    "description": "Crater Navidad",
+    "series": "Bosques Templados y Volcanes"
+  },
+  {
+    "id": "photo-43",
+    "file": "images/portfolio/araucania_05.webp",
+    "thumb": "images/portfolio/araucania_05_thumb.webp",
+    "category": "araucania",
+    "title": "Bosque Siempreverde Andino",
+    "description": "Curarrehue",
+    "series": "Bosques Templados y Volcanes"
+  },
+  {
+    "id": "photo-44",
+    "file": "images/portfolio/araucania_06.webp",
+    "thumb": "images/portfolio/araucania_06_thumb.webp",
+    "category": "araucania",
+    "title": "Lava y Nieve",
+    "description": "Sierra Nevada Conguillio",
+    "series": "Bosques Templados y Volcanes"
+  },
+  {
+    "id": "photo-45",
+    "file": "images/portfolio/portraits_01.webp",
+    "thumb": "images/portfolio/portraits_01_thumb.webp",
+    "category": "portraits",
+    "title": "Retrato Austral I",
+    "description": "Magallanes · Luz Fria Natural",
+    "series": "Retratos Autorales y Luz Territorial"
+  },
+  {
+    "id": "photo-46",
+    "file": "images/portfolio/portraits_02.webp",
+    "thumb": "images/portfolio/portraits_02_thumb.webp",
+    "category": "portraits",
+    "title": "Mirada y Territorio",
+    "description": "Punta Arenas 53°S",
+    "series": "Retratos Autorales y Luz Territorial"
+  },
+  {
+    "id": "photo-47",
+    "file": "images/portfolio/portraits_03.webp",
+    "thumb": "images/portfolio/portraits_03_thumb.webp",
+    "category": "portraits",
+    "title": "Retrato Austral II",
+    "description": "Magallanes · Viento y Textura",
+    "series": "Retratos Autorales y Luz Territorial"
+  },
+  {
+    "id": "photo-48",
+    "file": "images/portfolio/portraits_04.webp",
+    "thumb": "images/portfolio/portraits_04_thumb.webp",
+    "category": "portraits",
+    "title": "Gesto y Presencia",
+    "description": "Composicion Intima",
+    "series": "Retratos Autorales y Luz Territorial"
+  },
+  {
+    "id": "photo-49",
+    "file": "images/portfolio/portraits_05.webp",
+    "thumb": "images/portfolio/portraits_05_thumb.webp",
+    "category": "portraits",
+    "title": "Luz de Estudio y Optica 50mm",
+    "description": "Retrato Urbano",
+    "series": "Retratos Autorales y Luz Territorial"
+  },
+  {
+    "id": "photo-50",
+    "file": "images/portfolio/portraits_06.webp",
+    "thumb": "images/portfolio/portraits_06_thumb.webp",
+    "category": "portraits",
+    "title": "Retrato en Sombras Suaves",
+    "description": "Geometria Facial y Claroscuro",
+    "series": "Retratos Autorales y Luz Territorial"
+  },
+  {
+    "id": "photo-51",
+    "file": "images/portfolio/events_01.webp",
+    "thumb": "images/portfolio/events_01_thumb.webp",
+    "category": "events",
+    "title": "Preparativos y Detalle",
+    "description": "Cronica de Boda · Ceremonia",
+    "series": "Fotografia Documental de Bodas y Eventos"
+  },
+  {
+    "id": "photo-52",
+    "file": "images/portfolio/events_02.webp",
+    "thumb": "images/portfolio/events_02_thumb.webp",
+    "category": "events",
+    "title": "Emocion y Rito",
+    "description": "Cronica Documental",
+    "series": "Fotografia Documental de Bodas y Eventos"
+  },
+  {
+    "id": "photo-53",
+    "file": "images/portfolio/events_03.webp",
+    "thumb": "images/portfolio/events_03_thumb.webp",
+    "category": "events",
+    "title": "Llegada de la Novia",
+    "description": "Luz Natural y Retrato Vivo",
+    "series": "Fotografia Documental de Bodas y Eventos"
+  },
+  {
+    "id": "photo-54",
+    "file": "images/portfolio/events_04.webp",
+    "thumb": "images/portfolio/events_04_thumb.webp",
+    "category": "events",
+    "title": "Votos y Miradas",
+    "description": "Ceremonia Matrimonial",
+    "series": "Fotografia Documental de Bodas y Eventos"
+  },
+  {
+    "id": "photo-55",
+    "file": "images/portfolio/events_05.webp",
+    "thumb": "images/portfolio/events_05_thumb.webp",
+    "category": "events",
+    "title": "Celebracion y Brindis",
+    "description": "Narrativa en Movimiento",
+    "series": "Fotografia Documental de Bodas y Eventos"
+  },
+  {
+    "id": "photo-56",
+    "file": "images/portfolio/events_06.webp",
+    "thumb": "images/portfolio/events_06_thumb.webp",
+    "category": "events",
+    "title": "Fiesta y Luz de Escenario",
+    "description": "Atmosfera Nocturna",
+    "series": "Fotografia Documental de Bodas y Eventos"
   }
 ]
