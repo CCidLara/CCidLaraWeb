@@ -364,7 +364,7 @@ class VisualEffectsEngine {
   }
 
   /* ─────────────────────────────────────────────────────────────────────────
-     3. PIXEL / FRACTURED PORTRAIT ENGINE
+     3. GAUSSIAN & SALT-AND-PEPPER NOISE DENOISING PORTRAIT ENGINE
      ───────────────────────────────────────────────────────────────────────── */
   _initPixelPortrait() {
     const imgEl = document.querySelector('.about-portrait-img');
@@ -372,7 +372,7 @@ class VisualEffectsEngine {
 
     const img = new Image();
     // Do NOT set img.crossOrigin for local assets to avoid file:// CORS blocks
-    
+
     const setupCanvas = () => {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
@@ -390,12 +390,29 @@ class VisualEffectsEngine {
         imgEl.parentNode.replaceChild(canvas, imgEl);
       }
 
-      const w = img.naturalWidth || 800;
-      const h = img.naturalHeight || 1000;
-      canvas.width = w;
-      canvas.height = h;
+      // Sizing calibrated for crisp 60fps noise synthesis & tactile grain
+      const targetW = Math.min(img.naturalWidth || 600, 560);
+      const targetH = Math.round(targetW * 1.25);
+      canvas.width = targetW;
+      canvas.height = targetH;
+      const w = targetW;
+      const h = targetH;
+      const totalPixels = w * h;
 
-      let fractureFactor = 1.0;
+      // Offscreen clean buffer
+      const offCanvas = document.createElement('canvas');
+      offCanvas.width = w;
+      offCanvas.height = h;
+      const offCtx = offCanvas.getContext('2d', { willReadFrequently: true });
+      offCtx.drawImage(img, 0, 0, w, h);
+      const cleanImgData = offCtx.getImageData(0, 0, w, h);
+      const cleanData32 = new Uint32Array(cleanImgData.data.buffer);
+
+      // Output buffer
+      const outputImgData = ctx.createImageData(w, h);
+      const outputData32 = new Uint32Array(outputImgData.data.buffer);
+
+      let noiseFactor = 1.0;
       let scanlineY = -1;
       let hasScanned = false;
       let mouse = { x: -999, y: -999, active: false };
@@ -411,87 +428,94 @@ class VisualEffectsEngine {
         mouse.active = false;
       });
 
-      // Scrub fracture factor with ScrollTrigger
+      // Scrub noiseFactor with ScrollTrigger:
+      // Starts at almost pure noise (1.0) and reveals the picture as you scroll into the section
       ScrollTrigger.create({
         trigger: canvas.parentElement || canvas,
-        start: 'top 95%',
-        end: 'center 50%',
-        scrub: 0.8,
+        start: 'top 96%',
+        end: 'center 52%',
+        scrub: 0.6,
         onUpdate: (self) => {
-          fractureFactor = Math.max(0, 1 - self.progress);
-          if (fractureFactor <= 0.05 && !hasScanned) {
+          noiseFactor = Math.max(0, 1 - self.progress);
+          if (noiseFactor <= 0.04 && !hasScanned) {
             scanlineY = 0;
             hasScanned = true;
-          } else if (fractureFactor > 0.10) {
+          } else if (noiseFactor > 0.08) {
             hasScanned = false;
           }
         }
       });
 
-      // High-performance render loop
+      // Render Loop
+      let seed = 123456789;
       const render = (timeMs) => {
-        const time = timeMs * 0.001;
-        ctx.clearRect(0, 0, w, h);
+        seed = (seed + ((timeMs * 0.5) | 0) + 17) | 0;
 
-        if (fractureFactor > 0.015) {
-          const numSlices = 32;
-          const sliceH = h / numSlices;
-          const f = fractureFactor;
+        if (noiseFactor > 0.008) {
+          const N = noiseFactor;
+          const spProb = N * 0.44; // Salt & Pepper threshold
+          const sigWeight = Math.max(0, 1.0 - N * 0.88); // Signal attenuation
+          const gaussScale = N * 240; // Gaussian noise standard deviation
+          const tintCrimson = N > 0.6;
 
-          // 1. Red Channel Chromatic Shift
-          ctx.save();
-          ctx.globalCompositeOperation = 'screen';
-          for (let i = 0; i < numSlices; i++) {
-            const sy = i * sliceH;
-            const wave = Math.sin(i * 0.52 + time * 3.8) * 38 * f;
-            const jitter = (Math.sin(i * 9.3 + time * 15) * 16) * (f * f);
-            const dx = wave + jitter + (f * 18);
-            ctx.drawImage(img, 0, sy, w, sliceH, dx, sy, w, sliceH);
+          let rng = seed;
+
+          for (let i = 0; i < totalPixels; i++) {
+            // Fast LCG Random Generator
+            rng = (rng * 1664525 + 1013904223) | 0;
+            const u1 = (rng >>> 0) / 4294967296;
+
+            // 1. Salt and Pepper Noise
+            if (u1 < spProb) {
+              // 50% Salt (bone white), 50% Pepper (obsidian / dark red)
+              if ((rng & 1) === 0) {
+                // Salt: bone white (#f5f2eb)
+                outputData32[i] = 0xFFEBF2F5;
+              } else {
+                // Pepper: obsidian (#08080a) or deep crimson tint (#220505)
+                outputData32[i] = tintCrimson && (rng & 2) ? 0xFF0A0522 : 0xFF0A0808;
+              }
+              continue;
+            }
+
+            // 2. Gaussian Noise + Image Emergence
+            const orig = cleanData32[i];
+            const r = orig & 0xFF;
+            const g = (orig >> 8) & 0xFF;
+            const b = (orig >> 16) & 0xFF;
+
+            rng = (rng * 1664525 + 1013904223) | 0;
+            const u2 = (rng >>> 0) / 4294967296;
+            rng = (rng * 1664525 + 1013904223) | 0;
+            const u3 = (rng >>> 0) / 4294967296;
+
+            // Approximate normal distribution (Central Limit Theorem sum)
+            const gauss = (u1 + u2 + u3 - 1.5) * gaussScale;
+
+            let nr = r * sigWeight + gauss;
+            let ng = g * sigWeight + gauss;
+            let nb = b * sigWeight + gauss;
+
+            // Clamp [0, 255]
+            if (nr < 0) nr = 0; else if (nr > 255) nr = 255;
+            if (ng < 0) ng = 0; else if (ng > 255) ng = 255;
+            if (nb < 0) nb = 0; else if (nb > 255) nb = 255;
+
+            outputData32[i] = (255 << 24) | ((nb | 0) << 16) | ((ng | 0) << 8) | (nr | 0);
           }
-          ctx.fillStyle = `rgba(229, 56, 53, ${(0.35 * f).toFixed(3)})`;
-          ctx.fillRect(0, 0, w, h);
-          ctx.restore();
 
-          // 2. Cyan Channel Chromatic Shift
+          ctx.putImageData(outputImgData, 0, 0);
+
+          // Subtle digital scanline matrix when noise is active
           ctx.save();
-          ctx.globalCompositeOperation = 'screen';
-          for (let i = 0; i < numSlices; i++) {
-            const sy = i * sliceH;
-            const wave = Math.cos(i * 0.45 - time * 3.2) * 30 * f;
-            const dx = -wave - (f * 14);
-            ctx.drawImage(img, 0, sy, w, sliceH, dx, sy, w, sliceH);
-          }
-          ctx.fillStyle = `rgba(180, 225, 255, ${(0.22 * f).toFixed(3)})`;
-          ctx.fillRect(0, 0, w, h);
-          ctx.restore();
-
-          // 3. Voxel Block Displacements
-          const blocks = Math.floor(14 * f);
-          for (let b = 0; b < blocks; b++) {
-            const bw = 60 + (b * 23) % 110;
-            const bh = 30 + (b * 31) % 65;
-            const bx = (Math.sin(b * 3.7 + time * 2) * 0.5 + 0.5) * (w - bw);
-            const by = (Math.cos(b * 5.1 + time * 1.5) * 0.5 + 0.5) * (h - bh);
-            const off = (Math.sin(b * 8.1 + time * 9) * 45) * f;
-
-            ctx.save();
-            ctx.globalAlpha = 0.65 * f;
-            ctx.drawImage(img, bx, by, bw, bh, bx + off, by, bw, bh);
-            ctx.strokeStyle = `rgba(255, 255, 255, ${(0.45 * f).toFixed(3)})`;
-            ctx.lineWidth = 1;
-            ctx.strokeRect(bx + off, by, bw, bh);
-            ctx.restore();
-          }
-
-          // 4. Scanline Matrix
-          ctx.save();
-          ctx.fillStyle = `rgba(8, 8, 10, ${(0.36 * f).toFixed(3)})`;
+          ctx.fillStyle = `rgba(8, 8, 10, ${(0.22 * N).toFixed(3)})`;
           for (let y = 0; y < h; y += 4) {
-            ctx.fillRect(0, y, w, 1.5);
+            ctx.fillRect(0, y, w, 1);
           }
           ctx.restore();
+
         } else {
-          // Pristine Sharp Portrait
+          // 3. Fully Revealed Crystal-Clear Portrait
           ctx.drawImage(img, 0, 0, w, h);
 
           // Interactive Cursor Optical Prism
@@ -512,7 +536,7 @@ class VisualEffectsEngine {
             ctx.restore();
           }
 
-          // Laser Scanline Convergence Sweep
+          // Laser Convergence Scanline Sweep
           if (scanlineY >= 0 && scanlineY < h) {
             scanlineY += 32;
             ctx.save();
