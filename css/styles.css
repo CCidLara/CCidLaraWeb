@@ -4,6 +4,28 @@
    Palette: Obsidian Black (#08080a), Warm Bone (#f5f2eb), Crimson Red (#c5221f)
    ========================================================================== */
 
+/* ── Scroll-morph elements ─────────────────────────────────────────────── */
+/* The flying title and particle canvas are injected by effects.js.
+   These rules prevent a flash of un-styled content. */
+#morph-fly-title,
+#morph-particles-canvas {
+  pointer-events: none;
+  user-select: none;
+  /* opacity controlled entirely by JS — start hidden */
+  opacity: 0;
+}
+
+/* Give the navbar brand will-change so GPU composites it for free */
+.brand-logo {
+  will-change: opacity;
+}
+
+/* Give the hero title elements will-change for the morph */
+.title-compressed,
+.title-full-name {
+  will-change: opacity, transform;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
 
 :root {
