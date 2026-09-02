@@ -364,7 +364,7 @@ class VisualEffectsEngine {
   }
 
   /* ─────────────────────────────────────────────────────────────────────────
-     3. GAUSSIAN & SALT-AND-PEPPER NOISE DENOISING PORTRAIT ENGINE
+     3. STRICTLY MONOCHROMATIC GAUSSIAN & SALT-AND-PEPPER NOISE ENGINE
      ───────────────────────────────────────────────────────────────────────── */
   _initPixelPortrait() {
     const imgEl = document.querySelector('.about-portrait-img');
@@ -374,12 +374,17 @@ class VisualEffectsEngine {
     // Do NOT set img.crossOrigin for local assets to avoid file:// CORS blocks
 
     const setupCanvas = () => {
+      const natW = img.naturalWidth || 800;
+      const natH = img.naturalHeight || 800;
+      const aspect = natW / natH; // 1.0 for 1400x1400 square portrait
+
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
       canvas.className = imgEl.className;
       Object.assign(canvas.style, {
         width: '100%',
-        aspectRatio: '4/5',
+        height: 'auto',
+        aspectRatio: `${natW} / ${natH}`,
         display: 'block',
         borderRadius: 'var(--radius-md, 8px)',
         boxShadow: '0 25px 60px rgba(0, 0, 0, 0.75)',
@@ -390,9 +395,9 @@ class VisualEffectsEngine {
         imgEl.parentNode.replaceChild(canvas, imgEl);
       }
 
-      // Sizing calibrated for crisp 60fps noise synthesis & tactile grain
-      const targetW = Math.min(img.naturalWidth || 600, 560);
-      const targetH = Math.round(targetW * 1.25);
+      // Preserve natural image aspect ratio precisely (no stretching)
+      const targetW = Math.min(natW, 600);
+      const targetH = Math.round(targetW / aspect);
       canvas.width = targetW;
       canvas.height = targetH;
       const w = targetW;
@@ -429,7 +434,7 @@ class VisualEffectsEngine {
       });
 
       // Scrub noiseFactor with ScrollTrigger:
-      // Starts at almost pure noise (1.0) and reveals the picture as you scroll into the section
+      // Starts at almost pure monochromatic noise (1.0) and reveals the picture as you scroll
       ScrollTrigger.create({
         trigger: canvas.parentElement || canvas,
         start: 'top 96%',
@@ -446,17 +451,17 @@ class VisualEffectsEngine {
         }
       });
 
-      // Render Loop
+      // Render Loop with Strictly Monochromatic Noise
       let seed = 123456789;
       const render = (timeMs) => {
-        seed = (seed + ((timeMs * 0.5) | 0) + 17) | 0;
+        seed = (seed + ((timeMs * 0.4) | 0) + 19) | 0;
 
         if (noiseFactor > 0.008) {
           const N = noiseFactor;
-          const spProb = N * 0.44; // Salt & Pepper threshold
-          const sigWeight = Math.max(0, 1.0 - N * 0.88); // Signal attenuation
-          const gaussScale = N * 240; // Gaussian noise standard deviation
-          const tintCrimson = N > 0.6;
+          const spProb = N * 0.45; // Salt & Pepper probability
+          const sigWeight = Math.max(0, 1.0 - N * 0.90); // Signal attenuation
+          const gaussScale = N * 255; // Monochromatic Gaussian standard deviation
+          const baseOffset = (128 * N); // Baseline gray offset when signal is suppressed
 
           let rng = seed;
 
@@ -465,20 +470,15 @@ class VisualEffectsEngine {
             rng = (rng * 1664525 + 1013904223) | 0;
             const u1 = (rng >>> 0) / 4294967296;
 
-            // 1. Salt and Pepper Noise
+            // 1. Strictly Monochromatic Salt & Pepper
             if (u1 < spProb) {
-              // 50% Salt (bone white), 50% Pepper (obsidian / dark red)
-              if ((rng & 1) === 0) {
-                // Salt: bone white (#f5f2eb)
-                outputData32[i] = 0xFFEBF2F5;
-              } else {
-                // Pepper: obsidian (#08080a) or deep crimson tint (#220505)
-                outputData32[i] = tintCrimson && (rng & 2) ? 0xFF0A0522 : 0xFF0A0808;
-              }
+              // Salt: Pure white (255, 255, 255); Pepper: Pure black (0, 0, 0)
+              const bw = (rng & 1) ? 255 : 0;
+              outputData32[i] = (255 << 24) | (bw << 16) | (bw << 8) | bw;
               continue;
             }
 
-            // 2. Gaussian Noise + Image Emergence
+            // 2. Strictly Monochromatic Gaussian Noise
             const orig = cleanData32[i];
             const r = orig & 0xFF;
             const g = (orig >> 8) & 0xFF;
@@ -489,8 +489,8 @@ class VisualEffectsEngine {
             rng = (rng * 1664525 + 1013904223) | 0;
             const u3 = (rng >>> 0) / 4294967296;
 
-            // Approximate normal distribution (Central Limit Theorem sum)
-            const gauss = (u1 + u2 + u3 - 1.5) * gaussScale;
+            // Single scalar Gaussian perturbation (zero hue / saturation deviation)
+            const gauss = (u1 + u2 + u3 - 1.5) * gaussScale + (baseOffset * (1 - sigWeight));
 
             let nr = r * sigWeight + gauss;
             let ng = g * sigWeight + gauss;
@@ -506,16 +506,16 @@ class VisualEffectsEngine {
 
           ctx.putImageData(outputImgData, 0, 0);
 
-          // Subtle digital scanline matrix when noise is active
+          // Subtle monochromatic scanline matrix when noisy
           ctx.save();
-          ctx.fillStyle = `rgba(8, 8, 10, ${(0.22 * N).toFixed(3)})`;
+          ctx.fillStyle = `rgba(0, 0, 0, ${(0.18 * N).toFixed(3)})`;
           for (let y = 0; y < h; y += 4) {
             ctx.fillRect(0, y, w, 1);
           }
           ctx.restore();
 
         } else {
-          // 3. Fully Revealed Crystal-Clear Portrait
+          // 3. Pristine Portrait in Natural Dimensions
           ctx.drawImage(img, 0, 0, w, h);
 
           // Interactive Cursor Optical Prism
