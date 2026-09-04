@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fotografía & Archivo Visual — Christofer Cid Lara · CCidLara</title>
+  <title>Fotografía &amp; Archivo Territorial — Christofer Cid Lara · CCidLara · Cid-Lara Studio</title>
   
-  <meta name="description" content="Archivo fotográfico de Christofer Cid Lara: Magallanes, Dientes de Navarino, Araucanía Andina, Noroeste Argentino, Fotolibro Infrarrojo (IR) y película analógica 35mm.">
+  <meta name="description" content="Archivo fotográfico de Christofer Cid Lara: Magallanes, Dientes de Navarino (55°S), Araucanía Andina, Noroeste Argentino, Fotolibro Infrarrojo (720nm) y película analógica 35mm.">
   <meta name="author" content="Christofer Cid Lara">
 
   <!-- Favicons -->
@@ -18,7 +18,7 @@
 
   <style>
     .photo-hero {
-      padding: 10rem 0 4rem;
+      padding: 10rem 0 3.5rem;
       text-align: center;
       position: relative;
     }
@@ -33,36 +33,48 @@
       color: var(--color-bone-muted);
       text-decoration: none;
       margin-bottom: 2rem;
-      padding: 0.4rem 0.9rem;
+      padding: 0.45rem 1.1rem;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--border-subtle);
       border-radius: 20px;
       transition: all 0.25s ease;
     }
     .back-home-btn:hover {
-      border-color: var(--color-red);
-      color: var(--color-red-bright);
+      border-color: var(--color-gold);
+      color: var(--color-gold-bright);
+      background: rgba(197, 160, 89, 0.08);
+      transform: translateX(-3px);
     }
   </style>
 </head>
 
 <body id="top">
 
-  <!-- Canvas Background -->
-  <canvas id="vision-canvas" aria-hidden="true"></canvas>
+  <!-- Atmospheric Scroll Depth Filament (Driven by Motion) -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Ambient Generative p5.js Backdrop (Beksiński Latent Canvas) -->
+  <div id="p5-ambient-backdrop" class="p5-ambient-backdrop" aria-hidden="true"></div>
+  <div class="beksinski-vignette" aria-hidden="true"></div>
+  <div class="analog-grain-overlay" aria-hidden="true"></div>
 
   <!-- Header -->
   <header class="site-header scrolled">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo">
-        <span class="brand-bracket">[</span><span>CCidLara</span><span class="brand-bracket">]</span>
-        <span class="brand-dot"></span>
+      <a href="index.html" class="brand-logo" aria-label="CCidLara Inicio">
+        <div class="brand-logo-container">
+          <div><span class="brand-bracket">[</span><span>CCidLara</span><span class="brand-bracket">]</span><span class="brand-dot"></span></div>
+          <span class="brand-affiliation-badge">Cid-Lara Studio</span>
+        </div>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Navegación secundaria">
         <a href="index.html#vision" class="nav-link" data-i18n="navVision">Visión</a>
-        <a href="index.html#investigacion" class="nav-link" data-i18n="navResearch">Investigación</a>
-        <a href="index.html#arte-tecnico" class="nav-link" data-i18n="navVFX">Arte Técnico</a>
+        <a href="index.html#disciplinas" class="nav-link" data-i18n="navDisciplines">Disciplinas</a>
+        <a href="index.html#investigacion" class="nav-link" data-i18n="navResearch">Investigación IA</a>
+        <a href="index.html#arte-tecnico" class="nav-link" data-i18n="navVFX">Obras &amp; Curilemu</a>
         <a href="#top" class="nav-link active" data-i18n="navPhoto">Fotografía</a>
         <a href="index.html#contacto" class="nav-link" data-i18n="navContact">Contacto</a>
       </nav>
@@ -72,7 +84,7 @@
           <button type="button" class="lang-btn active" data-lang="es" id="btnLangEs">ES</button>
           <button type="button" class="lang-btn" data-lang="en" id="btnLangEn">EN</button>
         </div>
-        <a href="index.html" class="btn btn-secondary" style="padding:0.45rem 1rem; font-size:0.75rem;">
+        <a href="index.html" class="btn btn-secondary" style="padding:0.45rem 1rem; font-size:0.75rem;" data-i18n="backHomeShort">
           ← Inicio
         </a>
       </div>
@@ -88,16 +100,16 @@
           ← <span data-i18n="backHome">Volver a la Página Principal</span>
         </a>
         
-        <p class="section-meta" style="justify-content:center;">33°S – 55°S · ARCHIVO COMPLETO</p>
+        <p class="section-meta" style="justify-content:center;">33°S – 55°S · ARCHIVO INTEGRAL</p>
         <h1 class="section-title" style="font-size:clamp(2.5rem, 5vw, 4.2rem);">
           Archivo <em>Fotográfico</em>
         </h1>
-        <p class="section-lead" style="margin-left:auto; margin-right:auto; max-width:44rem;">
-          Documentación de paisajes sub-antárticos, cordilleras andinas, reflectancia infrarroja a 720nm y haluros de plata analógicos.
+        <p class="section-lead" style="margin-left:auto; margin-right:auto; max-width:44rem;" data-i18n="photoArchiveLead">
+          Documentación de paisajes sub-antárticos, cordilleras andinas, reflectancia infrarroja a 720nm y emulsiones analógicas de haluro de plata en 35mm.
         </p>
 
         <!-- Category Filters -->
-        <div class="gallery-controls" style="margin-top:3rem;">
+        <div class="gallery-controls" style="margin-top:2.8rem;">
           <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Todas</button>
           <button type="button" class="filter-btn" data-filter="photobook" data-i18n="filterPhotobook">Fotolibro IR</button>
           <button type="button" class="filter-btn" data-filter="navarino" data-i18n="filterNavarino">Navarino</button>
@@ -116,7 +128,7 @@
     <section class="site-section" style="padding-top:0;">
       <div class="container">
         <div class="photo-masonry-grid" id="fullPhotoGrid">
-          <!-- Injected via JS from manifest.json or full item list -->
+          <!-- Injected dynamically via JS -->
         </div>
       </div>
     </section>
@@ -141,75 +153,231 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <a href="index.html" class="footer-brand">CCidLara</a>
+          <p style="font-size:0.85rem; color:var(--color-bone-subtle); margin-top:0.35rem;">
+            Christofer Cid Lara — Director of R&amp;D at Cid-Lara Studio · Archivo Fotográfico &amp; Territorio.
+          </p>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Página Principal</a>
+          <a href="https://jaimecidlara.com/cid-lara-studio" target="_blank" rel="noopener noreferrer">Cid-Lara Studio ↗</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+      </div>
       <div class="footer-bottom-row">
-        <span>© 2026 Christofer Cid Lara · Archivo Fotográfico</span>
+        <span>© 2026 Christofer Cid Lara · Cid-Lara Studio. Todos los derechos reservados.</span>
         <span>Santiago de Chile · Confín Austral</span>
       </div>
     </div>
   </footer>
 
+  <!-- Vendor Animation & Generative Engines -->
+  <script src="js/vendor/anime.min.js"></script>
+  <script src="js/vendor/motion.js"></script>
+  <script src="js/vendor/p5.min.js"></script>
+  <script src="js/p5-lab.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Load full manifest for the dedicated photo archive page
-    fetch('images/portfolio/manifest.json')
-      .then(res => res.json())
-      .then(data => {
-        window.fullArchiveData = data;
-        renderFullArchive('all');
-      })
-      .catch(() => {
-        // Fallback to curatedGalleryItems
-        window.fullArchiveData = curatedGalleryItems;
-        renderFullArchive('all');
+    (function() {
+      let activeFullItems = [];
+      let photoArchiveIndex = 0;
+
+      // Initialize Motion Scroll Progress Filament
+      if (window.Motion && window.Motion.scroll && window.Motion.animate) {
+        const bar = document.getElementById('scrollProgressBar');
+        if (bar) {
+          Motion.scroll(Motion.animate(bar, { transform: ['scaleX(0)', 'scaleX(1)'] }));
+        }
+      }
+
+      // Category mapping helper
+      const normalizeCategory = (cat) => {
+        if (!cat) return 'all';
+        return cat.toLowerCase().replace(/_/g, '-');
+      };
+
+      // Load full manifest for the dedicated photo archive page
+      fetch('images/portfolio/manifest.json')
+        .then(res => res.json())
+        .then(data => {
+          window.fullArchiveData = data;
+          initArchiveFromUrl();
+        })
+        .catch(() => {
+          // Fallback to curatedGalleryItems defined in main.js
+          window.fullArchiveData = typeof curatedGalleryItems !== 'undefined' ? curatedGalleryItems : [];
+          initArchiveFromUrl();
+        });
+
+      function initArchiveFromUrl() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetCat = urlParams.get('cat') || 'all';
+
+        // Set active button
+        document.querySelectorAll('.filter-btn').forEach(b => {
+          const btnFilter = b.getAttribute('data-filter');
+          if (btnFilter === targetCat) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+
+        renderFullArchive(targetCat, true);
+      }
+
+      function renderFullArchive(filter = 'all', isInitial = false) {
+        const container = document.getElementById('fullPhotoGrid');
+        if (!container || !window.fullArchiveData) return;
+
+        const normFilter = normalizeCategory(filter);
+
+        activeFullItems = normFilter === 'all'
+          ? window.fullArchiveData
+          : window.fullArchiveData.filter(i => {
+              const itemCat = normalizeCategory(i.category || i.cat);
+              return itemCat === normFilter;
+            });
+
+        const injectCards = () => {
+          container.innerHTML = activeFullItems.map((item, idx) => `
+            <div class="photo-card active" style="opacity:0;" onclick="openFullLightbox(${idx})">
+              <img src="${item.thumb || item.file}" alt="${item.title}" class="photo-img" loading="lazy" />
+              <div class="photo-hover-overlay">
+                <h4 class="photo-title">${item.title}</h4>
+                <p class="photo-sub">${item.series || item.description || ''}</p>
+              </div>
+            </div>
+          `).join('');
+
+          // Animate cards into view with Anime.js stagger
+          if (typeof anime !== 'undefined') {
+            anime({
+              targets: container.querySelectorAll('.photo-card'),
+              opacity: [0, 1],
+              translateY: [24, 0],
+              scale: [0.96, 1],
+              delay: anime.stagger(30, { start: 60 }),
+              duration: 550,
+              easing: 'easeOutCubic'
+            });
+          } else {
+            container.querySelectorAll('.photo-card').forEach(c => c.style.opacity = '1');
+          }
+        };
+
+        // Smooth exit if already rendered
+        if (!isInitial && container.children.length > 0 && typeof anime !== 'undefined') {
+          anime({
+            targets: container.querySelectorAll('.photo-card'),
+            opacity: [1, 0],
+            translateY: [0, -12],
+            scale: [1, 0.96],
+            duration: 180,
+            easing: 'easeInQuad',
+            complete: injectCards
+          });
+        } else {
+          injectCards();
+        }
+      }
+
+      window.openFullLightbox = function(idx) {
+        if (idx < 0 || idx >= activeFullItems.length) return;
+        photoArchiveIndex = idx;
+        const modal = document.getElementById('lightboxModal');
+        const mainImg = document.getElementById('lightboxMainImg');
+        const captionTitle = document.getElementById('lightboxTitle');
+        const captionSeries = document.getElementById('lightboxSeries');
+
+        const item = activeFullItems[idx];
+        mainImg.src = item.file || item.full || item.thumb;
+        captionTitle.textContent = item.title;
+        captionSeries.textContent = item.series || item.description || '';
+
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+
+        if (typeof anime !== 'undefined') {
+          anime({
+            targets: mainImg,
+            opacity: [0, 1],
+            scale: [0.93, 1],
+            duration: 380,
+            easing: 'easeOutCubic'
+          });
+          anime({
+            targets: '.lightbox-caption',
+            opacity: [0, 1],
+            translateY: [16, 0],
+            duration: 420,
+            delay: 80,
+            easing: 'easeOutCubic'
+          });
+        }
+      };
+
+      window.closeLightbox = function() {
+        const modal = document.getElementById('lightboxModal');
+        if (modal) modal.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+
+      window.prevLightbox = function() {
+        if (!activeFullItems.length) return;
+        photoArchiveIndex = (photoArchiveIndex - 1 + activeFullItems.length) % activeFullItems.length;
+        updateLightboxImage(photoArchiveIndex);
+      };
+
+      window.nextLightbox = function() {
+        if (!activeFullItems.length) return;
+        photoArchiveIndex = (photoArchiveIndex + 1) % activeFullItems.length;
+        updateLightboxImage(photoArchiveIndex);
+      };
+
+      function updateLightboxImage(idx) {
+        const mainImg = document.getElementById('lightboxMainImg');
+        const captionTitle = document.getElementById('lightboxTitle');
+        const captionSeries = document.getElementById('lightboxSeries');
+        const item = activeFullItems[idx];
+
+        if (typeof anime !== 'undefined') {
+          anime({
+            targets: mainImg,
+            opacity: [0.35, 1],
+            scale: [0.98, 1],
+            duration: 280,
+            easing: 'easeOutQuad'
+          });
+        }
+
+        mainImg.src = item.file || item.full || item.thumb;
+        captionTitle.textContent = item.title;
+        captionSeries.textContent = item.series || item.description || '';
+      }
+
+      // Connect filter buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.getAttribute('data-filter');
+          renderFullArchive(cat);
+        });
       });
 
-    let activeFullItems = [];
+      // Keyboard navigation for Lightbox
+      window.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('lightboxModal');
+        if (!modal || !modal.classList.contains('open')) return;
 
-    function renderFullArchive(filter = 'all') {
-      const container = document.getElementById('fullPhotoGrid');
-      if (!container || !window.fullArchiveData) return;
-
-      activeFullItems = filter === 'all'
-        ? window.fullArchiveData
-        : window.fullArchiveData.filter(i => (i.category || i.cat) === filter);
-
-      container.innerHTML = activeFullItems.map((item, idx) => `
-        <div class="photo-card reveal active" onclick="openFullLightbox(${idx})">
-          <img src="${item.thumb || item.file}" alt="${item.title}" class="photo-img" loading="lazy" />
-          <div class="photo-hover-overlay">
-            <h4 class="photo-title">${item.title}</h4>
-            <p class="photo-sub">${item.series || item.description}</p>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    function openFullLightbox(idx) {
-      if (idx < 0 || idx >= activeFullItems.length) return;
-      currentLightboxIndex = idx;
-      const modal = document.getElementById('lightboxModal');
-      const mainImg = document.getElementById('lightboxMainImg');
-      const captionTitle = document.getElementById('lightboxTitle');
-      const captionSeries = document.getElementById('lightboxSeries');
-
-      const item = activeFullItems[idx];
-      mainImg.src = item.file || item.full;
-      captionTitle.textContent = item.title;
-      captionSeries.textContent = item.series || item.description;
-
-      modal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    // Connect filters on photo.html
-    document.querySelectorAll('.filter-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cat = btn.getAttribute('data-filter');
-        renderFullArchive(cat);
+        if (e.key === 'Escape') window.closeLightbox();
+        if (e.key === 'ArrowLeft') window.prevLightbox();
+        if (e.key === 'ArrowRight') window.nextLightbox();
       });
-    });
+    })();
   </script>
 
 </body>

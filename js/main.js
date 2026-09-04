@@ -14,81 +14,92 @@ const translations = {
     navVision: "Visión",
     navDisciplines: "Disciplinas",
     navResearch: "Investigación & IA",
+    navLab: "Lab Generativo",
     navVFX: "Arte Técnico",
-    navPhoto: "Fotografía",
+    navPhoto: "Fotografía ↗",
     navProjects: "Proyectos",
     navContact: "Contacto",
+    navStudioBadge: "Cid-Lara Studio",
     getCV: "Descargar CV",
 
     // Hero
-    heroBadge: "Ingeniería Eléctrica · Visión Computacional · Fotografía de Territorio",
+    heroStudioBadge: "Director of R&D at Cid-Lara Studio",
+    heroBadge: "IA & Visión Computacional · Arte Técnico UE5 · R&D",
     titleFull: "CHRISTOFER CID LARA",
     titleCompressed: "[ CCidLara ]",
-    heroStatement: "Ingeniería eléctrica, física de la luz y registro fotográfico de territorio.",
+    heroStatement: "Inteligencia artificial, arte técnico en tiempo real, dirección de I+D y documentación territorial.",
     heroTagAI: "Investigación en IA",
-    heroTagPhoto: "Fotografía & Óptica",
+    heroTagPhoto: "Fotografía & Territorio",
     heroTagTechArt: "Arte Técnico & Shaders",
-    heroTagDev: "Sistemas & R&D",
+    heroTagDev: "Cid-Lara Studio & R&D",
     heroCTAWorks: "Explorar Obras",
     heroCTAContact: "Contacto Directo",
     heroScroll: "Desplazar",
+    kineticBtn: "KINETIC FOCUS",
 
     // Section 1: Vision / About
     aboutMeta: "01 / Fundamento & Trayectoria",
-    aboutTitle: "Ingeniería, Óptica & Territorio",
-    aboutQuote: "«La imagen como fenómeno físico, estructura matemática y documento territorial.»",
-    aboutBio1: "Ingeniero Civil Eléctrico y Magíster en Ciencias de la Ingeniería (Universidad de Chile). Mi práctica investiga la confluencia entre modelos generativos para reconstrucción de imágenes, arte técnico en motores de tiempo real y fotografía analógica y digital.",
-    aboutBio2: "Investigo métodos de Deep Image Prior para resonancia magnética 3D multicontraste en el Instituto Milenio iHEALTH, dirijo el desarrollo técnico en Austral Games (Curilemu) y desarrollo instrumentación óptica en Cid-Lara Studio.",
+    aboutTitle: "Inteligencia Artificial, Sistemas & <em>Territorio</em>",
+    aboutQuote: "«La imagen como síntesis generativa, estructura matemática en tiempo real y documento territorial.»",
+    aboutBio1: "Ingeniero Civil Eléctrico y Magíster en Ciencias de la Ingeniería (Universidad de Chile). Mi práctica investiga la confluencia entre modelos generativos para reconstrucción de imágenes biomédicas, arte técnico en motores de tiempo real (Unreal Engine 5) y documentación fotográfica multiespectral.",
+    aboutBio2: "Me desempeño como Director de I+D en <em>Cid-Lara Studio</em> (organización matriz de producción cultural de alta complejidad e infraestructura computacional dirigida por Jaime Cid-Lara) y lidero <em>NAR Labs</em>. Asimismo, investigo modelos de Deep Image Prior en el <em>Instituto Milenio iHEALTH</em> y dirijo la arquitectura técnica en <em>Austral Games</em> (Curilemu).",
     stat1Val: "10+",
     stat1Lbl: "Años de Trayectoria",
-    stat2Val: "Nature / ACS",
-    stat2Lbl: "Publicaciones Científicas",
+    stat2Val: "iHEALTH / UChile",
+    stat2Lbl: "Investigación en IA",
     stat3Val: "4000+",
     stat3Lbl: "Fotogramas de Archivo",
 
     // Section 2: Disciplines
     discMeta: "02 / Cuatro Vertientes",
     discTitle: "Líneas de Trabajo",
-    discLead: "Práctica articulada en cuatro áreas concretas: aprendizaje profundo en imagenología, arte técnico para videojuegos, documentación fotográfica y automatización de instrumentación.",
+    discLead: "Práctica articulada en cuatro áreas concretas: aprendizaje profundo en imagenología médica, arte técnico para videojuegos, documentación fotográfica territorial y dirección de I+D independiente.",
 
     disc1Num: "01 // INTELIGENCIA ARTIFICIAL",
     disc1Title: "AI Vision Researcher",
-    disc1Desc: "Reconstrucción 3D MRI sin supervisión, arquitecturas neuronales bio-inspiradas (NAS) y Deep Image Prior para imágenes biomédicas y patrones visuales complejos.",
+    disc1Desc: "Reconstrucción 3D MRI sin supervisión, arquitecturas neuronales bio-inspiradas (NAS) y Deep Image Prior para tensores volumétricos médicos y patrones visuales complejos.",
     
-    disc2Num: "02 // ARTE TÉCNICO & MATEMÁTICA",
+    disc2Num: "02 // ARTE TÉCNICO & TIEMPO REAL",
     disc2Title: "Technical Artist & VFX",
     disc2Desc: "Sombreadores procedurales HLSL, sistemas de partículas Niagara en Unreal Engine 5, simulación física y dirección técnica para producciones interactivas como Curilemu.",
 
     disc3Num: "03 // FOTOGRAFÍA & TERRITORIO",
-    disc3Title: "Fotografía & Óptica",
+    disc3Title: "Fotografía & Territorio",
     disc3Desc: "Documentación territorial en Dientes de Navarino (55°S), Torres del Paine, Serranías del Hornocal (4350m) y Araucanía Andina. Fotolibro monográfico en espectro infrarrojo (720nm) y película 35mm.",
 
-    disc4Num: "04 // INGENIERÍA & SISTEMAS",
-    disc4Title: "Developer & Director I+D",
-    disc4Desc: "Dirección de ingeniería en Cid-Lara Studio. Automatización a escala nanométrica para grabado láser de femtosegundos en cristales ópticos (MIRO) y docencia universitaria en sistemas digitales.",
+    disc4Num: "04 // I+D INDEPENDIENTE & SISTEMAS",
+    disc4Title: "Director I+D · Cid-Lara Studio",
+    disc4Desc: "Dirección de I+D tecnológico en Cid-Lara Studio y NAR Labs. Diseño de protocolos de automatización, análisis computacional en tiempo real y soporte algorítmico para obras de alta complejidad.",
 
     // Section 3: Research
-    resMeta: "03 / Producción Científica",
-    resTitle: "Investigación en Visión & Fotónica",
-    resLead: "Reconstrucción de imágenes médicas sin supervisión, búsqueda bio-inspirada de redes neuronales y física de redes fotónicas en guías de onda.",
+    resMeta: "03 / Producción Científica & Algoritmos",
+    resTitle: "Investigación en <em>IA & Visión Computacional</em>",
+    resLead: "Aportes en reconstrucción de imágenes biomédicas 3D, búsqueda bio-inspirada de arquitecturas neuronales y modelos de Deep Image Prior (DIP).",
     resSpotlightInst: "Instituto Milenio iHEALTH · U. de Chile",
     resSpotlightTitle: "Reconstrucción Autosupervisada de Resonancia Magnética 3D Multicontraste",
     resSpotlightP1: "Desarrollo de métodos eficientes basados en <strong>Deep Image Prior (DIP)</strong> para reconstruir volúmenes 3D de alta fidelidad sin requerir grandes conjuntos de entrenamiento supervisado.",
     resSpotlightP2: "Reducción del tiempo de adquisición y supresión de artefactos de movimiento mediante optimización estocástica y regularizaciones de fase.",
-    resPubsHeading: "Publicaciones en Revistas con Comité Editorial",
-    pub1Badge: "Nature · Sci Rep",
-    pub1Title: "Strain-induced localization to delocalization transition on a Lieb photonic ribbon lattice",
-    pub1Desc: "D. Román-Cortés, G. Fadic, C. Cid-Lara et al. · Scientific Reports (2021)",
-    pub2Badge: "ACS · Nano Letters",
-    pub2Title: "Photonic Molecule Approach to Multiorbital Topology",
-    pub2Desc: "M. Mazanov, D. Román-Cortés, G. Cáceres-Aravena, C. Cid, M. A. Gorlach, R. A. Vicencio · Nano Letters (2024)",
-    pubLinkText: "Ver Paper →",
+    resPubsHeading: "Líneas de Investigación en IA & Publicaciones",
+    pub1Badge: "iHEALTH · Deep Learning",
+    pub1Title: "Reconstrucción 3D MRI Autosupervisada mediante Deep Image Prior",
+    pub1Desc: "Modelos generativos para reconstrucción volumétrica multicontraste sin grandes bases de datos supervisadas. · iHEALTH (2024–2026)",
+    pub2Badge: "FCFM · Visión Computacional",
+    pub2Title: "Búsqueda Bio-inspirada de Arquitecturas Neuronales (NAS)",
+    pub2Desc: "Optimización evolutiva de campos receptivos retinotópicos y conectividad sináptica para imagenología compleja. (2023–2025)",
+    pubLinkText: "Consultar CV →",
 
-    // Section 3-B: p5.js Optical Lab
-    p5LabTitle: "Simulador de Red Fotónica Lieb",
-    p5LabLead: "Modelo interactivo de propagación y difracción óptica en una red de Lieb. Basado en la investigación publicada en Scientific Reports (Nature, 2021). Haz clic o arrastra para emitir pulsos de onda coherentes.",
-    p5CtrlWavelength: "Longitud de Onda (λ)",
-    p5CtrlStrain: "Deformación de Red (Strain δ)",
+    // Section 3-B: p5.js Generative Lab
+    p5LabTitle: "Laboratorio Generativo de <em>IA & Latent Space</em>",
+    p5LabLead: "Exploración táctil interactiva de campos tensoriales, redes sinápticas bio-inspiradas (NAS) y dinámicas de partículas en tiempo real. Haz clic en el lienzo para emitir pulsos latentes o arrastra para deformar el flujo vectorial.",
+    p5CanvasHint: "⚡ CLICK: ONDA DE CHOQUE // ARRASTRE: FLUJO TENSORIAL",
+    p5CockpitBadge: "MODOS GENERATIVOS // CONTROL TÁCTIL",
+    p5Mode1Title: "01 // LATENT FLOW FIELD",
+    p5Mode1Desc: "Generative Deep Prior · Curl Noise Tensor Flow",
+    p5Mode2Title: "02 // SYNAPTIC NAS MESH",
+    p5Mode2Desc: "Bio-inspired Neural Architecture Search · Dynamic Axons",
+    p5Mode3Title: "03 // NIAGARA PROCEDURAL VFX",
+    p5Mode3Desc: "Unreal Engine 5 · Real-Time Particle Turbulence",
+    p5ReseedBtn: "RE-SEED LATENTE",
 
     // Section 4: Technical Art & Projects
     projMeta: "04 / Producción Técnica & Obras",
@@ -99,19 +110,18 @@ const translations = {
     proj1Desc: "Aventura de acción y horror en tercera persona arraigada en el folklore de Chiloé y la Recta Provincia. Responsable de la arquitectura de Niagara VFX, sombreadores de niebla volumétrica, modelado procedural de bosques y dirección de producción técnica.",
     proj1Link: "Sitio Oficial de Curilemu →",
 
-    proj2Role: "Infraestructura & R&D · Cid-Lara Studio",
+    proj2Role: "Infraestructura Matriz & R&D · Cid-Lara Studio",
     proj2Title: "NAR Labs & Algoritmo Cid-Lara",
-    proj2Desc: "Dirección del área de Investigación y Desarrollo tecnológico. Diseño de protocolos de automatización, análisis computacional en tiempo real, soporte algorítmico para obras de Música Aumentada y la Bienal M++ Santiago.",
-    proj2Link: "Ver Cid-Lara Studio →",
+    proj2Desc: "Dirección del área de Investigación y Desarrollo tecnológico. Cid-Lara Studio es la entidad matriz de alta complejidad que articula composición, ingeniería, inteligencia artificial y producción institucional; dentro de ella dirijo NAR Labs, creando la infraestructura algorítmica y sistemas en tiempo real para obras de Música Aumentada.",
+    proj2Link: "Conocer Cid-Lara Studio (jaimecidlara.com) →",
 
-    proj3Role: "Instituto Milenio de Investigación en Óptica (MIRO)",
-    proj3Title: "Micromecanizado Láser de Femtosegundos & Fotónica",
-    proj3Desc: "Automatización de sistemas de desplazamiento XYZ a escala nanométrica, estabilización de potencia óptica en tiempo real para grabado láser en cristales y procesamiento en lotes de imágenes microscópicas.",
+    studioEcosystemTitle: "Cid-Lara Studio — Entidad Matriz de Creación & I+D",
+    studioEcosystemDesc: "Cid-Lara Studio constituye la cúspide organizacional y artística dirigida por Jaime Cid-Lara. Articula investigación territorial, producción de alta escala y tecnología bajo una estructura unificada:",
 
     // Section 5: Photography
-    photoMeta: "05 / Archivo Fotográfico",
-    photoTitle: "Colección <em>Fotográfica</em>",
-    photoLead: "Un registro visual del territorio austral, la geología andina, el espectro infrarrojo y la textura de la película analógica.",
+    photoMeta: "05 / Fotografía & Territorio",
+    photoTitle: "Monografía & <em>Archivo Fotográfico</em>",
+    photoLead: "Registro visual del territorio austral, geología andina y espectro infrarrojo (720nm). El archivo integral se encuentra alojado en su página dedicada.",
     filterAll: "Todas",
     filterPhotobook: "Fotolibro IR",
     filterNavarino: "Navarino",
@@ -122,6 +132,8 @@ const translations = {
     filterPortraits: "Retratos",
     filterEvents: "Eventos",
     photobookSynopsis: "Monografía visual dedicada a la luz invisible y la memoria geológica en el confín austral. Registro multiespectral de estepas, bosques muertos y glaciares sub-antárticos.",
+    portalBannerTitle: "Archivo Fotográfico Completo (Colección 40+ Obras)",
+    portalBannerDesc: "Explora el archivo completo en alta resolución organizado por expediciones territoriales (Navarino, Paine, Sendero Cóndor, Jujuy, Araucanía, Retratos y Eventos) con visor lightbox interactivo.",
     viewFullArchive: "Abrir Archivo Completo en Alta Resolución →",
 
     // Section 6: Contact
@@ -139,8 +151,8 @@ const translations = {
     toastCopy: "Correo copiado al portapapeles: ",
 
     // Footer
-    footerDesc: "Christofer Cid Lara — AI Researcher, Technical Artist, Developer & Photographer.",
-    footerCopy: "© 2026 Christofer Cid Lara. Todos los derechos reservados.",
+    footerDesc: "Christofer Cid Lara — Director of R&D at Cid-Lara Studio · AI Researcher, Technical Artist & Photographer.",
+    footerCopy: "© 2026 Christofer Cid Lara · Cid-Lara Studio. Todos los derechos reservados.",
     footerLoc: "Santiago de Chile · Confín Austral"
   },
 
@@ -149,81 +161,92 @@ const translations = {
     navVision: "Vision",
     navDisciplines: "Disciplines",
     navResearch: "Research & AI",
+    navLab: "Generative Lab",
     navVFX: "Tech Art",
-    navPhoto: "Photography",
+    navPhoto: "Photography ↗",
     navProjects: "Projects",
     navContact: "Contact",
+    navStudioBadge: "Cid-Lara Studio",
     getCV: "Download CV",
 
     // Hero
-    heroBadge: "Electrical Engineering · Computer Vision · Territorial Photography",
+    heroStudioBadge: "Director of R&D at Cid-Lara Studio",
+    heroBadge: "AI & Computer Vision · UE5 Tech Art · R&D",
     titleFull: "CHRISTOFER CID LARA",
     titleCompressed: "[ CCidLara ]",
-    heroStatement: "Electrical engineering, physics of light, and territorial photography.",
+    heroStatement: "Artificial intelligence, real-time technical art, R&D direction, and territorial documentation.",
     heroTagAI: "AI Research",
-    heroTagPhoto: "Photography & Optics",
+    heroTagPhoto: "Photography & Territory",
     heroTagTechArt: "Tech Art & Shaders",
-    heroTagDev: "Systems & R&D",
+    heroTagDev: "Cid-Lara Studio & R&D",
     heroCTAWorks: "Explore Works",
     heroCTAContact: "Direct Contact",
     heroScroll: "Scroll",
+    kineticBtn: "KINETIC FOCUS",
 
     // Section 1: Vision / About
     aboutMeta: "01 / Foundation & Practice",
-    aboutTitle: "Engineering, Optics & Territory",
-    aboutQuote: "“The image as physical phenomenon, mathematical structure, and territorial document.”",
-    aboutBio1: "Civil Electrical Engineer and M.Sc. in Engineering Sciences from Universidad de Chile. My practice investigates the intersection of generative image reconstruction, real-time technical art in game engines, and territorial photography.",
-    aboutBio2: "Researching Deep Image Prior methods for 3D multi-contrast MRI at iHEALTH Millennium Institute, leading technical direction at Austral Games (Curilemu), and developing optical automation at Cid-Lara Studio.",
+    aboutTitle: "Artificial Intelligence, Systems & <em>Territory</em>",
+    aboutQuote: "“The image as generative synthesis, real-time mathematical structure, and territorial document.”",
+    aboutBio1: "Civil Electrical Engineer and M.Sc. in Engineering Sciences from Universidad de Chile. My practice investigates the intersection of generative image reconstruction, real-time technical art in Unreal Engine 5, and multispectral territorial photography.",
+    aboutBio2: "I serve as Director of R&D at <em>Cid-Lara Studio</em> (head umbrella organization for high-complexity cultural production and computational systems directed by Jaime Cid-Lara) and lead <em>NAR Labs</em>. Additionally, I research Deep Image Prior models at the <em>iHEALTH Millennium Institute</em> and lead technical architecture at <em>Austral Games</em> (Curilemu).",
     stat1Val: "10+",
     stat1Lbl: "Years of Practice",
-    stat2Val: "Nature / ACS",
-    stat2Lbl: "Peer-Reviewed Papers",
+    stat2Val: "iHEALTH / UChile",
+    stat2Lbl: "AI Research",
     stat3Val: "4000+",
     stat3Lbl: "Archive Frames",
 
     // Section 2: Disciplines
     discMeta: "02 / Areas of Practice",
     discTitle: "Lines of Work",
-    discLead: "Practice articulated across four concrete domains: deep learning in medical imaging, technical art for games, photographic documentation, and instrumentation automation.",
+    discLead: "Practice articulated across four concrete domains: deep learning in medical imaging, technical art for games, territorial photographic documentation, and independent R&D direction.",
 
     disc1Num: "01 // ARTIFICIAL INTELLIGENCE",
     disc1Title: "AI Vision Researcher",
-    disc1Desc: "Unsupervised 3D MRI reconstruction, bio-inspired Neural Architecture Search (NAS), and Deep Image Prior for biomedical imaging and complex optical patterns.",
+    disc1Desc: "Unsupervised 3D MRI reconstruction, bio-inspired Neural Architecture Search (NAS), and Deep Image Prior for biomedical volumetric tensors and complex visual patterns.",
     
-    disc2Num: "02 // TECHNICAL ART & MATHEMATICS",
+    disc2Num: "02 // TECHNICAL ART & REAL-TIME",
     disc2Title: "Technical Artist & VFX",
     disc2Desc: "Procedural HLSL shaders, Niagara particle dynamics in Unreal Engine 5, physical simulation, and technical direction for interactive productions such as Curilemu.",
 
     disc3Num: "03 // PHOTOGRAPHY & TERRITORY",
-    disc3Title: "Territorial Photography",
-    disc3Desc: "Territorial documentation across Dientes de Navarino (55°S), Torres del Paine, Serranías del Hornocal (4350m), and the Andean Araucanía. Monograph in 720nm infrared and 35mm film.",
+    disc3Title: "Photography & Territory",
+    disc3Desc: "Territorial documentation across Dientes de Navarino (55°S), Torres del Paine, Serranías del Hornocal (4350m), and Andean Araucanía. Monograph in 720nm infrared and 35mm film.",
 
-    disc4Num: "04 // SYSTEMS & ENGINEERING",
-    disc4Title: "Developer & Director of R&D",
-    disc4Desc: "Engineering direction at Cid-Lara Studio. Nanometer-scale XYZ stage automation for femtosecond laser micromachining in optical crystals (MIRO) and university digital systems teaching.",
+    disc4Num: "04 // INDEPENDENT R&D & SYSTEMS",
+    disc4Title: "Director of R&D · Cid-Lara Studio",
+    disc4Desc: "Directing technology and R&D at Cid-Lara Studio and NAR Labs. Designing automation protocols, real-time computational analysis, and algorithmic infrastructure for high-complexity works.",
 
     // Section 3: Research
-    resMeta: "03 / Scientific Research",
-    resTitle: "Research in Vision & Photonics",
-    resLead: "Unsupervised medical image reconstruction, bio-inspired neural networks, and photonic lattice physics in optical waveguides.",
+    resMeta: "03 / Scientific Research & Algorithms",
+    resTitle: "Research in <em>AI & Computer Vision</em>",
+    resLead: "Contributions in 3D biomedical image reconstruction, bio-inspired neural architecture search (NAS), and Deep Image Prior (DIP).",
     resSpotlightInst: "iHEALTH Millennium Institute · U. de Chile",
     resSpotlightTitle: "Unsupervised 3D Multi-Contrast MRI Reconstruction",
     resSpotlightP1: "Data-efficient methods based on <strong>Deep Image Prior (DIP)</strong> to reconstruct high-fidelity 3D medical volumes without requiring large supervised training databases.",
     resSpotlightP2: "Acquisition time acceleration and motion artifact mitigation via stochastic optimization and phase-regularized loss functions.",
-    resPubsHeading: "Peer-Reviewed Journal Publications",
-    pub1Badge: "Nature · Sci Rep",
-    pub1Title: "Strain-induced localization to delocalization transition on a Lieb photonic ribbon lattice",
-    pub1Desc: "D. Román-Cortés, G. Fadic, C. Cid-Lara et al. · Scientific Reports (2021)",
-    pub2Badge: "ACS · Nano Letters",
-    pub2Title: "Photonic Molecule Approach to Multiorbital Topology",
-    pub2Desc: "M. Mazanov, D. Román-Cortés, G. Cáceres-Aravena, C. Cid, M. A. Gorlach, R. A. Vicencio · Nano Letters (2024)",
-    pubLinkText: "View Paper →",
+    resPubsHeading: "AI Research Tracks & Publications",
+    pub1Badge: "iHEALTH · Deep Learning",
+    pub1Title: "Self-Supervised 3D MRI Reconstruction via Deep Image Prior",
+    pub1Desc: "Generative models for multi-contrast volumetric reconstruction without massive supervised datasets. · iHEALTH (2024–2026)",
+    pub2Badge: "FCFM · Computer Vision",
+    pub2Title: "Bio-Inspired Neural Architecture Search (NAS)",
+    pub2Desc: "Evolutionary optimization of retinotopic receptive fields and synaptic connectivity for complex imaging systems. (2023–2025)",
+    pubLinkText: "Inquire CV / Paper →",
 
-    // Section 3-B: p5.js Optical Lab
-    p5LabTitle: "Lieb Photonic Lattice Simulator",
-    p5LabLead: "Interactive model of optical wave propagation and diffraction in a Lieb lattice. Based on research published in Scientific Reports (Nature, 2021). Click or drag to pulse coherent wavefronts.",
-    p5CtrlWavelength: "Wavelength (λ)",
-    p5CtrlStrain: "Lattice Strain (δ)",
+    // Section 3-B: p5.js Generative Lab
+    p5LabTitle: "Generative AI & <em>Latent Space Lab</em>",
+    p5LabLead: "Interactive tactile exploration of tensor fields, bio-inspired synaptic networks (NAS), and real-time particle dynamics. Click on the canvas to emit latent pulse waves or drag to bend tensor flow vectors.",
+    p5CanvasHint: "⚡ CLICK: SHOCKWAVE // DRAG: TENSOR FLOW",
+    p5CockpitBadge: "GENERATIVE MODES // TACTILE CONTROL",
+    p5Mode1Title: "01 // LATENT FLOW FIELD",
+    p5Mode1Desc: "Generative Deep Prior · Curl Noise Tensor Flow",
+    p5Mode2Title: "02 // SYNAPTIC NAS MESH",
+    p5Mode2Desc: "Bio-inspired Neural Architecture Search · Dynamic Axons",
+    p5Mode3Title: "03 // NIAGARA PROCEDURAL VFX",
+    p5Mode3Desc: "Unreal Engine 5 · Real-Time Particle Turbulence",
+    p5ReseedBtn: "RE-SEED LATENT",
 
     // Section 4: Technical Art & Projects
     projMeta: "04 / Technical Production & Works",
@@ -234,19 +257,18 @@ const translations = {
     proj1Desc: "Third-person dark fantasy action RPG rooted in the folklore and myths of Chiloé. Responsible for Niagara VFX architecture, volumetric fog shaders, procedural forest generation, and executive production pipelines.",
     proj1Link: "Official Curilemu Website →",
 
-    proj2Role: "Infrastructure & R&D · Cid-Lara Studio",
+    proj2Role: "Head Infrastructure & R&D · Cid-Lara Studio",
     proj2Title: "NAR Labs & Cid-Lara Algorithm",
-    proj2Desc: "Directing research and technological development. Engineering automation protocols, real-time computational analysis, and algorithmic infrastructure supporting Augmented Music productions and the M++ Santiago Biennial.",
-    proj2Link: "Visit Cid-Lara Studio →",
+    proj2Desc: "Directing technology and R&D. Cid-Lara Studio is the high-complexity head organization articulating composition, engineering, artificial intelligence, and institutional production; within it I direct NAR Labs, providing the algorithmic infrastructure and real-time systems for Augmented Music.",
+    proj2Link: "Explore Cid-Lara Studio (jaimecidlara.com) →",
 
-    proj3Role: "Millennium Institute for Research in Optics (MIRO)",
-    proj3Title: "Femtosecond Laser Micromachining & Photonics",
-    proj3Desc: "Nanometric XYZ motorized stage automation, real-time optical power stabilization for waveguide inscription, and batch microscopic image analysis systems.",
+    studioEcosystemTitle: "Cid-Lara Studio — Head Organization for Creation & R&D",
+    studioEcosystemDesc: "Cid-Lara Studio constitutes the organizational and artistic head directed by Jaime Cid-Lara. It articulates territorial research, large-scale production, and technology under a unified structure:",
 
     // Section 5: Photography
-    photoMeta: "05 / Photographic Archive",
-    photoTitle: "Curated <em>Portfolio</em>",
-    photoLead: "A visual archive of sub-antarctic territories, Andean geology, infrared wavelengths, and film emulsion grain.",
+    photoMeta: "05 / Territorial Photography",
+    photoTitle: "Monograph & <em>Photographic Archive</em>",
+    photoLead: "A visual archive of sub-antarctic territories, Andean geology, and 720nm infrared reflectance. The complete archive is hosted on its dedicated page.",
     filterAll: "All",
     filterPhotobook: "Photobook IR",
     filterNavarino: "Navarino",
@@ -257,6 +279,8 @@ const translations = {
     filterPortraits: "Portraits",
     filterEvents: "Events",
     photobookSynopsis: "Visual monograph exploring invisible wavelengths and geological memory in southern Patagonia. Multispectral capture of steppes, dead forests, and sub-antarctic glaciers.",
+    portalBannerTitle: "Complete Photographic Archive (40+ Works Collection)",
+    portalBannerDesc: "Explore the complete high-resolution archive organized by territorial expeditions (Navarino, Paine, Sendero Cóndor, Jujuy, Araucanía, Portraits, and Events) with an interactive lightbox viewer.",
     viewFullArchive: "Open Complete High-Res Archive →",
 
     // Section 6: Contact
@@ -274,8 +298,8 @@ const translations = {
     toastCopy: "Email copied to clipboard: ",
 
     // Footer
-    footerDesc: "Christofer Cid Lara — AI Researcher, Technical Artist, Developer & Photographer.",
-    footerCopy: "© 2026 Christofer Cid Lara. All rights reserved.",
+    footerDesc: "Christofer Cid Lara — Director of R&D at Cid-Lara Studio · AI Researcher, Technical Artist & Photographer.",
+    footerCopy: "© 2026 Christofer Cid Lara · Cid-Lara Studio. All rights reserved.",
     footerLoc: "Santiago, Chile · Southern Reach"
   }
 };
@@ -313,114 +337,126 @@ function setLanguage(lang) {
 // =============================================================================
 function initKineticTitle() {
   const wrapper = document.querySelector('.kinetic-title-wrapper');
-  if (!wrapper) return;
+  const fullEl = document.querySelector('.title-full-name');
+  const compEl = document.querySelector('.title-compressed');
+  if (!wrapper || !fullEl || !compEl) return;
 
-  // Trigger compression smoothly after initial cinematic load
-  setTimeout(() => {
-    wrapper.classList.add('compressed');
-  }, 1600);
+  let isCompressed = false;
+  let compressTimeout = null;
+
+  function setCompressedState(compress) {
+    if (compress === isCompressed) return;
+    isCompressed = compress;
+
+    if (compress) {
+      wrapper.classList.add('compressed');
+      if (typeof anime !== 'undefined') {
+        anime.remove([fullEl, compEl]);
+        anime({
+          targets: fullEl,
+          letterSpacing: ['0.28em', '0.02em'],
+          opacity: [1, 0],
+          scale: [1, 0.92],
+          duration: 950,
+          easing: 'cubicBezier(0.16, 1, 0.3, 1)'
+        });
+        anime({
+          targets: compEl,
+          opacity: [0, 1],
+          scale: [1.08, 1],
+          letterSpacing: ['0.14em', '0.08em'],
+          duration: 1050,
+          delay: 150,
+          easing: 'cubicBezier(0.16, 1, 0.3, 1)'
+        });
+      }
+    } else {
+      wrapper.classList.remove('compressed');
+      if (typeof anime !== 'undefined') {
+        anime.remove([fullEl, compEl]);
+        anime({
+          targets: compEl,
+          opacity: [1, 0],
+          scale: [1, 1.05],
+          duration: 600,
+          easing: 'easeOutQuad'
+        });
+        anime({
+          targets: fullEl,
+          letterSpacing: ['0.02em', '0.28em'],
+          opacity: [0, 1],
+          scale: [0.94, 1],
+          duration: 1100,
+          delay: 100,
+          easing: 'cubicBezier(0.16, 1, 0.3, 1)'
+        });
+      }
+    }
+  }
+
+  // Cinematic initial compression after load
+  compressTimeout = setTimeout(() => {
+    setCompressedState(true);
+  }, 1800);
 
   // Allow clicking on title to toggle expanded / compressed
   wrapper.addEventListener('click', () => {
-    wrapper.classList.toggle('compressed');
+    if (compressTimeout) clearTimeout(compressTimeout);
+    setCompressedState(!isCompressed);
   });
 
   const replayBtn = document.querySelector('.kinetic-replay-btn');
   if (replayBtn) {
     replayBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      wrapper.classList.remove('compressed');
-      setTimeout(() => {
-        wrapper.classList.add('compressed');
-      }, 1800);
+      if (compressTimeout) clearTimeout(compressTimeout);
+      setCompressedState(false);
+      compressTimeout = setTimeout(() => {
+        setCompressedState(true);
+      }, 2400);
     });
   }
 }
 
 // =============================================================================
-// 3. Interactive Optical Waves Canvas Background
+// 3. Motion Engine (Scroll Progress Filament, Parallax & Spring Physics)
 // =============================================================================
-function initVisionCanvas() {
-  const canvas = document.getElementById('vision-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
+function initMotionEngine() {
+  if (typeof Motion === 'undefined') return;
 
-  let width, height;
-  let mouse = { x: null, y: null, targetX: null, targetY: null };
-  let time = 0;
-
-  function resize() {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    if (!mouse.x) {
-      mouse.x = mouse.targetX = width / 2;
-      mouse.y = mouse.targetY = height / 2;
-    }
+  // 3.1 Hardware-accelerated Scroll Progress Filament
+  const progressBar = document.getElementById('scrollProgressBar');
+  if (progressBar && Motion.scroll && Motion.animate) {
+    Motion.scroll(
+      Motion.animate(progressBar, { transform: ['scaleX(0)', 'scaleX(1)'] })
+    );
   }
 
-  window.addEventListener('resize', resize);
-  resize();
-
-  window.addEventListener('mousemove', (e) => {
-    mouse.targetX = e.clientX;
-    mouse.targetY = e.clientY;
+  // 3.2 Scroll-Linked Diamond Divider Rotation & Breathing
+  const centerDiamonds = document.querySelectorAll('.divider-diamond.center');
+  centerDiamonds.forEach(diamond => {
+    if (Motion.scroll && Motion.animate) {
+      Motion.scroll(
+        Motion.animate(diamond, { transform: ['rotate(45deg) scale(0.85)', 'rotate(225deg) scale(1.2)'] }),
+        { target: diamond, offset: ['start end', 'end start'] }
+      );
+    }
   });
 
-  // Optical Wave Lines & Diffraction Nodes
-  const numLines = 14;
-
-  function draw() {
-    time += 0.012;
-    // Smooth mouse interpolation
-    mouse.x += (mouse.targetX - mouse.x) * 0.05;
-    mouse.y += (mouse.targetY - mouse.y) * 0.05;
-
-    ctx.clearRect(0, 0, width, height);
-
-    // Subtle dark ambient gradient
-    const grad = ctx.createRadialGradient(
-      mouse.x, mouse.y, 10,
-      mouse.x, mouse.y, Math.max(width, height) * 0.6
-    );
-    grad.addColorStop(0, 'rgba(197, 34, 31, 0.035)');
-    grad.addColorStop(0.5, 'rgba(12, 12, 18, 0.02)');
-    grad.addColorStop(1, 'transparent');
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, 0, width, height);
-
-    // Render optical wave curves
-    for (let i = 0; i < numLines; i++) {
-      ctx.beginPath();
-      const progress = i / numLines;
-      const yBase = height * 0.15 + (height * 0.75 * progress);
-      const waveFreq = 0.0018 + (i * 0.0002);
-      const waveAmp = 25 + (Math.sin(time + i) * 15);
-
-      ctx.moveTo(0, yBase);
-
-      for (let x = 0; x < width; x += 16) {
-        const distToMouse = Math.hypot(x - mouse.x, yBase - mouse.y);
-        const mouseRepel = Math.max(0, (1 - distToMouse / 350)) * 30;
-
-        const y = yBase +
-          Math.sin(x * waveFreq + time + (i * 0.6)) * waveAmp +
-          Math.cos((x * 0.003) - time) * (waveAmp * 0.5) -
-          (mouse.y < yBase ? -mouseRepel : mouseRepel);
-
-        ctx.lineTo(x, y);
+  // 3.3 Tactile Spring Card Elevations
+  const interactiveCards = document.querySelectorAll('.discipline-card, .project-media-card, .studio-ecosystem-card, .monograph-plate, .curated-plate-card');
+  interactiveCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      if (Motion.animate) {
+        Motion.animate(card, { y: -6, scale: 1.012 }, { type: 'spring', stiffness: 350, damping: 22 });
       }
-
-      ctx.strokeStyle = i % 4 === 0
-        ? `rgba(197, 34, 31, ${0.12 + (i * 0.01)})`
-        : `rgba(245, 242, 235, ${0.03 + (i * 0.005)})`;
-      ctx.lineWidth = i % 4 === 0 ? 1.2 : 0.8;
-      ctx.stroke();
-    }
-
-    requestAnimationFrame(draw);
-  }
-
-  draw();
+    });
+    card.addEventListener('mouseleave', () => {
+      if (Motion.animate) {
+        Motion.animate(card, { y: 0, scale: 1 }, { type: 'spring', stiffness: 400, damping: 25 });
+      }
+    });
+  });
 }
 
 // =============================================================================
@@ -914,6 +950,24 @@ function openLightbox(index) {
 
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
+
+  if (typeof anime !== 'undefined') {
+    anime({
+      targets: mainImg,
+      opacity: [0, 1],
+      scale: [0.93, 1],
+      duration: 380,
+      easing: 'easeOutCubic'
+    });
+    anime({
+      targets: '.lightbox-caption',
+      opacity: [0, 1],
+      translateY: [16, 0],
+      duration: 420,
+      delay: 80,
+      easing: 'easeOutCubic'
+    });
+  }
 }
 
 function closeLightbox() {
@@ -924,14 +978,35 @@ function closeLightbox() {
   }
 }
 
+function updateLightboxImage(index) {
+  const mainImg = document.getElementById('lightboxMainImg');
+  const captionTitle = document.getElementById('lightboxTitle');
+  const captionSeries = document.getElementById('lightboxSeries');
+  const item = activeFilteredItems[index];
+
+  if (typeof anime !== 'undefined') {
+    anime({
+      targets: mainImg,
+      opacity: [0.35, 1],
+      scale: [0.98, 1],
+      duration: 280,
+      easing: 'easeOutQuad'
+    });
+  }
+
+  mainImg.src = item.full;
+  captionTitle.textContent = item.title;
+  captionSeries.textContent = item.series;
+}
+
 function nextLightbox() {
   currentLightboxIndex = (currentLightboxIndex + 1) % activeFilteredItems.length;
-  openLightbox(currentLightboxIndex);
+  updateLightboxImage(currentLightboxIndex);
 }
 
 function prevLightbox() {
   currentLightboxIndex = (currentLightboxIndex - 1 + activeFilteredItems.length) % activeFilteredItems.length;
-  openLightbox(currentLightboxIndex);
+  updateLightboxImage(currentLightboxIndex);
 }
 
 function initGalleryFilters() {
@@ -967,19 +1042,29 @@ function initScrollEffects() {
     } else {
       header.classList.remove('scrolled');
     }
-  });
+  }, { passive: true });
 
-  // Intersection Observer for Reveal Elements
+  // Intersection Observer for Reveal Elements with Anime.js
   const revealElements = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
+        if (typeof anime !== 'undefined') {
+          anime({
+            targets: entry.target,
+            opacity: [0, 1],
+            translateY: [24, 0],
+            easing: 'easeOutCubic',
+            duration: 850
+          });
+        }
+        observer.unobserve(entry.target);
       }
     });
   }, {
     root: null,
-    threshold: 0.12,
+    threshold: 0.08,
     rootMargin: '0px 0px -40px 0px'
   });
 
@@ -987,7 +1072,89 @@ function initScrollEffects() {
 }
 
 // =============================================================================
-// 6. Direct Contact & Email Copy
+// 6. Anime.js Cinematic Stagger, Archival Bracket Pulse & Tactile Micro-Physics
+// =============================================================================
+function initAnimeHero() {
+  if (typeof anime === 'undefined') return;
+
+  // Stagger hero elements on load with haunting, slow cinematic grace
+  anime.timeline({
+    easing: 'easeOutCubic'
+  })
+  .add({
+    targets: '.hero-meta-badge',
+    opacity: [0, 1],
+    translateY: [-14, 0],
+    duration: 1000,
+    delay: 200
+  })
+  .add({
+    targets: '.title-full-name',
+    opacity: [0, 1],
+    scale: [0.97, 1],
+    duration: 1200
+  }, '-=700')
+  .add({
+    targets: '.hero-statement, .hero-disciplines, .hero-cta-group',
+    opacity: [0, 1],
+    translateY: [18, 0],
+    delay: anime.stagger(140),
+    duration: 900
+  }, '-=600');
+
+  // Subtle 3D tactile perspective response on monolithic cards
+  const cards = document.querySelectorAll('.discipline-card, .project-media-card, .photobook-featured-card, .monograph-plate');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      anime({
+        targets: card,
+        rotateY: x * 5,
+        rotateX: -y * 5,
+        scale: 1.012,
+        duration: 350,
+        easing: 'easeOutQuad'
+      });
+    });
+
+    card.addEventListener('mouseleave', () => {
+      anime({
+        targets: card,
+        rotateY: 0,
+        rotateX: 0,
+        scale: 1,
+        duration: 650,
+        easing: 'easeOutElastic(1, .8)'
+      });
+    });
+  });
+
+  // Archival bracket & tag-dot subtle hover pulse
+  const bracketItems = document.querySelectorAll('.discipline-tag, .brand-logo');
+  bracketItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      anime({
+        targets: item.querySelectorAll('.brand-bracket, .tag-dot'),
+        scale: [1, 1.25],
+        duration: 260,
+        easing: 'easeOutCubic'
+      });
+    });
+    item.addEventListener('mouseleave', () => {
+      anime({
+        targets: item.querySelectorAll('.brand-bracket, .tag-dot'),
+        scale: 1,
+        duration: 400,
+        easing: 'easeOutElastic(1, .8)'
+      });
+    });
+  });
+}
+
+// =============================================================================
+// 7. Direct Contact & Email Copy
 // =============================================================================
 function copyEmail(email) {
   navigator.clipboard.writeText(email).then(() => {
@@ -1019,7 +1186,7 @@ function copyEmail(email) {
 }
 
 // =============================================================================
-// 7. Mobile Navigation Toggle
+// 8. Mobile Navigation Toggle
 // =============================================================================
 function initMobileMenu() {
   const btn = document.getElementById('mobileMenuBtn');
@@ -1054,10 +1221,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 2. Visual Effects & Features
   initKineticTitle();
-  initVisionCanvas();
+  initMotionEngine();
   renderGallery('all');
   initGalleryFilters();
   initScrollEffects();
+  initAnimeHero();
   initMobileMenu();
 });
 window.triggerCategoryFilter = function(cat) {

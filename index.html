@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Christofer Cid Lara — CCidLara · AI Vision, Mathematical VFX, Photography & Systems</title>
+  <title>Christofer Cid Lara — CCidLara · Director of R&amp;D at Cid-Lara Studio · AI Vision, Technical Artist &amp; Photography</title>
   
-  <meta name="description" content="Sitio oficial y archivo de Christofer Cid Lara: Investigador en Visión por Computador (Deep Learning, 3D MRI Reconstruction), Artista Técnico (Unreal Engine 5, Niagara VFX, Shaders HLSL), Fotógrafo y Desarrollador de Sistemas.">
-  <meta name="keywords" content="Christofer Cid Lara, CCidLara, AI Vision, Computer Vision, Deep Learning, Technical Artist, Unreal Engine 5, Niagara VFX, Shaders, Fotografía Patagonia, iHEALTH, Austral Games, Curilemu, Cid-Lara Studio, Universidad de Chile">
+  <meta name="description" content="Sitio oficial y archivo de Christofer Cid Lara: Director de I+D en Cid-Lara Studio (NAR Labs), Investigador en Visión por Computador (Deep Learning, 3D MRI Reconstruction), Artista Técnico (Unreal Engine 5, Niagara VFX, Shaders HLSL) y Fotógrafo.">
+  <meta name="keywords" content="Christofer Cid Lara, CCidLara, Cid-Lara Studio, NAR Labs, Director de I+D, AI Vision, Computer Vision, Deep Learning, Deep Image Prior, 3D MRI, Technical Artist, Unreal Engine 5, Niagara VFX, Shaders, Fotografía Patagonia, iHEALTH, Austral Games, Curilemu">
   <meta name="author" content="Christofer Cid Lara">
   <link rel="canonical" href="https://ccidlara.com/">
 
   <!-- OpenGraph / Social Meta -->
-  <meta property="og:title" content="Christofer Cid Lara — CCidLara · Vision, AI, Mathematical VFX & Photography">
-  <meta property="og:description" content="Investigando la visión a través de la luz, el aprendizaje profundo, los efectos matemáticos y la fotografía.">
+  <meta property="og:title" content="Christofer Cid Lara — CCidLara · Director of R&amp;D at Cid-Lara Studio">
+  <meta property="og:description" content="Inteligencia artificial, arte técnico en motores de tiempo real, dirección de I+D y fotografía territorial.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/hero/christofer_portrait.webp">
 
@@ -28,8 +28,15 @@
 
 <body id="top">
 
-  <!-- Background Interactive Optical Canvas -->
-  <canvas id="vision-canvas" aria-hidden="true"></canvas>
+  <!-- Atmospheric Scroll Depth Filament (Driven by Motion) -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- Ambient Generative p5.js Backdrop (Beksiński Latent Canvas) -->
+  <div id="p5-ambient-backdrop" class="p5-ambient-backdrop" aria-hidden="true"></div>
+  <div class="beksinski-vignette" aria-hidden="true"></div>
+  <div class="analog-grain-overlay" aria-hidden="true"></div>
 
   <!-- =========================================================================
        Site Header & Navigation
@@ -37,19 +44,21 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       
-      <!-- Brand Logo — Archival Typewriter Stamp -->
+      <!-- Brand Logo — Archival Typewriter Stamp with Studio Affiliation -->
       <a href="#top" class="brand-logo" aria-label="CCidLara Inicio">
-        <span class="brand-bracket">[</span><span>CCidLara</span><span class="brand-bracket">]</span>
-        <span class="brand-dot"></span>
+        <div class="brand-logo-container">
+          <div><span class="brand-bracket">[</span><span>CCidLara</span><span class="brand-bracket">]</span><span class="brand-dot"></span></div>
+          <span class="brand-affiliation-badge" data-i18n="navStudioBadge">Cid-Lara Studio</span>
+        </div>
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="#vision" class="nav-link" data-i18n="navVision">Visión</a>
         <a href="#disciplinas" class="nav-link" data-i18n="navDisciplines">Disciplinas</a>
-        <a href="#investigacion" class="nav-link" data-i18n="navResearch">Investigación &amp; IA</a>
-        <a href="#arte-tecnico" class="nav-link" data-i18n="navVFX">Arte Técnico</a>
-        <a href="#fotografia" class="nav-link" data-i18n="navPhoto">Fotografía</a>
+        <a href="#investigacion" class="nav-link" data-i18n="navResearch">Investigación IA</a>
+        <a href="#arte-tecnico" class="nav-link" data-i18n="navVFX">Obras &amp; Curilemu</a>
+        <a href="photo.html" class="nav-link" data-i18n="navPhoto">Fotografía ↗</a>
         <a href="#contacto" class="nav-link" data-i18n="navContact">Contacto</a>
       </nav>
 
@@ -77,9 +86,9 @@
   <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Menú móvil">
     <a href="#vision" class="nav-link" data-i18n="navVision">Visión</a>
     <a href="#disciplinas" class="nav-link" data-i18n="navDisciplines">Disciplinas</a>
-    <a href="#investigacion" class="nav-link" data-i18n="navResearch">Investigación &amp; IA</a>
-    <a href="#arte-tecnico" class="nav-link" data-i18n="navVFX">Arte Técnico</a>
-    <a href="#fotografia" class="nav-link" data-i18n="navPhoto">Fotografía</a>
+    <a href="#investigacion" class="nav-link" data-i18n="navResearch">Investigación IA</a>
+    <a href="#arte-tecnico" class="nav-link" data-i18n="navVFX">Obras &amp; Curilemu</a>
+    <a href="photo.html" class="nav-link" data-i18n="navPhoto">Fotografía ↗</a>
     <a href="#contacto" class="nav-link" data-i18n="navContact">Contacto</a>
   </div>
 
@@ -95,7 +104,7 @@
         <div class="hero-overlay"></div>
       </div>
 
-      <!-- Optical Focus Reticle Grid -->
+      <!-- Focus Reticle Grid -->
       <div class="optical-reticle" aria-hidden="true"></div>
 
       <div class="container hero-content">
@@ -103,9 +112,9 @@
         <div class="hero-meta-badge reveal">
           <span style="color:var(--color-gold); font-weight:700;">№ 26-CL</span>
           <span>·</span>
-          <span>λ = 380–750nm</span>
+          <span data-i18n="heroStudioBadge">Director of R&amp;D at Cid-Lara Studio</span>
           <span>·</span>
-          <span data-i18n="heroBadge">Ingeniería Eléctrica · Visión Computacional · Fotografía de Territorio</span>
+          <span data-i18n="heroBadge">IA &amp; Visión Computacional · Arte Técnico UE5 · R&amp;D</span>
         </div>
 
         <!-- Kinetic Title: Mechanical Typewriter Print -> Compressed [ CCidLara ] -->
@@ -123,20 +132,20 @@
             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/>
             </svg>
-            <span>KINETIC FOCUS</span>
+            <span data-i18n="kineticBtn">KINETIC FOCUS</span>
           </button>
         </div>
 
         <p class="hero-statement reveal delay-1" data-i18n="heroStatement">
-          Ingeniería eléctrica, física de la luz y registro fotográfico de territorio.
+          Inteligencia artificial, arte técnico en tiempo real, dirección de I+D y documentación territorial.
         </p>
 
         <!-- Discipline Badges -->
         <div class="hero-disciplines reveal delay-2">
           <span class="discipline-tag"><span class="tag-dot"></span><span data-i18n="heroTagAI">Investigación en IA</span></span>
           <span class="discipline-tag"><span class="tag-dot"></span><span data-i18n="heroTagTechArt">Arte Técnico &amp; Shaders</span></span>
-          <span class="discipline-tag"><span class="tag-dot"></span><span data-i18n="heroTagPhoto">Fotografía &amp; Óptica</span></span>
-          <span class="discipline-tag"><span class="tag-dot"></span><span data-i18n="heroTagDev">Sistemas &amp; R&amp;D</span></span>
+          <span class="discipline-tag"><span class="tag-dot"></span><span data-i18n="heroTagPhoto">Fotografía &amp; Territorio</span></span>
+          <span class="discipline-tag"><span class="tag-dot"></span><span data-i18n="heroTagDev">Cid-Lara Studio &amp; R&amp;D</span></span>
         </div>
 
         <!-- Hero Actions -->
@@ -194,36 +203,29 @@
             
             <div>
               <p class="section-meta" data-i18n="aboutMeta">01 / Fundamento &amp; Trayectoria</p>
-              <h2 class="section-title" data-i18n="aboutTitle">Ingeniería, Óptica &amp; <em>Territorio</em></h2>
+              <h2 class="section-title" data-i18n="aboutTitle">Inteligencia Artificial, Sistemas &amp; <em>Territorio</em></h2>
             </div>
 
             <blockquote class="manifesto-quote" data-i18n="aboutQuote">
-              «La imagen como fenómeno físico, estructura matemática y documento territorial.»
+              «La imagen como síntesis generativa, estructura matemática en tiempo real y documento territorial.»
             </blockquote>
 
             <div class="about-bio-body">
               <p data-i18n="aboutBio1">
-                Ingeniero Civil Eléctrico y Magíster en Ciencias de la Ingeniería (Universidad de Chile). Mi práctica investiga la confluencia entre modelos generativos para reconstrucción de imágenes, arte técnico en motores de tiempo real y fotografía analógica y digital.
+                Ingeniero Civil Eléctrico y Magíster en Ciencias de la Ingeniería (Universidad de Chile). Mi práctica investiga la confluencia entre modelos generativos para reconstrucción de imágenes biomédicas, arte técnico en motores de tiempo real (Unreal Engine 5) y documentación fotográfica multiespectral.
               </p>
               <p data-i18n="aboutBio2">
-                Investigo métodos de Deep Image Prior para resonancia magnética 3D multicontraste en el <em>Instituto Milenio iHEALTH</em>, dirijo el desarrollo técnico en <em>Austral Games</em> (Curilemu) y desarrollo instrumentación óptica en <em>Cid-Lara Studio</em>.
+                Me desempeño como Director de I+D en <em>Cid-Lara Studio</em> (organización matriz de producción cultural de alta complejidad e infraestructura computacional dirigida por Jaime Cid-Lara) y lidero <em>NAR Labs</em>. Asimismo, investigo modelos de Deep Image Prior en el <em>Instituto Milenio iHEALTH</em> y dirijo la arquitectura técnica en <em>Austral Games</em> (Curilemu).
               </p>
             </div>
 
-            <!-- Stats Strip -->
-            <div class="stats-grid">
-              <div class="stat-item">
-                <span class="stat-number" data-i18n="stat1Val">10+</span>
-                <span class="stat-label" data-i18n="stat1Lbl">Años de Trayectoria</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number" data-i18n="stat2Val">Nature / ACS</span>
-                <span class="stat-label" data-i18n="stat2Lbl">Publicaciones Científicas</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number" data-i18n="stat3Val">4000+</span>
-                <span class="stat-label" data-i18n="stat3Lbl">Fotogramas de Archivo</span>
-              </div>
+            <!-- Archival Codex Block -->
+            <div class="archival-codex-block">
+              <div class="codex-header">// PRAXIS MATRIZ &amp; AFILIACIÓN INSTITUCIONAL</div>
+              <div>• <strong>Cid-Lara Studio</strong> — Director de I+D &amp; Head de NAR Labs</div>
+              <div>• <strong>Instituto Milenio iHEALTH</strong> — Reconstrucción 3D MRI Autosupervisada (DIP)</div>
+              <div>• <strong>Austral Games</strong> — Co-Fundador &amp; Artista Técnico (Curilemu · UE5)</div>
+              <div>• <strong>Expediciones Territoriales</strong> — Dientes de Navarino 55°S, Torres del Paine &amp; Hornocal</div>
             </div>
 
           </div>
@@ -247,7 +249,7 @@
     </div>
 
     <!-- =========================================================================
-         Section 02: Four Disciplines of Vision
+         Section 02: Four Monumental Pillars (Disciplines of Vision & Systems)
          ========================================================================= -->
     <section class="site-section" id="disciplinas">
       <div class="container">
@@ -256,7 +258,7 @@
           <p class="section-meta" data-i18n="discMeta">02 / Cuatro Vertientes</p>
           <h2 class="section-title" data-i18n="discTitle">Líneas de <em>Trabajo</em></h2>
           <p class="section-lead" data-i18n="discLead">
-            Práctica articulada en cuatro áreas concretas: aprendizaje profundo en imagenología, arte técnico para videojuegos, documentación fotográfica y automatización de instrumentación.
+            Práctica articulada en cuatro áreas concretas: aprendizaje profundo en imagenología médica, arte técnico para videojuegos, documentación fotográfica territorial y dirección de I+D independiente.
           </p>
         </div>
 
@@ -267,60 +269,58 @@
             <span class="card-number" data-i18n="disc1Num">01 // INTELIGENCIA ARTIFICIAL</span>
             <h3 class="card-title" data-i18n="disc1Title">AI Vision Researcher</h3>
             <p class="card-desc" data-i18n="disc1Desc">
-              Reconstrucción 3D MRI sin supervisión, arquitecturas neuronales bio-inspiradas (NAS) y Deep Image Prior para imágenes biomédicas y patrones visuales complejos.
+              Reconstrucción 3D MRI sin supervisión, arquitecturas neuronales bio-inspiradas (NAS) y Deep Image Prior para tensores volumétricos médicos y patrones visuales complejos.
             </p>
-            <div class="card-tags">
-              <span class="tag-badge">Deep Learning</span>
-              <span class="tag-badge">PyTorch</span>
-              <span class="tag-badge">JAX</span>
-              <span class="tag-badge">3D MRI</span>
-              <span class="tag-badge">Computer Vision</span>
+            <div class="archival-taxonomy">
+              <span class="archival-bracket-item">Deep Learning</span>
+              <span class="archival-bracket-item">PyTorch / JAX</span>
+              <span class="archival-bracket-item">3D MRI Tensors</span>
+              <span class="archival-bracket-item">Bio-inspired NAS</span>
             </div>
           </div>
 
           <!-- Card 2: Tech Art & Shaders -->
           <div class="discipline-card reveal delay-1">
-            <span class="card-number" data-i18n="disc2Num">02 // ARTE TÉCNICO &amp; MATEMÁTICA</span>
+            <span class="card-number" data-i18n="disc2Num">02 // ARTE TÉCNICO &amp; TIEMPO REAL</span>
             <h3 class="card-title" data-i18n="disc2Title">Technical Artist &amp; VFX</h3>
             <p class="card-desc" data-i18n="disc2Desc">
               Sombreadores procedurales HLSL, sistemas de partículas Niagara en Unreal Engine 5, simulación física y dirección técnica para producciones interactivas como Curilemu.
             </p>
-            <div class="card-tags">
-              <span class="tag-badge">Unreal Engine 5</span>
-              <span class="tag-badge">Niagara VFX</span>
-              <span class="tag-badge">HLSL Shaders</span>
-              <span class="tag-badge">Houdini</span>
-              <span class="tag-badge">Procedural</span>
+            <div class="archival-taxonomy">
+              <span class="archival-bracket-item">Unreal Engine 5</span>
+              <span class="archival-bracket-item">Niagara VFX</span>
+              <span class="archival-bracket-item">HLSL Shaders</span>
+              <span class="archival-bracket-item">Procedural Worlds</span>
             </div>
           </div>
 
           <!-- Card 3: Photography -->
           <div class="discipline-card reveal delay-2">
             <span class="card-number" data-i18n="disc3Num">03 // FOTOGRAFÍA &amp; TERRITORIO</span>
-            <h3 class="card-title" data-i18n="disc3Title">Fotografía &amp; Óptica</h3>
+            <h3 class="card-title" data-i18n="disc3Title">Fotografía &amp; Territorio</h3>
             <p class="card-desc" data-i18n="disc3Desc">
               Documentación territorial en Dientes de Navarino (55°S), Torres del Paine, Serranías del Hornocal (4350m) y Araucanía Andina. Fotolibro monográfico en espectro infrarrojo (720nm) y película 35mm.
             </p>
-            <div class="card-tags">
-              <span class="tag-badge">Patagonia</span>
-              <span class="tag-badge">Infrarrojo 720nm</span>
-              <span class="tag-badge">35mm Analógico</span>
-              <span class="tag-badge">Composición &amp; Luz</span>
+            <div class="archival-taxonomy">
+              <span class="archival-bracket-item">Infrarrojo 720nm</span>
+              <span class="archival-bracket-item">Patagonia 55°S</span>
+              <span class="archival-bracket-item">35mm Analógico</span>
+              <span class="archival-bracket-item">Monografía Visual</span>
             </div>
           </div>
 
           <!-- Card 4: Systems & Dev -->
           <div class="discipline-card reveal delay-3">
-            <span class="card-number" data-i18n="disc4Num">04 // INGENIERÍA &amp; SISTEMAS</span>
-            <h3 class="card-title" data-i18n="disc4Title">Developer &amp; Director I+D</h3>
+            <span class="card-number" data-i18n="disc4Num">04 // I+D INDEPENDIENTE &amp; SISTEMAS</span>
+            <h3 class="card-title" data-i18n="disc4Title">Director I+D · Cid-Lara Studio</h3>
             <p class="card-desc" data-i18n="disc4Desc">
-              Dirección de ingeniería en Cid-Lara Studio. Automatización a escala nanométrica para grabado láser de femtosegundos en cristales ópticos (MIRO) y docencia universitaria en sistemas digitales.
+              Dirección de I+D tecnológico en Cid-Lara Studio y NAR Labs. Diseño de protocolos de automatización, análisis computacional en tiempo real y soporte algorítmico para obras de alta complejidad.
             </p>
-            <div class="card-tags">
-              <span class="tag-badge">Python / C</span>
-              <span class="tag-badge">Fotónica Láser</span>
-              <span class="tag-badge">Automatización</span>
-              <span class="tag-badge">Docencia FCFM</span>
+            <div class="archival-taxonomy">
+              <span class="archival-bracket-item">Cid-Lara Studio</span>
+              <span class="archival-bracket-item">NAR Labs</span>
+              <span class="archival-bracket-item">Real-Time Algorithms</span>
+              <span class="archival-bracket-item">Automatización</span>
             </div>
           </div>
 
@@ -343,16 +343,16 @@
     </div>
 
     <!-- =========================================================================
-         Section 03: Research & AI Vision (Lab Spotlight + Publications)
+         Section 03: Research & AI Vision (Lab Spotlight + Foundational Work)
          ========================================================================= -->
     <section class="site-section" id="investigacion">
       <div class="container">
         
         <div class="section-header reveal">
-          <p class="section-meta" data-i18n="resMeta">03 / Producción Científica</p>
-          <h2 class="section-title" data-i18n="resTitle">Investigación en <em>Visión &amp; Fotónica</em></h2>
+          <p class="section-meta" data-i18n="resMeta">03 / Producción Científica &amp; Algoritmos</p>
+          <h2 class="section-title" data-i18n="resTitle">Investigación en <em>IA &amp; Visión Computacional</em></h2>
           <p class="section-lead" data-i18n="resLead">
-            Aportes en reconstrucción de imágenes médicas, búsqueda bio-inspirada de redes neuronales y física de redes fotónicas.
+            Aportes en reconstrucción de imágenes biomédicas 3D, búsqueda bio-inspirada de arquitecturas neuronales y modelos de Deep Image Prior (DIP).
           </p>
         </div>
 
@@ -388,42 +388,42 @@
             </div>
           </div>
 
-          <!-- Publications Cards -->
+          <!-- Publications & Research Lines Cards -->
           <div>
             <h3 style="font-family:var(--font-serif); font-size:1.6rem; color:var(--color-bone); margin-bottom:1.5rem;" class="reveal" data-i18n="resPubsHeading">
-              Publicaciones en Revistas de Alto Impacto
+              Líneas de Investigación en IA &amp; Publicaciones
             </h3>
 
             <div class="publications-list">
               
-              <!-- Paper 1: Nature Scientific Reports -->
+              <!-- Research Line 1: iHEALTH DIP MRI -->
               <div class="pub-card reveal">
                 <div>
-                  <span class="pub-journal-badge" data-i18n="pub1Badge">Nature · Sci Rep</span>
+                  <span class="pub-journal-badge" data-i18n="pub1Badge">iHEALTH · Deep Learning</span>
                 </div>
                 <div>
-                  <h4 class="pub-title" data-i18n="pub1Title">Strain-induced localization to delocalization transition on a Lieb photonic ribbon lattice</h4>
-                  <p class="pub-authors" data-i18n="pub1Desc">D. Román-Cortés, G. Fadic, C. Cid-Lara et al. · Scientific Reports (2021)</p>
+                  <h4 class="pub-title" data-i18n="pub1Title">Reconstrucción 3D MRI Autosupervisada mediante Deep Image Prior</h4>
+                  <p class="pub-authors" data-i18n="pub1Desc">Modelos generativos para reconstrucción volumétrica multicontraste sin grandes bases de datos supervisadas. · iHEALTH (2024–2026)</p>
                 </div>
                 <div>
-                  <a href="https://doi.org/10.1038/s41598-021-00967-3" target="_blank" rel="noopener noreferrer" class="pub-link-btn" data-i18n="pubLinkText">
-                    Ver Paper →
+                  <a href="Christofer_CidLara_CV_Español_S2.pdf" target="_blank" class="pub-link-btn" data-i18n="pubLinkText">
+                    Consultar CV →
                   </a>
                 </div>
               </div>
 
-              <!-- Paper 2: ACS Nano Letters -->
+              <!-- Research Line 2: Bio-inspired NAS -->
               <div class="pub-card reveal delay-1">
                 <div>
-                  <span class="pub-journal-badge" data-i18n="pub2Badge">ACS · Nano Letters</span>
+                  <span class="pub-journal-badge" data-i18n="pub2Badge">FCFM · Visión Computacional</span>
                 </div>
                 <div>
-                  <h4 class="pub-title" data-i18n="pub2Title">Photonic Molecule Approach to Multiorbital Topology</h4>
-                  <p class="pub-authors" data-i18n="pub2Desc">M. Mazanov, D. Román-Cortés, G. Cáceres-Aravena, C. Cid, M. A. Gorlach, R. A. Vicencio · Nano Letters (2024)</p>
+                  <h4 class="pub-title" data-i18n="pub2Title">Búsqueda Bio-inspirada de Arquitecturas Neuronales (NAS)</h4>
+                  <p class="pub-authors" data-i18n="pub2Desc">Optimización evolutiva de campos receptivos retinotópicos y conectividad sináptica para imagenología compleja. (2023–2025)</p>
                 </div>
                 <div>
-                  <a href="https://doi.org/10.1021/acs.nanolett.4c00728" target="_blank" rel="noopener noreferrer" class="pub-link-btn" data-i18n="pubLinkText">
-                    Ver Paper →
+                  <a href="Christofer_CidLara_CV_Español_S2.pdf" target="_blank" class="pub-link-btn" data-i18n="pubLinkText">
+                    Consultar CV →
                   </a>
                 </div>
               </div>
@@ -436,83 +436,18 @@
       </div>
     </section>
 
-    <!-- Gold Monograph Divider -->
-    <hr class="gold-rule" aria-hidden="true">
-
-    <!-- =========================================================================
-         Section 03-B: Interactive p5.js Optical Laboratory (Lieb Photonic Lattice)
-         ========================================================================= -->
-    <section class="p5-lab-section" id="laboratorio-optico">
-      <div class="container">
-        
-        <div class="section-header reveal">
-          <div class="archival-badge" style="margin-bottom:0.8rem;">
-            <span>EXP. FOTÓNICA 03-B</span> · <span>INTERACCIÓN COMPUTACIONAL p5.js</span>
-          </div>
-          <h2 class="section-title" data-i18n="p5LabTitle">
-            Simulador de Red Fotónica <em>Lieb</em>
-          </h2>
-          <p class="section-lead" data-i18n="p5LabLead">
-            Modelo interactivo de propagación y difracción óptica en una red de Lieb. Basado en la investigación publicada en <em>Scientific Reports</em> (Nature, 2021). Haz clic o arrastra para emitir frentes de onda coherentes.
-          </p>
+    <!-- Diamond Section Divider -->
+    <div class="section-divider" aria-hidden="true">
+      <div class="divider-inner">
+        <span class="divider-line"></span>
+        <div class="divider-diamonds">
+          <span class="divider-diamond"></span>
+          <span class="divider-diamond center"></span>
+          <span class="divider-diamond"></span>
         </div>
-
-        <div class="p5-lab-container reveal">
-          <!-- Canvas Target for p5.js -->
-          <div class="p5-canvas-holder" id="p5-canvas-container">
-            <!-- p5 instance attached here via js/p5-lab.js -->
-          </div>
-
-          <!-- Controls & Telemetry Panel -->
-          <div class="p5-controls-panel">
-            <div class="archival-badge" style="width:fit-content;">
-              <span>PARÁMETROS DE LABORATORIO</span>
-            </div>
-
-            <!-- Slider 1: Wavelength -->
-            <div class="p5-control-group">
-              <label class="p5-control-label" for="slider-wavelength">
-                <span data-i18n="p5CtrlWavelength">Longitud de Onda (λ)</span>
-                <span class="p5-control-val" id="val-wavelength">720 nm</span>
-              </label>
-              <input type="range" class="p5-slider" id="slider-wavelength" min="450" max="750" value="720" step="5">
-              <span style="font-family:var(--font-mono); font-size:0.68rem; color:var(--color-bone-subtle);">
-                450nm (Azul visible) — 720nm (Infrarrojo fotolibro)
-              </span>
-            </div>
-
-            <!-- Slider 2: Lattice Strain -->
-            <div class="p5-control-group">
-              <label class="p5-control-label" for="slider-strain">
-                <span data-i18n="p5CtrlStrain">Deformación de Red (Strain δ)</span>
-                <span class="p5-control-val" id="val-strain">0.00</span>
-              </label>
-              <input type="range" class="p5-slider" id="slider-strain" min="0" max="1" value="0" step="0.02">
-              <span style="font-family:var(--font-mono); font-size:0.68rem; color:var(--color-bone-subtle);">
-                δ=0 (Localización plana) — δ=1 (Delocalización dispersiva)
-              </span>
-            </div>
-
-            <!-- Live Telemetry Display -->
-            <div class="p5-telemetry">
-              <div style="font-family:var(--font-typewriter); color:var(--color-gold); font-size:0.78rem; font-weight:700; margin-bottom:0.35rem;">
-                TELEMETRÍA ÓPTICA CUÁNTICA
-              </div>
-              <div>Régimen: <strong id="telemetry-state" style="color:var(--color-gold);">Estado Localizado (Banda Plana Lieb)</strong></div>
-              <div style="margin-top:0.25rem;">Estructura de bandas: <span id="telemetry-band">Flat-band compacta (Transporte nulo)</span></div>
-              <div style="margin-top:0.25rem; color:var(--color-bone-subtle); font-size:0.68rem;">
-                Ref: D. Román-Cortés, G. Fadic, C. Cid-Lara et al. · Sci Rep 11, 21957 (2021)
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+        <span class="divider-line right"></span>
       </div>
-    </section>
-
-    <!-- Gold Monograph Divider -->
-    <hr class="gold-rule" aria-hidden="true">
+    </div>
 
     <!-- =========================================================================
          Section 04: Technical Art & Mathematical VFX
@@ -549,31 +484,7 @@
               <a href="https://curilemu.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="proj1Link">
                 Sitio Oficial de Curilemu →
               </a>
-            </div>
           </div>
-
-          <!-- Spotlight 2: Cid-Lara Studio & NAR Labs -->
-          <div class="project-panel reverse reveal">
-            <div class="project-media-col">
-              <div class="project-media-card">
-                <img src="images/portfolio/infrared_01.webp" alt="NAR Labs & Cid-Lara Studio" class="project-img">
-                <div class="project-overlay-caption">
-                  <span>R&amp;D · MACHINE LEARNING · PROTOCOLOS OPERACIONALES</span>
-                </div>
-              </div>
-            </div>
-            <div class="project-info-col">
-              <p class="project-role-badge" data-i18n="proj2Role">Infraestructura &amp; R&amp;D · Cid-Lara Studio</p>
-              <h3 data-i18n="proj2Title">NAR Labs &amp; Algoritmo Cid-Lara</h3>
-              <p class="project-desc" data-i18n="proj2Desc">
-                Dirección del área de Investigación y Desarrollo tecnológico. Diseño de protocolos de automatización, análisis computacional en tiempo real, soporte algorítmico para obras de Música Aumentada y la Bienal M++ Santiago.
-              </p>
-              <a href="https://jaimecidlara.com/cid-lara-studio.html" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="proj2Link">
-                Ver Cid-Lara Studio →
-              </a>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -593,16 +504,16 @@
     </div>
 
     <!-- =========================================================================
-         Section 05: Curated Photography Portfolio (Masonry & Lightbox)
+         Section 05: Curated Photography Showcase (Monograph & Selected Works)
          ========================================================================= -->
     <section class="site-section" id="fotografia">
       <div class="container">
         
         <div class="section-header centered reveal">
-          <p class="section-meta" data-i18n="photoMeta">05 / Archivo Fotográfico</p>
-          <h2 class="section-title" data-i18n="photoTitle">Colección <em>Fotográfica</em></h2>
+          <p class="section-meta" data-i18n="photoMeta">05 / Fotografía &amp; Territorio</p>
+          <h2 class="section-title" data-i18n="photoTitle">Monografía &amp; <em>Archivo Fotográfico</em></h2>
           <p class="section-lead" data-i18n="photoLead">
-            Un registro visual del territorio austral, la geología andina, el espectro infrarrojo y la textura de la película analógica.
+            Registro visual del territorio austral, geología andina y espectro infrarrojo (720nm). El archivo integral se encuentra alojado en su página dedicada.
           </p>
         </div>
 
@@ -628,34 +539,59 @@
                 </svg>
                 Descargar Fotolibro (PDF 2.9 MB)
               </a>
-              <button type="button" class="btn btn-secondary" onclick="triggerCategoryFilter('photobook')" style="padding:0.6rem 1.1rem; font-size:0.78rem;">
-                Ver Muestras IR →
-              </button>
+              <a href="photo.html" class="btn btn-secondary" style="padding:0.6rem 1.1rem; font-size:0.78rem;">
+                Ver Galería Completa →
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- Filter Controls (7 Travels & Categories) -->
-        <div class="gallery-controls reveal">
-          <button type="button" class="filter-btn active" data-filter="all" data-i18n="filterAll">Todas</button>
-          <button type="button" class="filter-btn" data-filter="photobook" data-i18n="filterPhotobook">Fotolibro IR</button>
-          <button type="button" class="filter-btn" data-filter="navarino" data-i18n="filterNavarino">Navarino</button>
-          <button type="button" class="filter-btn" data-filter="torres-del-paine" data-i18n="filterPaine">Torres del Paine</button>
-          <button type="button" class="filter-btn" data-filter="sendero-condor" data-i18n="filterCondor">Sendero Cóndor</button>
-          <button type="button" class="filter-btn" data-filter="tilcara-jujuy" data-i18n="filterTilcara">Tilcara / Jujuy</button>
-          <button type="button" class="filter-btn" data-filter="araucania" data-i18n="filterAraucania">Araucanía</button>
-          <button type="button" class="filter-btn" data-filter="portraits" data-i18n="filterPortraits">Retratos</button>
-          <button type="button" class="filter-btn" data-filter="events" data-i18n="filterEvents">Eventos</button>
+        <!-- Curated 4-Plate Highlight Strip -->
+        <div class="curated-preview-grid reveal">
+          
+          <a href="photo.html?cat=navarino" class="curated-plate-card">
+            <img src="images/portfolio/navarino_01_thumb.webp" alt="Dientes de Navarino" class="curated-plate-img" loading="lazy">
+            <div class="curated-plate-overlay">
+              <span class="curated-plate-tag">55°S · NAVARINO</span>
+              <h4 class="curated-plate-title">Dientes de Navarino</h4>
+            </div>
+          </a>
+
+          <a href="photo.html?cat=torres-del-paine" class="curated-plate-card">
+            <img src="images/portfolio/torres_del_paine_01_thumb.webp" alt="Torres del Paine" class="curated-plate-img" loading="lazy">
+            <div class="curated-plate-overlay">
+              <span class="curated-plate-tag">720nm IR · PATAGONIA</span>
+              <h4 class="curated-plate-title">Torres del Paine</h4>
+            </div>
+          </a>
+
+          <a href="photo.html?cat=tilcara-jujuy" class="curated-plate-card">
+            <img src="images/portfolio/tilcara_jujuy_01_thumb.webp" alt="Serranías del Hornocal" class="curated-plate-img" loading="lazy">
+            <div class="curated-plate-overlay">
+              <span class="curated-plate-tag">4350m · JUJUY</span>
+              <h4 class="curated-plate-title">Serranías del Hornocal</h4>
+            </div>
+          </a>
+
+          <a href="photo.html?cat=araucania" class="curated-plate-card">
+            <img src="images/portfolio/araucania_01_thumb.webp" alt="Araucanía Andina" class="curated-plate-img" loading="lazy">
+            <div class="curated-plate-overlay">
+              <span class="curated-plate-tag">35mm · ANDES</span>
+              <h4 class="curated-plate-title">Araucanía Andina</h4>
+            </div>
+          </a>
+
         </div>
 
-        <!-- Masonry Photo Grid -->
-        <div class="photo-masonry-grid" id="photoMasonryGrid">
-          <!-- Injected dynamically by main.js -->
-        </div>
-
-        <!-- Callout to full gallery archive -->
-        <div class="gallery-action-footer reveal">
-          <a href="photo.html" class="btn btn-primary" data-i18n="viewFullArchive">
+        <!-- Full Archive Dedicated Page Portal Banner -->
+        <div class="gallery-portal-banner reveal">
+          <div class="portal-banner-text">
+            <h4 data-i18n="portalBannerTitle">Archivo Fotográfico Completo (Colección 40+ Obras)</h4>
+            <p data-i18n="portalBannerDesc">
+              Explora el archivo completo en alta resolución organizado por expediciones territoriales (Navarino, Paine, Sendero Cóndor, Jujuy, Araucanía, Retratos y Eventos) con visor lightbox interactivo.
+            </p>
+          </div>
+          <a href="photo.html" class="btn btn-primary" style="white-space:nowrap;" data-i18n="viewFullArchive">
             Abrir Archivo Completo en Alta Resolución →
           </a>
         </div>
@@ -850,33 +786,36 @@
         <div>
           <a href="#top" class="footer-brand">CCidLara</a>
           <p style="font-size:0.85rem; color:var(--color-bone-subtle); margin-top:0.35rem;" data-i18n="footerDesc">
-            Christofer Cid Lara — AI Researcher, Technical Artist, Developer &amp; Photographer.
+            Christofer Cid Lara — Director of R&amp;D at Cid-Lara Studio · AI Researcher, Technical Artist &amp; Photographer.
           </p>
         </div>
 
         <nav class="footer-nav" aria-label="Navegación inferior">
           <a href="#vision" data-i18n="navVision">Visión</a>
           <a href="#disciplinas" data-i18n="navDisciplines">Disciplinas</a>
-          <a href="#investigacion" data-i18n="navResearch">Investigación</a>
-          <a href="#arte-tecnico" data-i18n="navVFX">Arte Técnico</a>
-          <a href="#fotografia" data-i18n="navPhoto">Fotografía</a>
+          <a href="#investigacion" data-i18n="navResearch">Investigación IA</a>
+          <a href="#arte-tecnico" data-i18n="navVFX">Obras &amp; Curilemu</a>
+          <a href="photo.html" data-i18n="navPhoto">Fotografía ↗</a>
           <a href="#contacto" data-i18n="navContact">Contacto</a>
         </nav>
       </div>
 
       <div class="footer-bottom-row">
-        <span data-i18n="footerCopy">© 2026 Christofer Cid Lara. Todos los derechos reservados.</span>
+        <span data-i18n="footerCopy">© 2026 Christofer Cid Lara · Cid-Lara Studio. Todos los derechos reservados.</span>
         <span data-i18n="footerLoc">Santiago de Chile · Confín Austral</span>
       </div>
 
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Scripts & Animation Engines -->
+  <script src="js/vendor/anime.min.js"></script>
+  <script src="js/vendor/motion.js"></script>
   <script src="js/vendor/gsap.min.js"></script>
   <script src="js/vendor/ScrollTrigger.min.js"></script>
   <script src="js/vendor/p5.min.js"></script>
   <script src="js/p5-lab.js"></script>
+  <script src="js/pixel-sort-text.js"></script>
   <script src="js/main.js"></script>
   <script src="js/effects.js"></script>
 

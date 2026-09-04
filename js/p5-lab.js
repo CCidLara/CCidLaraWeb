@@ -1,266 +1,257 @@
 /**
- * CCidLara — Interactive p5.js Generative Optical Laboratory
- * Lieb Photonic Lattice & Wave Synthesizer
+ * CCidLara — Responsive Motion Graphics Background Engine (p5.js)
  * 
- * Directly connected to peer-reviewed research:
- * "Strain-induced localization to delocalization transition on a Lieb photonic ribbon lattice"
- * (D. Román-Cortés, G. Fadic, C. Cid-Lara et al. · Nature Scientific Reports)
+ * Visceral, dark surrealist atmospheric background:
+ * - Glowing ember particles (arterial crimson, antique gold, bone ash)
+ * - Dynamic constellation vector lattice connecting neighboring particles
+ * - Viscous mouse wake with swirling deflection and velocity distortion
+ * - Responsive Pixel-Sort Glitch Waves: cursor acceleration and scrolling
+ *   trigger horizontal pixel-sorting glitch streaks across the dark void.
+ * - Scroll-linked phase progression (Ethereal Top -> Neural Lattice -> Gale Shear)
  */
 
 'use strict';
 
 (function () {
-  const container = document.getElementById('p5-canvas-container');
+  const container = document.getElementById('p5-ambient-backdrop');
   if (!container || typeof p5 === 'undefined') return;
 
   const sketch = (p) => {
-    let canvasW = 600;
-    let canvasH = 440;
+    let canvasW = window.innerWidth;
+    let canvasH = window.innerHeight;
 
-    // Simulation parameters
-    let wavelength = 720; // nm (Infrared default from photobook)
-    let strain = 0.0;     // Strain parameter delta
-    let wavePackets = [];
-    let latticeNodes = [];
-    let time = 0;
+    // Particle & Glitch Systems
+    const NUM_PARTICLES = 130;
+    let particles = [];
+    let glitchRows = [];
 
-    // UI elements
-    let sliderWavelength;
-    let sliderStrain;
-    let valWavelength;
-    let valStrain;
-    let telemetryState;
-    let telemetryBand;
+    let noiseTime = 0;
+    let scrollProgress = 0;
+    let targetScrollProgress = 0;
+
+    // Smooth mouse tracking with inertia
+    let mouseXSmooth = canvasW * 0.5;
+    let mouseYSmooth = canvasH * 0.5;
+    let mouseXTarget = canvasW * 0.5;
+    let mouseYTarget = canvasH * 0.5;
+    let mouseVelocity = 0;
+    let lastRawX = canvasW * 0.5;
+    let lastRawY = canvasH * 0.5;
 
     p.setup = () => {
-      const parentW = container.clientWidth || 600;
-      canvasW = Math.min(parentW, 700);
-      canvasH = Math.round(canvasW * 0.72);
-
       const canvas = p.createCanvas(canvasW, canvasH);
       canvas.parent(container);
-      p.pixelDensity(1);
+      p.pixelDensity(Math.min(window.devicePixelRatio || 1, 1.5));
+      p.strokeCap(p.ROUND);
 
-      // Connect HTML controls
-      sliderWavelength = document.getElementById('slider-wavelength');
-      sliderStrain = document.getElementById('slider-strain');
-      valWavelength = document.getElementById('val-wavelength');
-      valStrain = document.getElementById('val-strain');
-      telemetryState = document.getElementById('telemetry-state');
-      telemetryBand = document.getElementById('telemetry-band');
+      initParticles();
 
-      if (sliderWavelength) {
-        sliderWavelength.addEventListener('input', (e) => {
-          wavelength = parseFloat(e.target.value);
-          if (valWavelength) valWavelength.textContent = `${wavelength} nm`;
-        });
-      }
-
-      if (sliderStrain) {
-        sliderStrain.addEventListener('input', (e) => {
-          strain = parseFloat(e.target.value);
-          if (valStrain) valStrain.textContent = strain.toFixed(2);
-          updateTelemetry();
-        });
-      }
-
-      initLattice();
-      // Initial wave pulse
-      addWavePulse(canvasW * 0.5, canvasH * 0.5);
+      window.addEventListener('resize', onResize, { passive: true });
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('mousemove', onMouseMove, { passive: true });
+      onScroll();
     };
 
-    function initLattice() {
-      latticeNodes = [];
-      const cols = 9;
-      const rows = 7;
-      const spacingX = canvasW / (cols + 1);
-      const spacingY = canvasH / (rows + 1);
+    function onResize() {
+      canvasW = window.innerWidth;
+      canvasH = window.innerHeight;
+      p.resizeCanvas(canvasW, canvasH);
+      initParticles();
+    }
 
-      for (let r = 1; r <= rows; r++) {
-        for (let c = 1; c <= cols; c++) {
-          const x = c * spacingX;
-          const y = r * spacingY;
-          // Lieb lattice sublattices: A, B, C
-          const isA = (r % 2 === 1 && c % 2 === 1);
-          const isB = (r % 2 === 1 && c % 2 === 0);
-          const isC = (r % 2 === 0 && c % 2 === 1);
+    function onScroll() {
+      const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      targetScrollProgress = Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
 
-          if (isA || isB || isC) {
-            latticeNodes.push({
-              x, y,
-              type: isA ? 'A' : (isB ? 'B' : 'C'),
-              amp: 0
-            });
-          }
-        }
+      // Trigger ambient pixel sort wave on rapid scroll
+      if (Math.random() < 0.45 && glitchRows.length < 12) {
+        triggerGlitchWave(p.random(canvasH), p.random(20, 80));
       }
     }
 
-    function addWavePulse(x, y) {
-      wavePackets.push({
-        originX: x,
-        originY: y,
-        birthTime: time,
-        lifespan: 180, // frames
-        decay: 1.0
+    function onMouseMove(e) {
+      mouseXTarget = e.clientX;
+      mouseYTarget = e.clientY;
+
+      const dx = e.clientX - lastRawX;
+      const dy = e.clientY - lastRawY;
+      const speed = Math.hypot(dx, dy);
+      mouseVelocity = Math.min(speed * 0.12, 18);
+
+      // When moving quickly, spawn an interactive pixel-sort streak near the cursor
+      if (speed > 18 && Math.random() < 0.35 && glitchRows.length < 15) {
+        triggerGlitchWave(e.clientY + p.random(-30, 30), p.random(15, 60));
+      }
+
+      lastRawX = e.clientX;
+      lastRawY = e.clientY;
+    }
+
+    function triggerGlitchWave(y, height) {
+      glitchRows.push({
+        y: y,
+        h: height,
+        life: 1.0,
+        decay: p.random(0.025, 0.055),
+        offset: p.random(-45, 45),
+        colorType: p.random() > 0.5 ? 'crimson' : 'gold'
       });
-      if (wavePackets.length > 8) wavePackets.shift();
     }
 
-    function updateTelemetry() {
-      if (!telemetryState || !telemetryBand) return;
-      if (strain < 0.22) {
-        telemetryState.textContent = "Estado Localizado (Banda Plana Lieb)";
-        telemetryState.style.color = "#c5a059";
-        telemetryBand.textContent = "Flat-band compacta (Transporte nulo)";
-      } else if (strain < 0.65) {
-        telemetryState.textContent = "Transición Crítica (Apertura de Cono)";
-        telemetryState.style.color = "#e5c158";
-        telemetryBand.textContent = "Hibridación multiorbital / túnel parcial";
-      } else {
-        telemetryState.textContent = "Régimen Delocalizado (Dispersión Óptica)";
-        telemetryState.style.color = "#e53835";
-        telemetryBand.textContent = "Bandas dispersivas abiertas (Transporte balístico)";
+    function initParticles() {
+      particles = [];
+      for (let i = 0; i < NUM_PARTICLES; i++) {
+        particles.push(createParticle());
       }
     }
 
-    p.mousePressed = () => {
-      if (p.mouseX >= 0 && p.mouseX <= canvasW && p.mouseY >= 0 && p.mouseY <= canvasH) {
-        addWavePulse(p.mouseX, p.mouseY);
-      }
-    };
+    function createParticle() {
+      const rnd = p.random();
+      let type = 'bone';
+      let r = 237, g = 230, b = 218; // Bone
+      let size = p.random(1.2, 3.2);
 
-    p.touchStarted = () => {
-      if (p.mouseX >= 0 && p.mouseX <= canvasW && p.mouseY >= 0 && p.mouseY <= canvasH) {
-        addWavePulse(p.mouseX, p.mouseY);
+      if (rnd > 0.72) {
+        type = 'crimson';
+        r = 224; g = 74; b = 58; // Arterial crimson
+        size = p.random(2.0, 4.5);
+      } else if (rnd > 0.45) {
+        type = 'gold';
+        r = 197; g = 160; b = 89; // Antique gold
+        size = p.random(1.8, 3.8);
       }
-    };
+
+      return {
+        x: p.random(canvasW),
+        y: p.random(canvasH),
+        vx: p.random(-0.5, 0.5),
+        vy: p.random(-0.6, 0.2),
+        size,
+        baseAlpha: p.random(120, 220),
+        r, g, b,
+        type,
+        seed: p.random(1000),
+        pulseSpeed: p.random(0.02, 0.05),
+        pulseOffset: p.random(p.TWO_PI)
+      };
+    }
 
     p.draw = () => {
-      time++;
-      p.background(7, 7, 10);
+      // Smooth interpolation for mouse
+      mouseXSmooth += (mouseXTarget - mouseXSmooth) * 0.06;
+      mouseYSmooth += (mouseYTarget - mouseYSmooth) * 0.06;
+      mouseVelocity *= 0.93;
 
-      // Map wavelength to optical color hue
-      // 450nm (blue) -> 530nm (green) -> 650nm (red) -> 720nm (infrared ruby)
-      let waveColor;
-      if (wavelength < 500) {
-        waveColor = p.color(100, 180, 255);
-      } else if (wavelength < 580) {
-        waveColor = p.color(120, 240, 160);
-      } else if (wavelength < 680) {
-        waveColor = p.color(240, 140, 60);
-      } else {
-        waveColor = p.color(229, 56, 53); // 720nm Infrared ruby
-      }
+      scrollProgress += (targetScrollProgress - scrollProgress) * 0.08;
+      noiseTime += 0.003;
 
-      const kFreq = p.map(wavelength, 450, 750, 0.16, 0.06);
-      const phaseSpeed = p.map(wavelength, 450, 750, 2.5, 4.2);
-      const delocFactor = p.map(strain, 0, 1, 0.25, 1.6);
+      // Deep obsidian void with subtle persistence trail
+      p.background(6, 6, 8, 48);
 
-      // Draw Waveguide Interconnections
-      p.stroke(40, 40, 52);
-      p.strokeWeight(1);
-      for (let i = 0; i < latticeNodes.length; i++) {
-        const n1 = latticeNodes[i];
-        for (let j = i + 1; j < latticeNodes.length; j++) {
-          const n2 = latticeNodes[j];
-          const dist = p.dist(n1.x, n1.y, n2.x, n2.y);
-          if (dist < canvasW * 0.15) {
-            // Modulate coupling thickness with strain
-            const isHoriz = Math.abs(n1.y - n2.y) < 5;
-            p.strokeWeight(isHoriz ? 1 + strain * 1.5 : 1);
-            p.stroke(isHoriz ? p.lerpColor(p.color(50, 50, 65), p.color(197, 160, 89), strain) : p.color(45, 45, 58));
-            p.line(n1.x, n1.y, n2.x, n2.y);
+      // 1. Draw Particle Constellations & Embers
+      drawParticles();
+
+      // 2. Draw Pixel-Sorting Glitch Waves
+      drawGlitchWaves();
+    };
+
+    function drawParticles() {
+      const mx = mouseXSmooth;
+      const my = mouseYSmooth;
+      const mouseActive = mouseVelocity > 0.2 || (Math.hypot(mx - canvasW * 0.5, my - canvasH * 0.5) > 15);
+
+      // Connection threshold distance
+      const MAX_LINK_DIST = 95;
+
+      // Update & Draw Links
+      for (let i = 0; i < particles.length; i++) {
+        const p1 = particles[i];
+
+        // Multi-octave curl noise drift
+        const angle = p.noise(p1.x * 0.002, p1.y * 0.002, noiseTime + p1.seed) * p.TWO_PI * 2.2;
+        p1.vx += Math.cos(angle) * 0.04;
+        p1.vy += Math.sin(angle) * 0.04 - (0.05 * (1 - scrollProgress));
+
+        // Mouse repulsion / vortex swirl
+        if (mouseActive) {
+          const dx = p1.x - mx;
+          const dy = p1.y - my;
+          const dist = Math.hypot(dx, dy);
+          const repelRadius = 160 + mouseVelocity * 7;
+
+          if (dist < repelRadius && dist > 1) {
+            const force = (1 - dist / repelRadius) * (1.6 + mouseVelocity * 0.3);
+            p1.vx += (dx / dist) * force;
+            p1.vy += (dy / dist) * force;
+
+            // Subtle angular swirl
+            p1.vx += (-dy / dist) * force * 0.35;
+            p1.vy += (dx / dist) * force * 0.35;
           }
         }
-      }
 
-      // Compute Wave Field at Lattice Nodes
-      for (let node of latticeNodes) {
-        let totalAmp = 0;
+        // Apply friction
+        p1.vx *= 0.96;
+        p1.vy *= 0.96;
 
-        for (let wave of wavePackets) {
-          const age = time - wave.birthTime;
-          if (age > wave.lifespan) continue;
+        p1.x += p1.vx;
+        p1.y += p1.vy;
 
-          const d = p.dist(node.x, node.y, wave.originX, wave.originY);
-          const travelR = age * phaseSpeed * delocFactor;
+        // Screen wrap
+        if (p1.x < -20) p1.x = canvasW + 20;
+        if (p1.x > canvasW + 20) p1.x = -20;
+        if (p1.y < -20) p1.y = canvasH + 20;
+        if (p1.y > canvasH + 20) p1.y = -20;
 
-          // Wave equation envelope
-          const envelope = p.exp(-p.sq((d - travelR) / 45));
-          const spatialPhase = p.sin(d * kFreq - age * 0.2);
-          const decay = p.map(age, 0, wave.lifespan, 1, 0);
-
-          totalAmp += envelope * spatialPhase * decay;
+        // Draw connections to nearby particles
+        for (let j = i + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const d = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+          if (d < MAX_LINK_DIST) {
+            const linkAlpha = (1 - d / MAX_LINK_DIST) * 45;
+            p.stroke(p1.r, p1.g, p1.b, linkAlpha);
+            p.strokeWeight(0.65);
+            p.line(p1.x, p1.y, p2.x, p2.y);
+          }
         }
 
-        node.amp = totalAmp;
+        // Pulse size
+        const pulse = 1 + Math.sin(p.frameCount * p1.pulseSpeed + p1.pulseOffset) * 0.2;
+        const currentSize = p1.size * pulse;
 
-        // Render Node Glow & Amplitude
-        const glowRadius = p.map(Math.abs(node.amp), 0, 1.5, 4, 18, true);
+        // Outer glow aura
         p.noStroke();
+        p.fill(p1.r, p1.g, p1.b, p1.baseAlpha * 0.25);
+        p.circle(p1.x, p1.y, currentSize * 2.6);
 
-        if (node.type === 'A') {
-          // Corner Lieb site (Gold)
-          p.fill(197, 160, 89, 180 + node.amp * 70);
-          p.circle(node.x, node.y, 6);
+        // Core bright nucleus
+        p.fill(p1.r, p1.g, p1.b, p1.baseAlpha);
+        p.circle(p1.x, p1.y, currentSize);
+      }
+    }
+
+    function drawGlitchWaves() {
+      for (let i = glitchRows.length - 1; i >= 0; i--) {
+        const g = glitchRows[i];
+
+        p.noStroke();
+        if (g.colorType === 'crimson') {
+          p.fill(224, 74, 58, g.life * 65);
         } else {
-          // Edge sites B & C (Bone White)
-          p.fill(245, 242, 235, 140 + node.amp * 90);
-          p.circle(node.x, node.y, 4);
+          p.fill(197, 160, 89, g.life * 55);
         }
 
-        if (Math.abs(node.amp) > 0.08) {
-          p.fill(p.red(waveColor), p.green(waveColor), p.blue(waveColor), p.min(220, Math.abs(node.amp) * 140));
-          p.circle(node.x, node.y, glowRadius);
-        }
-      }
+        // Draw horizontal pixel-sorted glitch lines
+        const segWidth = p.random(60, 220);
+        const startX = p.random(0, canvasW - segWidth);
+        p.rect(startX + g.offset, g.y, segWidth, g.h * 0.4);
 
-      // Draw wavefront pulses
-      p.noFill();
-      for (let wave of wavePackets) {
-        const age = time - wave.birthTime;
-        if (age <= wave.lifespan) {
-          const r = age * phaseSpeed * delocFactor;
-          const alpha = p.map(age, 0, wave.lifespan, 160, 0);
-          p.stroke(p.red(waveColor), p.green(waveColor), p.blue(waveColor), alpha);
-          p.strokeWeight(1.2);
-          p.circle(wave.originX, wave.originY, r * 2);
+        g.life -= g.decay;
+        if (g.life <= 0) {
+          glitchRows.splice(i, 1);
         }
       }
-
-      // Archival Reticle / Compass Corner Marks
-      p.stroke(197, 160, 89, 90);
-      p.strokeWeight(1);
-      // Top-left
-      p.line(12, 12, 28, 12);
-      p.line(12, 12, 12, 28);
-      // Top-right
-      p.line(canvasW - 12, 12, canvasW - 28, 12);
-      p.line(canvasW - 12, 12, canvasW - 12, 28);
-      // Bottom-left
-      p.line(12, canvasH - 12, 28, canvasH - 12);
-      p.line(12, canvasH - 12, 12, canvasH - 28);
-      // Bottom-right
-      p.line(canvasW - 12, canvasH - 12, canvasW - 28, canvasH - 12);
-      p.line(canvasW - 12, canvasH - 12, canvasW - 12, canvasH - 28);
-
-      // On-canvas telemetry overlay
-      p.noStroke();
-      p.fill(245, 242, 235, 120);
-      p.textFont('Courier Prime');
-      p.textSize(10);
-      p.text(`LIEB-LATTICE // λ=${wavelength}nm // δ=${strain.toFixed(2)}`, 16, canvasH - 16);
-      p.text(`CLICK/TAP TO PULSE WAVE`, canvasW - 170, 22);
-    };
-
-    p.windowResized = () => {
-      const parentW = container.clientWidth || 600;
-      canvasW = Math.min(parentW, 700);
-      canvasH = Math.round(canvasW * 0.72);
-      p.resizeCanvas(canvasW, canvasH);
-      initLattice();
-    };
+    }
   };
 
   new p5(sketch);
